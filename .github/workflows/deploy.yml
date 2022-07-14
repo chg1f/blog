@@ -1,0 +1,21 @@
+name: Gatsby Publish
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: '0'
+      - uses: enriikke/gatsby-gh-pages-action@v2
+        with:
+          access-token: chongiofai:${{ secrets.GITHUB_TOKEN }}
+          deploy-branch: gh-pages
+          git-config-name: chg1f
+          git-config-email: chongiofai@gmail.com
