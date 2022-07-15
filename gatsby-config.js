@@ -107,7 +107,7 @@ module.exports = {
               }
             `,
             output: "/rss.xml",
-            title: "Gatsby Starter Blog RSS Feed",
+            title: "rss feed",
           },
         ],
       },
@@ -115,8 +115,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `GatsbyJS`,
+        name: `ontheway`,
+        short_name: `ontheway`,
         start_url: `/`,
         background_color: `#ffffff`,
         // This will impact how browsers show your PWA/website
@@ -127,6 +127,48 @@ module.exports = {
       },
     },
     `gatsby-plugin-react-helmet`,
+    {
+      resolve: 'gatsby-plugin-local-search',
+      options: {
+        name: 'pages',
+        engine: 'flexsearch',
+        // engineOptions: 'speed',
+        query: `
+           {
+             allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+               nodes {
+                 id
+                 fields {
+                   slug
+                 }
+                 frontmatter {
+                   date(formatString: "MMMM DD, YYYY")
+                   tags
+                   title
+                   description
+                 }
+                 excerpt
+                 rawMarkdownBody
+               }
+             }
+           }
+         `,
+        normalizer: ({data}) =>
+          data.allMarkdownRemark.nodes.map((node) => ({
+            id: node.id,
+            slug: node.fields.slug,
+            date: node.frontmatter.date,
+            title: node.frontmatter.title,
+            description: node.frontmatter.description,
+            tags: node.frontmatter.tags,
+            excerpt: node.excerpt,
+            body: node.rawMarkdownBody,
+          })),
+        ref: 'id',
+        index: ['title', 'description', 'body', 'tags'],
+        store: ['id', 'slug', 'title', 'date', 'description', 'excerpt', 'tags'],
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
