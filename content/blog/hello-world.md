@@ -8,7 +8,7 @@ tags:
 
 `renew blog again`\*\*2
 
-> ![archive](https://oldblog.chongiofai.com)
+> ARCHIVE: https://oldblog.chongiofai.com
 
 
 WHY
