@@ -7,13 +7,14 @@ module.exports = {
       avatar: `https://avatars.githubusercontent.com/chg1f`,
     },
     description: ``,
-    siteUrl: `https://blog.chongiofai.com/`,
+    siteUrl: `https://b.chg1f.at/`,
     social: {
       mailto: `chongiofai@gmail.com`,
       github: `chg1f`,
     },
   },
   plugins: [
+    `gatsby-plugin-cname`,
     `gatsby-plugin-image`,
     {
       resolve: `gatsby-source-filesystem`,
