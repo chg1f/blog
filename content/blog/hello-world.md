@@ -1,17 +1,16 @@
 ---
 title: "hello world"
-description: "renew blog again..."
+description: "renew again..."
 date: "2022-07-15"
 tags:
-- helloworld
+- hello
+TODO:
 ---
 
-`renew blog again`\*\*2
+## RENEW AGAIN
 
 > ARCHIVE: https://oldblog.chongiofai.com
 
+## WHY
 
-WHY
-- via gatsby
-- with javascript
-...learning javascript
+1. via gatsby, with javascript ...learning javascript

@@ -1,10 +1,9 @@
 ---
 title: "markdown rendered view"
 description: "markdown rendered view"
-date: "2015-05-01"
+date: "2022-07-15"
 tags:
-- helloworld
-- renderedview
+- view
 ---
 
 This is my first post on my new fake blog! How exciting!

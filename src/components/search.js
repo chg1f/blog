@@ -48,9 +48,10 @@ const Search = () => {
                     <span itemProp="headline">{result.title || result.slug}</span>
                   </Link>
                 </h2>
-                <small>
-                  {result.date} {result.tags.join(";")}
-                </small>
+                {result.date ||
+                  (<strong>WIP</strong>)
+                }
+                <small> {result.date} {result.tags.join(";")} </small>
               </header>
               <section>
                 <p

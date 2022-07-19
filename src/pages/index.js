@@ -39,9 +39,10 @@ const BlogIndex = ({data, location}) => {
                       <span itemProp="headline">{title}</span>
                     </Link>
                   </h2>
-                  <small>
-                    {post.frontmatter.date} {post.frontmatter.tags.join(";")}
-                  </small>
+                  {post.frontmatter.date ||
+                    (<strong>WIP</strong>)
+                  }
+                  <small>{post.frontmatter.date} {post.frontmatter.tags.join(";")} </small>
                 </header>
                 <section>
                   <p
