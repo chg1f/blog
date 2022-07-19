@@ -1,7 +1,6 @@
 ---
 title: "URI Schema"
 description: ""
-date: "2022-07-19"
 tags:
 - uri
 TODO:

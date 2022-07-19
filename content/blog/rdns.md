@@ -1,7 +1,6 @@
 ---
 title: "rDNS and PTR"
 description: "reverse dns resolve and ptr record"
-date: "2022-07-19"
 tags:
 - protocol
 - dns
