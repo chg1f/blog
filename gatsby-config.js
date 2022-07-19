@@ -7,7 +7,7 @@ module.exports = {
       avatar: `https://avatars.githubusercontent.com/chg1f`,
     },
     description: ``,
-    siteUrl: `https://b.chg1f.at/`,
+    siteUrl: `https://blog.chongiofai.com/`,
     social: {
       mailto: `chongiofai@gmail.com`,
       github: `chg1f`,
