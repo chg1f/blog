@@ -28,3 +28,7 @@ command = "mdbook-toc"
 marker = "[TOC]"
 max-level = 4
 renderer = ["html"]
+
+[preprocessor.index]
+
+[preprocessor.links]
