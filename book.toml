@@ -1,0 +1,25 @@
+[book]
+title = "chg1f's blog"
+authors = ["chongiofai(chg1f)"]
+description = "keep it simple, stupid"
+src = "content"
+
+[build]
+build-dir = "book"
+create-missing = true
+use-default-preprocessors = true
+
+[output.html]
+mathjax-support = true
+git-repository-url = "https://github.com/chg1f/blog/tree/mdbook"
+edit-url-template = "https://github.com/chg1f/blog/tree/mdbook/{path}"
+
+[output.html.search]
+limit-results = 20
+use-boolean-and = true
+boost-title = 2
+boost-hierarchy = 2
+boost-paragraph = 1
+expand = true
+heading-split-level = 2
+
