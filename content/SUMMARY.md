@@ -1,6 +1,8 @@
 # Summary
 
-[Home](README.md)
+[chg1f's blog](README.md)
+
+------
 
 # Archive
 
