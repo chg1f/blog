@@ -33,6 +33,7 @@ jobs:
         # Delete the ref to avoid keeping history.
         git update-ref -d refs/heads/gh-pages
         rm -rf *
+        echo "blog.chongiofai.com" > CNAME
         mv ../book/* .
         git add .
         git commit -m "Deploy $GITHUB_SHA to gh-pages"
