@@ -1,0 +1,3707 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>chg1f&#x27;s blog</title>
+        <meta name="robots" content="noindex" />
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="keep it simple, stupid">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+        <!-- MathJax -->
+        <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var html = document.querySelector('html');
+            var sidebar = null;
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="index.html">chg1f's blog</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Interesting</li><li class="chapter-item expanded affix "><li class="part-title">Security</li><li class="chapter-item expanded affix "><li class="part-title">Learning & Notes</li><li class="chapter-item expanded affix "><li class="part-title">Bug Track&Review</li><li class="chapter-item expanded affix "><li class="part-title">Archive</li><li class="chapter-item expanded "><a href="archive/mount-android-image-file.html"><strong aria-hidden="true">1.</strong> mount-android-image-file</a></li><li class="chapter-item expanded "><a href="archive/ngrok-customized.html"><strong aria-hidden="true">2.</strong> ngrok-customized</a></li><li class="chapter-item expanded "><a href="archive/using-vim.html"><strong aria-hidden="true">3.</strong> using-vim</a></li><li class="chapter-item expanded "><a href="archive/vim.html"><strong aria-hidden="true">4.</strong> vim</a></li><li class="chapter-item expanded "><a href="archive/hello-world.html"><strong aria-hidden="true">5.</strong> hello-world</a></li><li class="chapter-item expanded "><a href="archive/redis_data_structure.html"><strong aria-hidden="true">6.</strong> redis_data_structure</a></li><li class="chapter-item expanded "><a href="archive/go-yaml.html"><strong aria-hidden="true">7.</strong> go-yaml</a></li><li class="chapter-item expanded "><a href="archive/how_to_root_android.html"><strong aria-hidden="true">8.</strong> how_to_root_android</a></li><li class="chapter-item expanded "><a href="archive/protobuf-c-cpp-string-error.html"><strong aria-hidden="true">9.</strong> protobuf-c-cpp-string-error</a></li><li class="chapter-item expanded "><a href="archive/git-conventions.html"><strong aria-hidden="true">10.</strong> git-conventions</a></li><li class="chapter-item expanded "><a href="archive/openresty-waf.html"><strong aria-hidden="true">11.</strong> openresty-waf</a></li><li class="chapter-item expanded "><a href="archive/adb-device-no-permissions.html"><strong aria-hidden="true">12.</strong> adb-device-no-permissions</a></li><li class="chapter-item expanded "><a href="archive/cups.html"><strong aria-hidden="true">13.</strong> cups</a></li><li class="chapter-item expanded "><a href="archive/nginx-502-error.html"><strong aria-hidden="true">14.</strong> nginx-502-error</a></li><li class="chapter-item expanded "><a href="archive/iwlwifi.html"><strong aria-hidden="true">15.</strong> iwlwifi</a></li><li class="chapter-item expanded "><a href="archive/concurency.html"><strong aria-hidden="true">16.</strong> concurency</a></li><li class="chapter-item expanded "><a href="archive/install-gentoo-and-archlinux.html"><strong aria-hidden="true">17.</strong> install-gentoo-and-archlinux</a></li><li class="chapter-item expanded "><a href="archive/make-livecd.html"><strong aria-hidden="true">18.</strong> make-livecd</a></li><li class="chapter-item expanded "><a href="archive/i3.html"><strong aria-hidden="true">19.</strong> i3</a></li><li class="chapter-item expanded "><a href="archive/linux-graphics.html"><strong aria-hidden="true">20.</strong> linux-graphics</a></li><li class="chapter-item expanded "><a href="archive/url-schema.html"><strong aria-hidden="true">21.</strong> url-schema</a></li><li class="chapter-item expanded "><a href="archive/linux_keyboard.html"><strong aria-hidden="true">22.</strong> linux_keyboard</a></li><li class="chapter-item expanded "><a href="archive/serial_connection.html"><strong aria-hidden="true">23.</strong> serial_connection</a></li><li class="chapter-item expanded "><a href="archive/pyyaml-parse-error.html"><strong aria-hidden="true">24.</strong> pyyaml-parse-error</a></li><li class="chapter-item expanded "><a href="archive/index.html"><strong aria-hidden="true">25.</strong> index</a></li><li class="chapter-item expanded "><a href="archive/python_coroutine.html"><strong aria-hidden="true">26.</strong> python_coroutine</a></li><li class="chapter-item expanded "><a href="archive/mitm-attack-via-v2ray.html"><strong aria-hidden="true">27.</strong> mitm-attack-via-v2ray</a></li><li class="chapter-item expanded "><a href="archive/kali_localectl_list_keymaps_no_such_file.html"><strong aria-hidden="true">28.</strong> kali_localectl_list_keymaps_no_such_file</a></li><li class="chapter-item expanded "><a href="archive/postwoman-cors.html"><strong aria-hidden="true">29.</strong> postwoman-cors</a></li><li class="chapter-item expanded "><a href="archive/partition-disk.html"><strong aria-hidden="true">30.</strong> partition-disk</a></li><li class="chapter-item expanded "><a href="archive/ssl-disable-connect.html"><strong aria-hidden="true">31.</strong> ssl-disable-connect</a></li><li class="chapter-item expanded "><a href="archive/grub.html"><strong aria-hidden="true">32.</strong> grub</a></li><li class="chapter-item expanded "><a href="archive/network-protocol.html"><strong aria-hidden="true">33.</strong> network-protocol</a></li><li class="chapter-item expanded "><a href="archive/install-usb.html"><strong aria-hidden="true">34.</strong> install-usb</a></li><li class="chapter-item expanded "><a href="archive/network_topology.html"><strong aria-hidden="true">35.</strong> network_topology</a></li><li class="chapter-item expanded "><a href="archive/sed_bad_flag_in_substitute_command.html"><strong aria-hidden="true">36.</strong> sed_bad_flag_in_substitute_command</a></li><li class="chapter-item expanded "><a href="archive/docker-permission-denied.html"><strong aria-hidden="true">37.</strong> docker-permission-denied</a></li><li class="chapter-item expanded "><a href="archive/owasp_top10_webapp_sec_risks.html"><strong aria-hidden="true">38.</strong> owasp_top10_webapp_sec_risks</a></li><li class="chapter-item expanded "><a href="archive/boot-device.html"><strong aria-hidden="true">39.</strong> boot-device</a></li><li class="chapter-item expanded "><a href="archive/distribution.html"><strong aria-hidden="true">40.</strong> distribution</a></li><li class="chapter-item expanded "><a href="archive/ngrok-tunnel-not-found.html"><strong aria-hidden="true">41.</strong> ngrok-tunnel-not-found</a></li><li class="chapter-item expanded "><a href="archive/base64-encode-linux-and-windows.html"><strong aria-hidden="true">42.</strong> base64-encode-linux-and-windows</a></li><li class="chapter-item expanded "><a href="archive/netfilter.html"><strong aria-hidden="true">43.</strong> netfilter</a></li><li class="chapter-item expanded "><a href="archive/rdns.html"><strong aria-hidden="true">44.</strong> rdns</a></li><li class="chapter-item expanded "><a href="archive/android-flusing-device.html"><strong aria-hidden="true">45.</strong> android-flusing-device</a></li><li class="chapter-item expanded "><a href="archive/reinstall-manjaro-from-archlinux.html"><strong aria-hidden="true">46.</strong> reinstall-manjaro-from-archlinux</a></li><li class="chapter-item expanded "><a href="archive/fastboot-fake-plaseholder.html"><strong aria-hidden="true">47.</strong> fastboot-fake-plaseholder</a></li><li class="chapter-item expanded "><a href="archive/tmux.html"><strong aria-hidden="true">48.</strong> tmux</a></li><li class="chapter-item expanded "><a href="archive/docker-compose-network.html"><strong aria-hidden="true">49.</strong> docker-compose-network</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">chg1f&#x27;s blog</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/chg1f/blog/tree/mdbook" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="chg1fs-blog"><a class="header" href="#chg1fs-blog">chg1f's blog</a></h1>
+<blockquote>
+<p>路 漫 漫 其 修 远 兮 吾 将 上 下 而 求 索</p>
+</blockquote>
+<pre><code class="language-toml">name = &quot;chongiofai&quot;
+alias = &quot;chg1f&quot;
+email = &quot;chongiofai@gmail.com&quot;
+title = &quot;security r&amp;d&quot;
+from = &quot;macau&quot;
+live = &quot;beijing&quot;
+
+[stack]
+  languages = [&quot;golang&quot;, &quot;python&quot;, &quot;bash&quot;]
+  operation_systems = [&quot;archlinux&quot;, &quot;debian&quot;, &quot;centos&quot;, &quot;darwin&quot;]
+
+[interesting]
+
+</code></pre>
+<p><a href="https://github.com/chg1f"><img src="https://github-readme-stats.vercel.app/api?username=chg1f&amp;count_private=true&amp;show_icons=true" alt="chg1f" /></a></p>
+<p><a href="https://github.com/chg1f"><img src="https://github-readme-stats.vercel.app/api/top-langs/?username=chg1f&amp;exclude_repo=chg1f,blog,blog-archive,notes" alt="toplangs" /></a></p>
+<div style="break-before: page; page-break-before: always;"></div><hr />
+<p>title: &quot;Bug Mount Android Image File&quot;
+date: 2020-12-09T13:12:12+08:00
+categories:</p>
+<ul>
+<li>bug
+tags:</li>
+<li>android</li>
+<li>mount</li>
+</ul>
+<hr />
+<h2 id="question"><a class="header" href="#question">Question</a></h2>
+<pre><code class="language-bash">$ file system.img
+system.img: Linux rev 1.0 ext2 filesystem data, UUID=4a50462e-52cf-5fab-87a1-49824cdf6b4f (extents) (large files) (huge files)
+$ sudo mount -t auto system.img system
+mount: system: failed to setup loop device for system.img.
+$ sudo mount -t ext2 system.img system
+mount: system: wrong fs type, bad option, bad superblock on /dev/loop0, missing codepage or helper program, or other error.
+
+</code></pre>
+<h2 id="tried"><a class="header" href="#tried">Tried</a></h2>
+<ol>
+<li>mount with loop,offset</li>
+</ol>
+<pre><code class="language-bash">$ file system.img
+system.img: Linux rev 1.0 ext2 filesystem data, UUID=4a50462e-52cf-5fab-87a1-49824cdf6b4f (extents) (large files) (huge files)
+$ parted system.img print
+WARNING: You are not superuser.  Watch out for permissions.
+Model:  (file)
+Disk system.img: 1840MB
+Sector size (logical/physical): 512B/512B
+Partition Table: loop
+Disk Flags:
+
+Number  Start  End     Size    File system  Flags
+ 1      0.00B  1840MB  1840MB  ext2
+$ sudo mount -o loop,offset=0 system.img system
+mount: system: wrong fs type, bad option, bad superblock on /dev/loop0, missing codepage or helper program, or other error.
+$ sudo mount -t ext2 -o loop,offset=0 system.img system
+mount: system: wrong fs type, bad option, bad superblock on /dev/loop0, missing codepage or helper program, or other error.
+</code></pre>
+<ol start="2">
+<li>mount with losetup</li>
+</ol>
+<pre><code class="language-bash">$ ls /dev/loop0
+/dev/loop0
+$ sudo losetup -f
+/dev/loop0
+$ sudo losetup /dev/loop0 system.img
+$ sudo mount /dev/loop0 system
+mount: system: wrong fs type, bad option, bad superblock on /dev/loop0, missing codepage or helper program, or other error.
+$ sudo losetup  -d /dev/loop0
+``
+&gt; ```bash
+&gt; [10021.208192] EXT4-fs (loop0): couldn't mount RDWR because of unsupported optional features (4000)
+&gt; [10247.432930] EXT4-fs (loop0): couldn't mount RDWR because of unsupported optional features (4000)
+&gt; [10319.835415] EXT4-fs (loop0): couldn't mount as ext2 due to feature incompatibilities
+&gt; [10390.662357] EXT4-fs (loop0): couldn't mount RDWR because of unsupported optional features (4000)
+&gt; [10757.923783] EXT4-fs (loop0): couldn't mount RDWR because of unsupported optional features (4000)
+&gt; ```
+
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><hr />
+<p>title: &quot;Ngrok Customized&quot;
+date: 2019-11-07
+categories:</p>
+<ul>
+<li>note
+tags:</li>
+<li>ngrok</li>
+</ul>
+<hr />
+<h2 id="client"><a class="header" href="#client">client</a></h2>
+<ol>
+<li>Run-SetupModel-newClientModel建立ngrokd-ngroko信道</li>
+</ol>
+<blockquote>
+<p>好像無加密</p>
+</blockquote>
+<ol start="2">
+<li>ctl-clientModel.Run-control開始使用model向ngrokd建立連接</li>
+</ol>
+<blockquote>
+<p>newClientModel??為什么給configPath不是config,因為服务器給出新authToken更新</p>
+</blockquote>
+<ol start="3">
+<li>clientModel.update更新control</li>
+</ol>
+<blockquote>
+<p>tunnel下分拆可能會引到重復NewTunnel
+Proxy Agent
+SaveAuthToken保存完Token不更新內存中的conifg???</p>
+</blockquote>
+<ol start="4">
+<li>asset脚本會先把asset文件的數据生成assets_release.go二進制導入版,然后編譯時直接放進程序中,在請求時會直接把路徑換成已轉二進制數据寫入</li>
+</ol>
+<blockquote>
+<p>ngrok-&gt;ngrokd
+&lt;-msg.Auth驗証建立信道
+-&gt;msg.AuthResp請求結果
+&lt;-msg.ReqTunnel請求建立Tunnel
+-&gt;NewTunnel註冊結果
+**
+-&gt;Pong心跳
+**
+-&gt;ReqProxy請求
+#&lt;-如果有設HTTPPROXY測轉發連接,失敗結束
+&lt;-msg.ReqProxy确認
+-&gt;msg.StartProxy服务器确認返回URL比對自已URL</p>
+<h3 id=""><a class="header" href="#"></a></h3>
+</blockquote>
+<ol start="5">
+<li>
+<p>Control</p>
+</li>
+<li>
+<p>ClientModel
+###ENV
+DEBUG</p>
+</li>
+</ol>
+<h2 id="server"><a class="header" href="#server">server</a></h2>
+<ol>
+<li>
+<p>net.Listen-conn.Listen-http.startHttpListener</p>
+</li>
+<li>
+<p>tunnelListener開启註冊監听
+!TODO: 加密
+!TODO: HTTP信道
+!TODO: 一個服务多個同協議</p>
+</li>
+<li>
+<p>ctl.manager核心</p>
+</li>
+<li>
+<p>ctl.in讀入ctl,ctl.out ctl寫出???有點困暈</p>
+</li>
+<li>
+<p>ctl.stopper等待其他gorounit shutdown信号</p>
+</li>
+<li>
+<p>轉發請求dstip會是進入网卡內网地址,註冊請求dstip會是127.0.0.1/0.0.0.0,或者知道服务器主机請況下設的某网卡內网地址,
+0.0.0.0可以任何地址,127.0.0.1只能本地-&gt;先試用轉發DIP失敗再0.0.0.0-&gt;失敗,因為127.0.0.1本机回環,DIP亦會回環,同時覆蓋註冊网卡情況
+更新startTcp/HttpListener註冊一個對外提供服务的Listener,使用conn.Listener包裝的net.Listener
+tcp/httpHandler處理請求
+tunnel要怎确定?getTunnelKey
+NewTunnel分別處理http/tcp請求,getTunnelKey-&gt;getListener/StartListen-&gt;initTunnel
+<strong>隱患:只重构server,client沒有理清conn,net有可能會資源泄漏</strong>
+*<strong>名字沒有整理好..公開私有亂來中..</strong></p>
+</li>
+<li>
+<p>ControlRegistry: map client id to control</p>
+</li>
+<li>
+<p>TunnelRegistry: map tunnel url to tunnel</p>
+</li>
+</ol>
+<p><strong>主程序關閉沒關到監听tunnel grouting...</strong></p>
+<h3 id="env"><a class="header" href="#env">ENV</a></h3>
+<p>conn.Conn連接處理,通過网絡壙
+conn.Tee連接處理,通過本地內存IO</p>
+<p>ENV PS1影响了VSCODE DEBUG</p>
+<div style="break-before: page; page-break-before: always;"></div><hr />
+<p>title: &quot;Using Vim&quot;
+description: &quot;&quot;
+tags:</p>
+<ul>
+<li>vim
+TODO:</li>
+</ul>
+<hr />
+<ul>
+<li><a href="archive/using-vim.html#cursor">Cursor</a></li>
+<li><a href="archive/using-vim.html#search">Search</a></li>
+<li><a href="archive/using-vim.html#page">Page</a></li>
+<li><a href="archive/using-vim.html#tab">Tab</a></li>
+<li><a href="archive/using-vim.html#window">Window</a></li>
+<li><a href="archive/using-vim.html#command">Command</a></li>
+</ul>
+<h1 id="cursor"><a class="header" href="#cursor">Cursor</a></h1>
+<div class="table-wrapper"><table><thead><tr><th style="text-align: center">.</th><th style="text-align: left">.</th></tr></thead><tbody>
+<tr><td style="text-align: center">h,j,k,l</td><td style="text-align: left"></td></tr>
+<tr><td style="text-align: center">w,b</td><td style="text-align: left"></td></tr>
+<tr><td style="text-align: center">W,B</td><td style="text-align: left"></td></tr>
+<tr><td style="text-align: center">e,ge</td><td style="text-align: left"></td></tr>
+<tr><td style="text-align: center">E,gE</td><td style="text-align: left"></td></tr>
+<tr><td style="text-align: center">gg,G</td><td style="text-align: left"></td></tr>
+<tr><td style="text-align: center">0,$</td><td style="text-align: left"></td></tr>
+<tr><td style="text-align: center">H,M,L</td><td style="text-align: left"></td></tr>
+</tbody></table>
+</div>
+<h1 id="search"><a class="header" href="#search">Search</a></h1>
+<p>|C-n,c-N|
+|C-o,C-i|
+|q/,q?|
+|/XXX,?XXX|</p>
+<h1 id="page"><a class="header" href="#page">Page</a></h1>
+<p>|C-f,C-b||
+|C-e,C-y||
+|zt,zz,zb|</p>
+<h1 id="tab"><a class="header" href="#tab">Tab</a></h1>
+<div class="table-wrapper"><table><thead><tr><th style="text-align: center">.</th><th style="text-align: left">.</th></tr></thead><tbody>
+<tr><td style="text-align: center">gt,gT</td><td style="text-align: left"></td></tr>
+</tbody></table>
+</div>
+<h1 id="window"><a class="header" href="#window">Window</a></h1>
+<div class="table-wrapper"><table><thead><tr><th style="text-align: center">.</th><th style="text-align: left">.</th></tr></thead><tbody>
+<tr><td style="text-align: center">C-wh,C-wj,C-wk,C-wl</td><td style="text-align: left"></td></tr>
+<tr><td style="text-align: center">C-wH,C-wJ,C-wK,C-wL</td><td style="text-align: left"></td></tr>
+</tbody></table>
+</div>
+<h1 id="command"><a class="header" href="#command">Command</a></h1>
+<div class="table-wrapper"><table><thead><tr><th style="text-align: center">.</th><th style="text-align: left">.</th></tr></thead><tbody>
+<tr><td style="text-align: center">:tabe</td><td style="text-align: left"></td></tr>
+<tr><td style="text-align: center">:tabn,:tabp</td><td style="text-align: left"></td></tr>
+<tr><td style="text-align: center">:e</td><td style="text-align: left"></td></tr>
+</tbody></table>
+</div><div style="break-before: page; page-break-before: always;"></div><hr />
+<p>title: &quot;Vim Note&quot;
+description: &quot;Vim笔记&quot;
+date: 2021-07-17T21:35:41+08:00
+lastmod: 2021-07-17T21:35:41+08:00
+tags:</p>
+<ul>
+<li>vim</li>
+</ul>
+<hr />
+<h2 id="备忘"><a class="header" href="#备忘">备忘</a></h2>
+<ol>
+<li>在为了在多机器、环境下，最大限度上令体验一致。 使用了<code>bash</code>+<code>readline</code>+<code>tmux</code>+<code>vim</code>+<code>fzf</code>作为基本的工具链</li>
+<li>在Vim上，为了对大文件等编缉，尽可能减少非常用必要设置及插件，或者可以可以简易打开/关闭的，保持体验，或者使用<code>vim -u NONE {filepath}</code>用裸配置模式打开</li>
+<li>对于日常开发上，目标只补存上Linter（语法检测）、Fixer/Fomatter（格式化或自动校正）、Completer（代码补全）,及一些快捷辨识及工具</li>
+</ol>
+<h3 id="相关文章"><a class="header" href="#相关文章">相关文章</a></h3>
+<ol>
+<li>键盘映射</li>
+</ol>
+<blockquote>
+<p>http://yyq123.blogspot.com/2010/12/vim-map.html?m=1</p>
+</blockquote>
+<ul>
+<li>
+<p>设置键盘映射
+| command | normal | visual | operator | insert only | command |
+| - | - | - | - | - | - |
+| :map,:noremap | 1 | 1 | 1 |  |  |
+| :map!,:noremap! |  |  |  | 1 | 1 |
+| :nmap,:nnoremap | 1 |  |  |  |  |
+| :vmap,:vnoremap |  | 1 |  |  |  |
+| :omap,:onoremap |  |  | 1 |  |  |
+| :imap,:inoremap |  |  |  | 1 |  |
+| :cmap,:cnoremap |  |  |  |  | 1 |</p>
+</li>
+<li>
+<p>取消键盘映射
+| command | normal | visual | operator | insert only | command |
+| - | - | - | - | - | - |
+| :unmap | 1 | 1 | 1 |  |  |
+| :unmap! |  |  |  | 1 | 1 |
+| :nunmap | 1 |  |  |  |  |
+| :vunmap |  | 1 |  |  |  |
+| :ounmap |  |  | 1 |  |  |
+| :iunmap |  |  |  | 1 |  |
+| :cunmap |  |  |  |  | 1 |</p>
+</li>
+<li>
+<p>查看键盘映射<code>:help key-notation</code></p>
+</li>
+</ul>
+<ol start="2">
+<li>关于quickfix list及location list</li>
+</ol>
+<blockquote>
+<p>https://stackoverflow.com/questions/20933836/what-is-the-difference-between-location-list-and-quickfix-list-in-vim</p>
+</blockquote>
+<ol start="3">
+<li>关于<code>buffer</code>、<code>window</code>、<code>tab</code></li>
+</ol>
+<blockquote>
+<p>https://dev.to/iggredible/using-buffers-windows-and-tabs-efficiently-in-vim-56jc</p>
+</blockquote>
+<ul>
+<li><code>buffer</code>
+<ul>
+<li><code>:n</code></li>
+<li><code>:ls,:buffers</code></li>
+<li><code>:bn,:bnext</code></li>
+<li><code>:bp,:bprev</code></li>
+<li><code>:bd,:bdelete</code></li>
+</ul>
+</li>
+<li><code>window</code>
+<ul>
+<li><code>:sp,:split,&lt;C-w&gt;s</code></li>
+<li><code>:vs,:vsplit,&lt;C-w&gt;v</code></li>
+<li><code>&lt;C-w&gt;c</code> - close the current window</li>
+<li><code>&lt;C-w&gt;o</code> - make the current window the only one on the screen, all other windows are closed</li>
+<li><code>&lt;C-w&gt;h/j/k/l</code></li>
+</ul>
+</li>
+<li><code>tab</code>
+<ul>
+<li><code>:tabnew</code></li>
+<li><code>:tabn,:tabnext</code></li>
+<li><code>:tabp,:tabprev</code></li>
+<li><code>:tabc,:tabclose</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="我的配置文件"><a class="header" href="#我的配置文件">我的配置文件</a></h2>
+<ul>
+<li><code>https://github.com/chongiofai/dots/blob/main/.vimrc</code></li>
+</ul>
+<h3 id="插件"><a class="header" href="#插件">插件</a></h3>
+<ul>
+<li>
+<p>YouCompleteMe
+代码补全</p>
+</li>
+<li>
+<p>ale
+语法检查，格式化/修正</p>
+<ul>
+<li><leader>f - 格式化/修正</li>
+<li><leader>l - 启用/取消语法检查</li>
+<li><leader>j - 错误/警告跳转下一个</li>
+<li><leader>k - 错误/警告跳转上一个</li>
+</ul>
+</li>
+<li>
+<p>vim-colorschemes
+配置方案</p>
+</li>
+<li>
+<p>vim-bookmarks
+书签管理</p>
+</li>
+<li>
+<p>eregex.vim
+本文件正则匹配</p>
+</li>
+<li>
+<p>ack.vim
+多文件匹配</p>
+</li>
+<li>
+<p>fzf,fzf.vim</p>
+</li>
+<li>
+<p>editorconfig-vim</p>
+</li>
+<li>
+<p>nerdcommenter</p>
+</li>
+<li>
+<p>vim-go</p>
+</li>
+<li>
+<p>undotree</p>
+</li>
+<li>
+<p>tagbar</p>
+</li>
+<li>
+<p>nerdtree</p>
+</li>
+<li>
+<p>vim-gitbranch</p>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><hr />
+<p>title: &quot;hello world&quot;
+description: &quot;renew again...&quot;
+date: &quot;2022-07-15&quot;
+tags:</p>
+<ul>
+<li>hello
+TODO:</li>
+</ul>
+<hr />
+<h2 id="renew-again"><a class="header" href="#renew-again">RENEW AGAIN</a></h2>
+<blockquote>
+<p>ARCHIVE: https://oldblog.chongiofai.com</p>
+</blockquote>
+<h2 id="why"><a class="header" href="#why">WHY</a></h2>
+<ol>
+<li>via gatsby, with javascript ...learning javascript</li>
+</ol>
+<div style="break-before: page; page-break-before: always;"></div><hr />
+<p>title: &quot;Redis Data Structure&quot;
+description: &quot;Redis数据结据&quot;
+tags:</p>
+<ul>
+<li>redis</li>
+</ul>
+<hr />
+<blockquote>
+<p>Docs</p>
+<p>https://github.com/redis/redis-doc/blob/master/topics/data-types-intro.md</p>
+<p>https://github.com/redis/redis-doc/blob/master/topics/data-types.md</p>
+</blockquote>
+<blockquote>
+<p>Learning Test Env</p>
+<pre><code class="language-bash">docker run --rm -dt --name learning redis:5.0.9 redis-cli &amp;&amp; docker exec -it learning redis-cli
+</code></pre>
+</blockquote>
+<h2 id="note"><a class="header" href="#note">Note</a></h2>
+<ol>
+<li>About key</li>
+</ol>
+<ul>
+<li><code>KEY</code>设置太长不是一件好事，如大于<code>1024byte</code>，对于内存及寻找都会有影响，建议可以用<code>SHA1</code>压缩</li>
+<li><code>KEY</code>设置太短不是一件好事，因为可读性会变低</li>
+<li><code>KEY</code>的最大值为<code>512MB</code></li>
+</ul>
+<ol start="2">
+<li>About creation and removal of keys</li>
+</ol>
+<ul>
+<li>当添加值到不存在键中，添加时会创建一个相应数据结构</li>
+<li>当删除值使键中数据类型为空，键会自动销毁，<code>Stream</code>除外</li>
+<li>调用如<code>LLEN</code>空键只读命令或删除命令，总返回与空链一致结果</li>
+</ul>
+<pre><code>127.0.0.1:6379&gt; get a
+(nil)
+127.0.0.1:6379&gt; lpush a a
+(integer) 1
+127.0.0.1:6379&gt; get a
+(error) WRONGTYPE Operation against a key holding the wrong kind of value
+127.0.0.1:6379&gt; lpop a
+&quot;a&quot;
+127.0.0.1:6379&gt; get a
+(nil)
+</code></pre>
+<h2 id="commands"><a class="header" href="#commands">Commands</a></h2>
+<ul>
+<li><code>EXISTS KEY [KEY ...]</code></li>
+<li><code>TYPE KEY</code></li>
+<li><code>DEL KEY [KEY ...]</code></li>
+<li><code>EXPIRE KEY SECONDS</code></li>
+<li><code>TTL KEY</code></li>
+<li><code>PEXPIRE KEY MILLISECONDS</code></li>
+<li><code>PTTL KEY</code></li>
+<li><code>PERSIST KEY</code></li>
+</ul>
+<pre><code>127.0.0.1:6379&gt; set ex a
+OK
+127.0.0.1:6379&gt; del ne
+(integer) 0
+127.0.0.1:6379&gt; type ex
+string
+127.0.0.1:6379&gt; type ne
+none
+127.0.0.1:6379&gt; exists ex
+(integer) 1
+127.0.0.1:6379&gt; exists ne
+(integer) 0
+127.0.0.1:6379&gt; del ex
+(integer) 1
+127.0.0.1:6379&gt; del ne
+(integer) 0
+127.0.0.1:6379&gt; set ep a
+OK
+127.0.0.1:6379&gt; expire ep 5
+(integer) 1
+127.0.0.1:6379&gt; get ep
+&quot;a&quot;
+127.0.0.1:6379&gt; get ep
+(nil)
+127.0.0.1:6379&gt; set ep a
+OK
+127.0.0.1:6379&gt; expire ep 100
+(integer) 1
+127.0.0.1:6379&gt; ttl ep
+(integer) 97
+127.0.0.1:6379&gt; pttl ep
+(integer) 82937
+127.0.0.1:6379&gt; persist ep
+(integer) 1
+127.0.0.1:6379&gt; persist ep
+(integer) 0
+127.0.0.1:6379&gt; pttl ep
+(integer) -1
+127.0.0.1:6379&gt; ttl ep
+(integer) -1
+</code></pre>
+<h2 id="string"><a class="header" href="#string">String</a></h2>
+<p>Binary-safe strings.</p>
+<h3 id="note-1"><a class="header" href="#note-1">Note</a></h3>
+<ul>
+<li>
+<p>About value</p>
+<ul>
+<li><code>VALUE</code>最大值为<code>512MB</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="commands-1"><a class="header" href="#commands-1">Commands</a></h3>
+<ul>
+<li><code>SET KEY VALUE [expiration EX seconds|PX milliseconds] [NX|XX]</code></li>
+<li><code>GET KEY</code></li>
+<li><code>INCR KEY</code></li>
+<li><code>INCRBY KEY INCREMENT</code></li>
+<li><code>DECR KEY</code></li>
+<li><code>DECRBY KEY DECREMENT</code></li>
+<li><code>MSET KEY VALUE [KEY VALUE ...]</code></li>
+<li><code>MGET KEY [KEY ...]</code></li>
+</ul>
+<pre><code>127.0.0.1:6379&gt; set t1 1
+OK
+127.0.0.1:6379&gt; get t1
+&quot;1&quot;
+127.0.0.1:6379&gt; incr t2
+(integer) 1
+127.0.0.1:6379&gt; incrby t2 10
+(integer) 11
+127.0.0.1:6379&gt; decr t2
+(integer) 10
+127.0.0.1:6379&gt; decrby t2 10
+(integer) 0
+127.0.0.1:6379&gt; decr t2
+(integer) -1
+127.0.0.1:6379&gt; incr t1
+(integer) 2
+127.0.0.1:6379&gt; get t1
+&quot;2&quot;
+127.0.0.1:6379&gt; set t3 a
+OK
+127.0.0.1:6379&gt; incr t3
+(error) ERR value is not an integer or out of range
+127.0.0.1:6379&gt; mset t4 1 t5 b
+OK
+127.0.0.1:6379&gt; mget t4 t5 t6
+1) &quot;1&quot;
+2) &quot;b&quot;
+3) (nil)
+127.0.0.1:6379&gt; set t7 c nx
+OK
+127.0.0.1:6379&gt; set t8 c xx
+(nil)
+127.0.0.1:6379&gt; mget t7 t8
+1) &quot;c&quot;
+2) (nil)
+</code></pre>
+<h2 id="list"><a class="header" href="#list">List</a></h2>
+<p>collections of string elements sorted according to the order of insertion. They are basically linked lists.</p>
+<h3 id="note-2"><a class="header" href="#note-2">Note</a></h3>
+<ul>
+<li>内部车现为链表结构</li>
+</ul>
+<h3 id="commands-2"><a class="header" href="#commands-2">Commands</a></h3>
+<ul>
+<li><code>LPUSH KEY VALUE [VALUE ...]</code></li>
+<li><code>RPUSH KEY VALUE [VALUE ...]</code></li>
+<li><code>LRANGE KEY START STOP</code></li>
+<li><code>LTRIM KEY START STOP</code></li>
+<li><code>LPOP KEY</code></li>
+<li><code>RPOP KEY</code></li>
+<li><code>BLPOP KEY [KEY ...] TIMEOUT</code></li>
+<li><code>BRPOP KEY [KEY ...] TIMEOUT</code></li>
+<li><code>LLEN KEY</code></li>
+</ul>
+<pre><code>127.0.0.1:6379&gt; lpush tl 1 2 3 4 a b c d
+(integer) 8
+127.0.0.1:6379&gt; rpush tl q w e r 5 6 7 8
+(integer) 16
+127.0.0.1:6379&gt; lrange tl 0 -1
+ 1) &quot;d&quot;
+ 2) &quot;c&quot;
+ 3) &quot;b&quot;
+ 4) &quot;a&quot;
+ 5) &quot;4&quot;
+ 6) &quot;3&quot;
+ 7) &quot;2&quot;
+ 8) &quot;1&quot;
+ 9) &quot;q&quot;
+10) &quot;w&quot;
+11) &quot;e&quot;
+12) &quot;r&quot;
+13) &quot;5&quot;
+14) &quot;6&quot;
+15) &quot;7&quot;
+16) &quot;8&quot;
+127.0.0.1:6379&gt; ltrim tl 1 -2
+OK
+127.0.0.1:6379&gt; lrange tl 0 -1
+ 1) &quot;c&quot;
+ 2) &quot;b&quot;
+ 3) &quot;a&quot;
+ 4) &quot;4&quot;
+ 5) &quot;3&quot;
+ 6) &quot;2&quot;
+ 7) &quot;1&quot;
+ 8) &quot;q&quot;
+ 9) &quot;w&quot;
+10) &quot;e&quot;
+11) &quot;r&quot;
+12) &quot;5&quot;
+13) &quot;6&quot;
+14) &quot;7&quot;
+127.0.0.1:6379&gt; lpop tl
+&quot;c&quot;
+127.0.0.1:6379&gt; rpop tl
+&quot;7&quot;
+127.0.0.1:6379&gt; lrange tl 0 -1
+ 1) &quot;b&quot;
+ 2) &quot;a&quot;
+ 3) &quot;4&quot;
+ 4) &quot;3&quot;
+ 5) &quot;2&quot;
+ 6) &quot;1&quot;
+ 7) &quot;q&quot;
+ 8) &quot;w&quot;
+ 9) &quot;e&quot;
+10) &quot;r&quot;
+11) &quot;5&quot;
+12) &quot;6&quot;
+127.0.0.1:6379&gt; del tl
+(integer) 1
+127.0.0.1:6379&gt; lrange tl 0 -1
+(empty list or set)
+127.0.0.1:6379&gt; blpop tl 1
+(nil)
+(1.00s)
+127.0.0.1:6379&gt; blpop tl 10
+1) &quot;tl&quot;
+2) &quot;10&quot;
+(8.31s)
+127.0.0.1:6379&gt; brpop tl ne 10
+1) &quot;tl&quot;
+2) &quot;ee&quot;
+(5.93s)
+127.0.0.1:6379&gt; brpop tl ne 10
+1) &quot;tl&quot;
+2) &quot;e2&quot;
+127.0.0.1:6379&gt; lpush tl 1 2 3
+127.0.0.1:6379&gt; llen tl
+(integer) 3
+</code></pre>
+<h2 id="set"><a class="header" href="#set">Set</a></h2>
+<p>collections of unique, unsorted string elements.</p>
+<h2 id="sorted-set"><a class="header" href="#sorted-set">Sorted Set</a></h2>
+<p>similar to Sets but where every string element is associated to a floating number value, called score. The elements are always taken sorted by their score, so unlike Sets it is possible to retrieve a range of elements (for example you may ask: give me the top 10, or the bottom 10).</p>
+<h2 id="hashe"><a class="header" href="#hashe">Hashe</a></h2>
+<p>which are maps composed of fields associated with values. Both the field and the value are strings. This is very similar to Ruby or Python hashes.</p>
+<h2 id="bit-array"><a class="header" href="#bit-array">Bit Array</a></h2>
+<p>it is possible, using special commands, to handle String values like an array of bits: you can set and clear individual bits, count all the bits set to 1, find the first set or unset bit, and so forth.</p>
+<h2 id="hyperloglogs"><a class="header" href="#hyperloglogs">HyperLogLogs</a></h2>
+<p>this is a probabilistic data structure which is used in order to estimate the cardinality of a set. Don't be scared, it is simpler than it seems... See later in the HyperLogLog section of this tutorial.</p>
+<h2 id="streams"><a class="header" href="#streams">Streams</a></h2>
+<p>append-only collections of map-like entries that provide an abstract log data type. They are covered in depth in the Introduction to Redis Streams.</p>
+<div style="break-before: page; page-break-before: always;"></div><hr />
+<p>title: &quot;GO解释YAML错误&quot;
+date: 2019-11-06
+categories:</p>
+<ul>
+<li>bug
+tags:</li>
+<li>golang</li>
+<li>yaml</li>
+</ul>
+<hr />
+<h2 id="问题problem"><a class="header" href="#问题problem">问题/Problem</a></h2>
+<ol>
+<li>TODO</li>
+</ol>
+<h2 id="原因reason"><a class="header" href="#原因reason">原因/Reason</a></h2>
+<ol>
+<li>因为解释调用了第三方包，但解释结构体中的属性为非公开属性，第三方包无法读职这些字段</li>
+</ol>
+<h2 id="解决fix"><a class="header" href="#解决fix">解决/Fix</a></h2>
+<ol>
+<li>结构体中需解释字段修改为公开</li>
+</ol>
+<div style="break-before: page; page-break-before: always;"></div><hr />
+<h2>title: &quot;How To Root Android&quot;
+description: &quot;安卓手机获取ROOT权限&quot;</h2>
+<ol start="0">
+<li></li>
+</ol>
+<blockquote>
+<p>https://source.android.com/setup/build/running</p>
+</blockquote>
+<pre><code class="language-bash">adb devi
+adb reboot
+</code></pre>
+<ol>
+<li>Unlocking Bootloader</li>
+</ol>
+<blockquote>
+<p>https://source.android.com/devices/bootloader/locking_unlocking</p>
+</blockquote>
+<pre><code class="language-bash">fastboot flashing unlock
+</code></pre>
+<ol start="2">
+<li>Flashing boot partition</li>
+</ol>
+<p>bootloader
+root permission</p>
+<p>recovery
+fastboot
+adb</p>
+<ul>
+<li>如何从OTA升级包获取boot.img</li>
+</ul>
+<pre><code class="language-bash">$ unzip {OTA package}
+$ cd {OTA package}
+$ git clone https://github.com/vm03/payload_dumper.git
+$ pip install -r payload_dumper/requirements.txt
+$ python payload_dumper/payload_dumper.py payload.bin
+$ file output/boot.img
+</code></pre>
+<ul>
+<li>magisk</li>
+</ul>
+<blockquote>
+<p>https://github.com/topjohnwu/Magisk</p>
+</blockquote>
+<ul>
+<li>edxposed</li>
+</ul>
+<blockquote>
+<p>https://github.com/ElderDrivers/EdXposed</p>
+</blockquote>
+<div style="break-before: page; page-break-before: always;"></div><hr />
+<p>title: &quot;Protobuf在C/CPP下字符串截断&quot;
+date: 2019-11-12
+categories:</p>
+<ul>
+<li>bug
+tags:</li>
+<li>protobuf</li>
+</ul>
+<hr />
+<h2 id="问题problem-1"><a class="header" href="#问题problem-1">问题/Problem</a></h2>
+<ol>
+<li>程序在使用gRPC,protobuf時因為字符串中出現<code>\0</code>發現截斷現象</li>
+</ol>
+<h2 id="原因reason-1"><a class="header" href="#原因reason-1">原因/Reason</a></h2>
+<ol>
+<li><code>\0</code>為C及C++中的字符串結束符
+protobuf中的byte,string等連續內存型數據類型在C/CPP都是以string為轉換類型,無法只修改自身代碼FIX
+<blockquote>
+<p><a href="https://developers.google.com/protocol-buffers/docs/proto#scalar">proto2</a>
+<a href="https://developers.google.com/protocol-buffers/docs/proto3#scalar">proto3</a></p>
+</blockquote>
+</li>
+</ol>
+<h2 id="解决fix-1"><a class="header" href="#解决fix-1">解决/Fix</a></h2>
+<ol>
+<li>因為不存在其他連續內存型數據類型,只能對字符串進行處理,把<code>\0</code>隱去,在最后轉換回來,且自身C/CPP處理中也不能使用string類型處理己轉換類型,要使用字符流</li>
+<li>原想用hex編碼修改,有人提醒想起用base64更好,壓縮能力..</li>
+</ol>
+<div style="break-before: page; page-break-before: always;"></div><hr />
+<p>title: &quot;Git Conventions&quot;
+description: &quot;&quot;
+date: &quot;2022-07-19&quot;
+tags:</p>
+<ul>
+<li>git
+TODO:</li>
+</ul>
+<hr />
+<blockquote>
+<p>REF: https://git-scm.com/book/en/v3</p>
+</blockquote>
+<h1 id="branch"><a class="header" href="#branch">Branch</a></h1>
+<blockquote>
+<p>REF: https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow</p>
+</blockquote>
+<blockquote>
+<p>REF: https://github.com/nvie/gitflow</p>
+</blockquote>
+<blockquote>
+<p>REF: https://nvie.com/posts/a-successful-git-branching-model/</p>
+</blockquote>
+<div class="table-wrapper"><table><thead><tr><th style="text-align: center">type</th><th style="text-align: left">description</th></tr></thead><tbody>
+<tr><td style="text-align: center">feature/&lt;FEATURE_SUMMARY&gt;</td><td style="text-align: left">Feature branches are created from develop, When a feature is complete it is merged into the develop branch</td></tr>
+<tr><td style="text-align: center">bugfix/&lt;BUG_SUMMARY&gt;(or hotfix/&lt;BUG_SUMMARY&gt;)</td><td style="text-align: left">If an issue in main is detected a hotfix branch is created from main</td></tr>
+<tr><td style="text-align: center">release/<VERSION></td><td style="text-align: left">A release branch is created from develop, When the release branch is done it is merged into develop and main</td></tr>
+<tr><td style="text-align: center">develop</td><td style="text-align: left">A develop branch is created from main</td></tr>
+<tr><td style="text-align: center">master(or main)</td><td style="text-align: left">The main branch stores the official release history, and the develop branch serves as an integration branch for features. It's also convenient to tag all commits in the main branch with a version number.</td></tr>
+</tbody></table>
+</div>
+<p><img src="https://nvie.com/img/git-model@2x.png" alt="@GitFlow" /></p>
+<h1 id="commit"><a class="header" href="#commit">Commit</a></h1>
+<blockquote>
+<p>REF: https://github.com/angular/angular/blob/master/CONTRIBUTING.md#-commit-message-format</p>
+</blockquote>
+<blockquote>
+<p>REF: https://github.com/commitizen/conventional-commit-types/blob/master/index.json</p>
+</blockquote>
+<blockquote>
+<p>REF: https://www.conventionalcommits.org/en/v1.0.0/</p>
+</blockquote>
+<pre><code class="language-text">&lt;type&gt;(&lt;scope&gt;)[!]: &lt;short summary&gt;
+  │       │     │        │
+  │       │     │        └─⫸ Summary in present tense. Not capitalized. No period at the end.
+  │       │     │
+  │       │     └─⫸ If ! is used, BREAKING CHANGE: MAY be omitted from the footer section, and
+  │       │         the commit description SHALL be used to describe the breaking change.
+  │       │
+  │       └─⫸ Commit Scope: animations|bazel|benchpress|common|compiler|compiler-cli|core|
+  │                          elements|forms|http|language-service|localize|platform-browser|
+  │                          platform-browser-dynamic|platform-server|router|service-worker|
+  │                          upgrade|zone.js|packaging|changelog|docs-infra|migrations|ngcc|ve|
+  │                          devtools
+  │
+  └─⫸ Commit Type
+</code></pre>
+<div class="table-wrapper"><table><thead><tr><th style="text-align: center">type</th><th style="text-align: left">description</th></tr></thead><tbody>
+<tr><td style="text-align: center">feat</td><td style="text-align: left">A new feature</td></tr>
+<tr><td style="text-align: center">fix</td><td style="text-align: left">A bug fix</td></tr>
+<tr><td style="text-align: center">test</td><td style="text-align: left">Adding missing tests or correcting existing tests</td></tr>
+<tr><td style="text-align: center">ci</td><td style="text-align: left">Changes to our CI configuration files and scripts (examples:CircleCi, SauceLabs)</td></tr>
+<tr><td style="text-align: center">build</td><td style="text-align: left">Changes that affect the build system or external dependencies (example scopes:gulp, broccoli, npm)</td></tr>
+<tr><td style="text-align: center">docs</td><td style="text-align: left">Documentation only changes</td></tr>
+<tr><td style="text-align: center">perf</td><td style="text-align: left">A code change that improves performance</td></tr>
+<tr><td style="text-align: center">refactor</td><td style="text-align: left">A code change that neither fixes a bug nor adds a feature</td></tr>
+<tr><td style="text-align: center">style</td><td style="text-align: left">Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)</td></tr>
+<tr><td style="text-align: center">chore</td><td style="text-align: left">Other changes that don't modify src or test files (version.txt and release changes)</td></tr>
+<tr><td style="text-align: center">misc</td><td style="text-align: left">Miscellaneous types</td></tr>
+<tr><td style="text-align: center">wip</td><td style="text-align: left">Working in process</td></tr>
+</tbody></table>
+</div><div style="break-before: page; page-break-before: always;"></div><hr />
+<p>title: &quot;Openresty WAF via p0pr0ck5/lua-resty-waf&quot;
+description: &quot;使用开源的WAF规则引擎简单搭一个Openresty WAF DEMO&quot;
+lead: &quot;&quot;
+date: 2021-04-21T10:23:51+08:00
+lastmod: 2021-04-21T10:23:51+08:00
+weight: 50
+tags:</p>
+<ul>
+<li>WAF</li>
+<li>openresty</li>
+</ul>
+<hr />
+<h2 id="environment"><a class="header" href="#environment">Environment</a></h2>
+<ol>
+<li>Ubuntu 18.04</li>
+<li>Openresty-1.19.3.1</li>
+</ol>
+<h2 id="go"><a class="header" href="#go">GO</a></h2>
+<ol>
+<li>Get Openresty</li>
+</ol>
+<pre><code class="language-bash">$ curl -O https://openresty.org/download/openresty-1.19.3.1.tar.gz
+$ tar xf openresty-1.19.3.1.tar.gz
+$ cd openresty-1.19.3.1.tar.gz
+</code></pre>
+<ol start="2">
+<li>Install Depends</li>
+</ol>
+<pre><code class="language-bash">$ sudo apt udpate
+$ apt install -y gcc make liblua5.1 libpcre3-dev libssl-dev zlib1g-dev
+</code></pre>
+<ol start="3">
+<li>Compile Openresty</li>
+</ol>
+<pre><code class="language-bash">$ ./configure --prefix=/usr/local/openresty --with-luajit --with-http_stub_status_module --with-pcre --with-pcre-jit
+$ make
+$ sudo make install
+$ ldd bin/openresty
+        linux-vdso.so.1 (0x00007fff2b9df000)
+        libdl.so.2 =&gt; /lib/x86_64-linux-gnu/libdl.so.2 (0x00007ff8091ee000)
+        libpthread.so.0 =&gt; /lib/x86_64-linux-gnu/libpthread.so.0 (0x00007ff808fcf000)
+        libcrypt.so.1 =&gt; /lib/x86_64-linux-gnu/libcrypt.so.1 (0x00007ff808d97000)
+        libluajit-5.1.so.2 =&gt; /usr/local/openresty/luajit/lib/libluajit-5.1.so.2 (0x00007ff808b16000)
+        libpcre.so.3 =&gt; /lib/x86_64-linux-gnu/libpcre.so.3 (0x00007ff8088a4000)
+        libssl.so.1.1 =&gt; /usr/lib/x86_64-linux-gnu/libssl.so.1.1 (0x00007ff808617000)
+        libcrypto.so.1.1 =&gt; /usr/lib/x86_64-linux-gnu/libcrypto.so.1.1 (0x00007ff80814c000)
+        libz.so.1 =&gt; /lib/x86_64-linux-gnu/libz.so.1 (0x00007ff807f2f000)
+        libc.so.6 =&gt; /lib/x86_64-linux-gnu/libc.so.6 (0x00007ff807b3e000)
+        /lib64/ld-linux-x86-64.so.2 (0x00007ff8097d4000)
+        libm.so.6 =&gt; /lib/x86_64-linux-gnu/libm.so.6 (0x00007ff8077a0000)
+        libgcc_s.so.1 =&gt; /lib/x86_64-linux-gnu/libgcc_s.so.1 (0x00007ff807588000)
+</code></pre>
+<ol start="4">
+<li>Get Waf Lua Script ( Via p0pr0ck5/lua-resty-waf to test )</li>
+</ol>
+<pre><code class="language-bash">$ git clone https://github.com/p0pr0ck5/lua-resty-waf.git
+$ cd lua-resty-waf
+$ sudo apt install python luarocks
+$ git submodule update --init --recursive
+$ make
+# FAQ: https://github.com/p0pr0ck5/lua-resty-waf/pull/334
+$ sudo PATH=/usr/local/openresty/bin:$PATH make install
+# Makefile default openresty prefix is /usr/local/openresty
+</code></pre>
+<ol start="5">
+<li>Configure Nginx</li>
+</ol>
+<ul>
+<li>nginx.conf
+<blockquote>
+<p>https://github.com/p0pr0ck5/lua-resty-waf#synopsis</p>
+<p>https://github.com/p0pr0ck5/lua-resty-waf#mode</p>
+</blockquote>
+<pre><code class="language-text">http {
+    lua_package_path &quot;...&quot;;
+
+    init_by_lua_block {
+        -- use resty.core for performance improvement, see the status note above
+        require &quot;resty.core&quot;
+
+        -- require the base module
+        local lua_resty_waf = require &quot;resty.waf&quot;
+
+        -- perform some preloading and optimization
+        lua_resty_waf.init()
+    }
+
+    server {
+        location / {
+
+            access_by_lua_block {
+                local lua_resty_waf = require &quot;resty.waf&quot;
+
+                local waf = lua_resty_waf:new()
+
+                -- define options that will be inherited across all scopes
+                waf:set_option(&quot;debug&quot;, true)
+                waf:set_option(&quot;mode&quot;, &quot;ACTIVE&quot;)
+
+                -- this may be desirable for low-traffic or testing sites
+                -- by default, event logs are not written until the buffer is full
+                -- for testing, flush the log buffer every 5 seconds
+                --
+                -- this is only necessary when configuring a remote TCP/UDP
+                -- socket server for event logs. otherwise, this is ignored
+                waf:set_option(&quot;event_log_periodic_flush&quot;, 5)
+
+                -- run the firewall
+                waf:exec()
+            }
+
+            header_filter_by_lua_block {
+                local lua_resty_waf = require &quot;resty.waf&quot;
+
+                -- note that options set in previous handlers (in the same scope)
+                -- do not need to be set again
+                local waf = lua_resty_waf:new()
+
+                waf:exec()
+            }
+
+            body_filter_by_lua_block {
+                local lua_resty_waf = require &quot;resty.waf&quot;
+
+                local waf = lua_resty_waf:new()
+
+                waf:exec()
+            }
+
+            log_by_lua_block {
+                local lua_resty_waf = require &quot;resty.waf&quot;
+
+                local waf = lua_resty_waf:new()
+
+                waf:exec()
+            }
+        }
+
+        ....
+    }
+}
+
+</code></pre>
+</li>
+</ul>
+<ol start="6">
+<li>
+<p>Test WAF</p>
+<pre><code class="language-bash">$ curl -IL &quot;http://localhost?a=alert(1)&quot;
+HTTP/1.1 403 Forbidden
+Server: openresty/1.19.3.1
+Date: Wed, 21 Apr 2021 09:44:57 GMT
+Content-Type: text/html
+Content-Length: 159
+Connection: keep-alive
+
+$ curl -IL &quot;http://localhost?a=1&quot;
+HTTP/1.1 200 OK
+Server: openresty/1.19.3.1
+Date: Wed, 21 Apr 2021 09:45:01 GMT
+Content-Type: text/html
+Content-Length: 1097
+Last-Modified: Wed, 21 Apr 2021 07:43:55 GMT
+Connection: keep-alive
+ETag: &quot;607fd7bb-449&quot;
+Accept-Ranges: bytes
+
+$ curl -IL &quot;http://localhost&quot;
+HTTP/1.1 200 OK
+Server: openresty/1.19.3.1
+Date: Wed, 21 Apr 2021 09:45:03 GMT
+Content-Type: text/html
+Content-Length: 1097
+Last-Modified: Wed, 21 Apr 2021 07:43:55 GMT
+Connection: keep-alive
+ETag: &quot;607fd7bb-449&quot;
+Accept-Ranges: bytes
+</code></pre>
+</li>
+</ol>
+<div style="break-before: page; page-break-before: always;"></div><hr />
+<p>title: &quot;Adb Device No Permissions&quot;
+date: 2020-12-09T13:06:13+08:00
+categories:</p>
+<ul>
+<li>bug
+tags:</li>
+<li>android</li>
+</ul>
+<hr />
+<h2 id="question-1"><a class="header" href="#question-1">Question</a></h2>
+<pre><code class="language-bash">$ adb devices
+List of devices attached
+00000000        no permissions (user in plugdev group; are your udev rules wrong?); see [http://developer.android.com/tools/device.html]
+</code></pre>
+<h2 id="fixed"><a class="header" href="#fixed">Fixed</a></h2>
+<pre><code>$ sudo adb kill-server
+$ sudo pkill adb
+$ sudo adb start-server
+$ adb devices
+List of devices attached
+00000000        unauthorized
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><hr />
+<h2>title: &quot;CUPS&quot;
+draft: true</h2>
+<h2 id="faq"><a class="header" href="#faq">FAQ</a></h2>
+<h3 id="add-printer"><a class="header" href="#add-printer">Add Printer</a></h3>
+<pre><code class="language-bash">sudo usermod -a -G lpadmin username
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><hr />
+<p>title: &quot;Nginx502错误&quot;
+date: 2019-12-09
+categories:</p>
+<ul>
+<li>bug
+tags:</li>
+<li>nginx</li>
+</ul>
+<hr />
+<h2 id="问题problem-2"><a class="header" href="#问题problem-2">问题/Problem</a></h2>
+<ol>
+<li>nginx 在轉發中報錯日志為
+<code>... upstream sent too big header while reading response header from upstream ...</code></li>
+</ol>
+<h2 id="原因reason-2"><a class="header" href="#原因reason-2">原因/Reason</a></h2>
+<ol>
+<li>
+<p>反向代理的源站HTTP頭太大了</p>
+<blockquote>
+<p><code>proxy_buffer_size</code>
+<code>proxy_buffers</code>
+<code>proxy_busy_buffers_size</code> </p>
+<p>http://nginx.org/en/docs/http/ngx_http_proxy_module.html</p>
+</blockquote>
+</li>
+</ol>
+<h2 id="解决fix-2"><a class="header" href="#解决fix-2">解决/Fix</a></h2>
+<pre><code class="language-nginx">location \ {
+    proxy_buffer_size 4k;
+    proxy_buffers 4 256k;
+    proxy_busy_buffers_size 256k;
+}
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><hr />
+<p>title: &quot;Iwlwifi Intel AX210&quot;
+description: &quot;Intel AX210网卡兼容问题&quot;
+tags:</p>
+<ul>
+<li>linux</li>
+<li>kernel</li>
+<li>iwlwifi</li>
+</ul>
+<hr />
+<h2 id="environment-1"><a class="header" href="#environment-1">Environment</a></h2>
+<ul>
+<li>Intel® Wi-Fi 6 AX210 160MHz</li>
+</ul>
+<pre><code class="language-bash">$ lspci
+...
+09:00.0 Network controller [0280]: Intel Corporation Device [8086:2725] (rev 1a)
+...
+</code></pre>
+<ul>
+<li>Kali</li>
+</ul>
+<h2 id="question-2"><a class="header" href="#question-2">Question</a></h2>
+<pre><code class="language-bash">$ sudo dmesg
+iwlwifi .. Timeout waiting for PNVM load!
+iwlwifi .. Failed to start RT ucode: -110
+iwlwifi .. iwl_trans_send_cmd bad state = 0
+iwlwifi .. Failed to run INIT ucode: -110
+$ ip a
+...
+(no exists wlan)
+...
+</code></pre>
+<h2 id="debugging"><a class="header" href="#debugging">Debugging</a></h2>
+<blockquote>
+<p>https://wireless.wiki.kernel.org/en/users/drivers/iwlwifi</p>
+<p>https://www.intel.com/content/www/us/en/support/articles/000005511/wireless.html</p>
+</blockquote>
+<pre><code class="language-bash">$ ls /lib/firmware/iwlwifi-*.ucode
+...
+iwlwifi-ty-59.601f3a66.0.tgz
+...
+</code></pre>
+<blockquote>
+<p>https://community.intel.com/t5/Wireless/Linux-driver-Wifi-6-AX210-NGW/td-p/1249283</p>
+<p>https://www.reddit.com/r/pop_os/comments/khhufu/is_there_a_way_to_make_intel_ax210_wifi_6e/</p>
+<p>https://www.kernel.org/</p>
+<p>https://www.kali.org/docs/development/recompiling-the-kali-linux-kernel/</p>
+</blockquote>
+<pre><code class="language-bash">$ ls /usr/src/linux-5.12.3
+$ cp /boot/config-...kali...-amd64 .config
+$ make menuconfig
+# $ make
+$ make deb-pkg LOCALVERSION=-custom KDEB_PKGVERSION=$(make kernelversion)-1
+$ sudo dpkg -i ../linux-image-5.12.3-custom_5.12.3-1_amd64.deb
+$ reboot
+</code></pre>
+<h2 id="fixed-1"><a class="header" href="#fixed-1">Fixed</a></h2>
+<p>一开始以为是<code>linux-firmware</code>/<code>iwlwifi</code>没有最新版本的躯动，检查后发现有
+然后是在看发现相关躯动要在<code>5.11+</code>和<code>5.12</code>在支持</p>
+<pre><code class="language-bash">$ apt search linux-source                        c1f@CIFT14
+Sorting... Done
+Full Text Search... Done
+linux-source/kali-rolling 5.10.28-1kali1 all
+  Linux kernel source (meta-package)
+
+linux-source-4.19/oldstable 4.19.181-1~deb9u1 all
+  Linux kernel source for version 4.19 with Debian patches
+
+linux-source-4.9/oldstable 4.9.258-1 all
+  Linux kernel source for version 4.9 with Debian patches
+
+linux-source-5.10/kali-rolling 5.10.28-1kali1 all
+  Linux kernel source for version 5.10 with Debian patches
+</code></pre>
+<p>Kali官方上没有支持，自已编译一个，解决</p>
+<div style="break-before: page; page-break-before: always;"></div><hr />
+<h2>title: &quot;Concurency&quot;
+description: &quot;关于并发&quot;
+draft: true
+weight: 50</h2>
+<h2 id="concurrency-and-parallelism"><a class="header" href="#concurrency-and-parallelism">Concurrency And Parallelism</a></h2>
+<h3 id="concurrency--并发"><a class="header" href="#concurrency--并发">Concurrency / 并发</a></h3>
+<h3 id="parallelism--并行"><a class="header" href="#parallelism--并行">Parallelism / 并行</a></h3>
+<h2 id="io-bound-and-cpu-bound-programme"><a class="header" href="#io-bound-and-cpu-bound-programme">I/O Bound And CPU Bound Programme</a></h2>
+<h3 id="io-bound--io密集型"><a class="header" href="#io-bound--io密集型">IO Bound / IO密集型</a></h3>
+<h3 id="cpu-bound--cpu密集型"><a class="header" href="#cpu-bound--cpu密集型">CPU Bound / CPU密集型</a></h3>
+<h2 id="process-thread-and-coroutine"><a class="header" href="#process-thread-and-coroutine">Process, Thread And Coroutine</a></h2>
+<h3 id="process--进程"><a class="header" href="#process--进程">Process / 进程</a></h3>
+<h3 id="thread--线程"><a class="header" href="#thread--线程">Thread / 线程</a></h3>
+<h3 id="coroutine--协程"><a class="header" href="#coroutine--协程">Coroutine / 协程</a></h3>
+<h2 id="language"><a class="header" href="#language">Language</a></h2>
+<h3 id="python"><a class="header" href="#python">Python</a></h3>
+<blockquote>
+<p>https://docs.python.org/3/library/concurrency.html</p>
+</blockquote>
+<ul>
+<li>mitlprocesses</li>
+<li>threading</li>
+<li>[asyncio]({{&lt; relref &quot;blog/techstack/python_coroutine&quot; &gt;}})</li>
+</ul>
+<h3 id="golang"><a class="header" href="#golang">Golang</a></h3>
+<div style="break-before: page; page-break-before: always;"></div><hr />
+<p>title: &quot;Install Gentoo/Archlinux&quot;
+date: 2020-12-06T09:13:12+08:00
+toc: true
+categories:</p>
+<ul>
+<li>note
+tags:</li>
+<li>linux</li>
+<li>gentoo</li>
+<li>archlinux</li>
+<li>install</li>
+</ul>
+<hr />
+<blockquote>
+<p>这理又重装了Gentoo,Archlinux是之前安装的,只在记忆中简单对比一下大概的</p>
+</blockquote>
+<blockquote>
+<p><em>约定名词</em>
+安装环境: 安装Gentoo/Archlinux的操作环境,非安装后的新系统环境,通常为LiveCD的Live环境中
+目标环境: 安装Gentoo/Archlinux的新系统环境,为安装后结果,此文以<code>/mnt</code>为挂载目标(与Archlinux一致,Gentoo官方文档是以<code>/mnt/gentoo</code>为例)</p>
+</blockquote>
+<h2 id="一点小理解"><a class="header" href="#一点小理解">一点小理解</a></h2>
+<blockquote>
+<p>https://www.gentoo.org/
+https://www.archlinux.org/</p>
+</blockquote>
+<div class="table-wrapper"><table><thead><tr><th></th><th>Gentoo</th><th>Archlinux</th></tr></thead><tbody>
+<tr><td>一句话</td><td>配置自由度极高(也有人说OverEninerring)</td><td>KISS(Keep it Simple, Stupid)</td></tr>
+<tr><td>硬件支持</td><td>反正内核自已编译程序自已编译...</td><td>官方支持x86</td></tr>
+<tr><td>INIT</td><td>OpenRC(default)/Systemd</td><td>Systemd</td></tr>
+<tr><td>包管理</td><td>portage(源码编译,提供<code>USE</code>,<code>SLOT</code>等超赞功能)</td><td>pacman(二进制分发)</td></tr>
+<tr><td>安装环境</td><td>基本完全不依赖LiveCD,可在任何安装环境下使用stage包开始构建新系统</td><td>依赖LiveCD一些工具</td></tr>
+</tbody></table>
+</div>
+<h2 id="玩起来"><a class="header" href="#玩起来">玩起来</a></h2>
+<ol>
+<li>
+<p>Gentoo</p>
+<blockquote>
+<p>https://wiki.gentoo.org/wiki/Installation
+https://wiki.gentoo.org/wiki/Handbook:Main_Page</p>
+</blockquote>
+</li>
+<li>
+<p>Archlinux</p>
+<blockquote>
+<p>https://wiki.archlinux.org/index.php/installation_guide</p>
+</blockquote>
+</li>
+</ol>
+<h3 id="安装介质"><a class="header" href="#安装介质">安装介质</a></h3>
+<p><a href="https://blog.chongiofai.com/note/make-livecd">制作LiveUSB</a></p>
+<blockquote>
+<p>TODO:</p>
+</blockquote>
+<ol>
+<li>
+<p>Gentoo</p>
+<blockquote>
+<p>https://www.gentoo.org/downloads/</p>
+</blockquote>
+</li>
+<li>
+<p>Archlinux</p>
+<blockquote>
+<p>https://archlinux.org/download/</p>
+</blockquote>
+</li>
+</ol>
+<h3 id="配置安装环境"><a class="header" href="#配置安装环境">配置安装环境</a></h3>
+<ol>
+<li>
+<p>Network</p>
+<pre><code class="language-bash">$ ip address
+</code></pre>
+</li>
+<li>
+<p>Date</p>
+<pre><code class="language-bash">$ date
+$ ntpdate -u cn.pool.ntp.org
+</code></pre>
+</li>
+<li>
+<p>Keymap</p>
+</li>
+</ol>
+<h3 id="磁盘分区"><a class="header" href="#磁盘分区">磁盘分区</a></h3>
+<p><a href="https://blog.chongiofai.com/note/partition-disk">Disk Partitional</a></p>
+<ol>
+<li>
+<p>准备安装磁盘</p>
+<pre><code class="language-bash"># 查看当前磁盘挂载情况,确定使用哪块磁盘
+$ sudo lsblk
+$ sudo blkid
+# 磁盘分区,以`/dev/sda`为例,简单区分`/`,`/home`,`/boot`,`/boot/efi`,此处使用UEFI方式躯动
+$ gdisk /dev/sda
+</code></pre>
+</li>
+<li>
+<p>磁盘格式化/加密/逻辑分区</p>
+<pre><code class="language-bash"># 此处只作普通分区
+$ mkfs.ext4 -L GENTOO /dev/sda1
+$ mkfs.vfat -L  /dev/sda2
+$ mkswap -L SWAP /dev/sda3
+$ mkfs.ext4 -L GENTOO /dev/sda4
+$ mkfs.ext4 -L GENTOO /dev/sda5
+</code></pre>
+</li>
+<li>
+<p>挂载磁盘</p>
+<pre><code class="language-bash">$ mount /dev/sda4 /
+$ mkdir -p /mnt/boot/efi
+$ mkdir -p /mnt/home
+$ mount /dev/sda1 /mnt/boot
+$ mount /dev/sda2 /mnt/boot/efi
+$ mount /dev/sda5 /mnt/home
+$ swapon /dev/sda3
+# 下方在Archlinux中可以使用LiveCD工具`arch-chroot /mnt`时自动完成,Gentoo需自行手动操作
+$ mount --types proc /proc /mnt/proc
+$ mount --rbind /sys /mnt/sys
+$ mount --make-rslave /mnt/sys  # 使用Systemd时必须
+$ mount --rbind /dev /mnt/dev
+$ mount --make-rslave /mnt/dev  # 使用Systemd时必须
+</code></pre>
+</li>
+</ol>
+<h3 id="安装工具链"><a class="header" href="#安装工具链">安装工具链</a></h3>
+<ol>
+<li>
+<p>Gentoo</p>
+<pre><code class="language-bash">$ tar xvf stage3-amd64-20201230T214503Z.tar.xz -C /mnt
+# 选择校验下载源
+$ mirrorselect -i -o &gt;&gt; /mnt/etc/portage/make.conf
+# 复制
+</code></pre>
+<blockquote>
+<p>进入环境后</p>
+</blockquote>
+<pre><code class="language-bash"># 配置下载源
+$ mkdir -p /etc/portage/repors.conf
+$ cp /usr/share/portage/config/repos.conf /etc/portage/repors.conf/gentoo.conf
+$ cat /etc/portage/repors.conf/gentoo.conf
+# 时间同步,Gentoo安装拉取会使用到`rsync`等依赖系统时间
+$ ntpdate -u cn.pool.ntp.org
+# 下载文件校验码
+$ emerge-webrsync
+# 下载文件目录
+$ emerge --sync
+# 确定portage配置
+$ cat /etc/portage/make.conf
+# 选择配置文件
+$ eselect profile list
+$ eselect profile set 1
+$ eselect profile list
+</code></pre>
+</li>
+<li>
+<p>Archlinux</p>
+<pre><code class="language-bash">$ pacstrap /mnt base
+</code></pre>
+</li>
+</ol>
+<h3 id="安装内核"><a class="header" href="#安装内核">安装内核</a></h3>
+<ol>
+<li>
+<p>Gentoo</p>
+<blockquote>
+<p>https://wiki.gentoo.org/wiki/Handbook:AMD64/Installation/Kernel</p>
+</blockquote>
+<pre><code class="language-bash">$ emerge --ask --verbose sys-apps/pciutils app-admin/mcelog
+$ emerge --ask --verbose sys-kernel/gentoo-sources
+$ cd /usr/src/linux
+$ make menuconfig
+$ cat /usr/src/linux/.config
+$ make
+$ make modules_install
+$ make install
+$ ls /boot/vmlinuz-*-gentoo-*  /boot/config-*-gentoo-* /boot/System.map-*-gentoo-*
+$ genkenerl
+$ ls /boot/initramfs-*-gentoo-*
+</code></pre>
+</li>
+<li>
+<p>Archlinux</p>
+<pre><code class="language-bash">$ pacstrap /mnt linux
+</code></pre>
+</li>
+</ol>
+<h3 id="安装驱动"><a class="header" href="#安装驱动">安装驱动</a></h3>
+<ol>
+<li>
+<p>Gentoo</p>
+<pre><code class="language-bash">$ emerge --ask --verbose sys-kernel/linux-firmware
+</code></pre>
+</li>
+<li>
+<p>Archlinux</p>
+<pre><code class="language-bash">$ pacstrap /mnt linux-firmware
+</code></pre>
+</li>
+</ol>
+<h3 id="安装引导"><a class="header" href="#安装引导">安装引导</a></h3>
+<p><a href="https://blog.chongiofai.com/note/boot-device">Boot Device</a></p>
+<ol>
+<li>
+<p>Gentoo</p>
+<pre><code class="language-bash">$ emerge --ask --verbose sys-boot/grub:2
+</code></pre>
+</li>
+<li>
+<p>Archlinux</p>
+</li>
+</ol>
+<h3 id="个人化"><a class="header" href="#个人化">个人化</a></h3>
+<ol>
+<li>locale,keymap</li>
+<li>hostname, domain</li>
+<li>hosts</li>
+<li>passwd,useradd</li>
+</ol>
+<h3 id="其他"><a class="header" href="#其他">其他</a></h3>
+<h4 id="图形化"><a class="header" href="#图形化">图形化</a></h4>
+<p><a href="https://blog.chongiofai.com/note/linux-graphics">Linux Graphics</a></p>
+<ol>
+<li>
+<p>Gentoo</p>
+</li>
+<li>
+<p>Archlinux</p>
+</li>
+<li>
+<p>安装发行版工具链,如init(Archlinux的<code>Systemd</code>和Gentoo可选的<code>Systemd</code>及<code>OpenRC</code>)、包管理工具(Archlinux的<code>pacman</code>和Gentoo的<code>portage</code>)等等</p>
+<ul>
+<li>
+<p>Archlinux</p>
+<pre><code class="language-bash">pacstrap /mnt base
+</code></pre>
+</li>
+<li>
+<p>Gentoo</p>
+<blockquote>
+<p>https://wiki.gentoo.org/wiki/Handbook:AMD64/Installation/Stage</p>
+</blockquote>
+<pre><code class="language-bash">tar xf stage3-amd64-20201202T214503Z.tar.xz  # 这里使用OpenRC版本init
+</code></pre>
+</li>
+</ul>
+</li>
+<li>
+<p>工具链配置</p>
+</li>
+<li>
+<p>安装Linux的内核</p>
+</li>
+<li>
+<p>安装基本驱动集合</p>
+<ul>
+<li>
+<p>Archlinux</p>
+<pre><code class="language-bash">pacstrap /mnt linux-firmware
+</code></pre>
+</li>
+<li>
+<p>Gentoo</p>
+<pre><code class="language-bash">emerge --ask sys-kernel/linux-firmware
+</code></pre>
+</li>
+</ul>
+</li>
+<li>
+<p>启动
+<code>grub-install --efi</code>....
+<code>update-grub</code></p>
+</li>
+<li>
+<p>本地化</p>
+</li>
+<li>
+<p>网络配置</p>
+</li>
+<li>
+<p>图形化(Optional)</p>
+</li>
+</ol>
+<blockquote>
+<p>TODO:</p>
+</blockquote>
+<h2 id="参考资料"><a class="header" href="#参考资料">参考资料</a></h2>
+<p>https://wiki.gentoo.org/</p>
+<p>http://wiki.archlinux.org/</p>
+<p>https://www.thegeekstuff.com/2011/02/linux-boot-process/</p>
+<h2 id="后续"><a class="header" href="#后续">后续</a></h2>
+<div style="break-before: page; page-break-before: always;"></div><hr />
+<p>title: &quot;LiveCD&quot;
+date: 2020-12-06T09:13:12+08:00
+categories:</p>
+<ul>
+<li>note
+tags:</li>
+<li>livecd</li>
+<li>kali</li>
+<li>linux</li>
+</ul>
+<hr />
+<h1 id="livecd"><a class="header" href="#livecd">LiveCD</a></h1>
+<h2 id="install-livecd"><a class="header" href="#install-livecd">Install LiveCD</a></h2>
+<pre><code class="language-bash">dd status=progress if=livecd.iso of=/dev/sdaX bs=512
+fdisk ... # TODO: fix disk size
+cryptsetup luksFormt /dev/sdaX
+cryptsetup open persistence /dev/sdaX
+mkfs.ext4 -L persistence /dev/mapper/persistence
+mount /dev/mapper/persistence /mnt/livecd
+echo &quot;/ union&quot; &gt; /mnt/livecd/persistence.conf
+umount /dev/mapper/persistence
+cryptsetup close persistence
+</code></pre>
+<h2 id="-1"><a class="header" href="#-1"></a></h2>
+<ol>
+<li>backup dick images</li>
+</ol>
+<pre><code class="language-bash">$ fdisk -l
+$ blkid
+$ dd status=progress bs=512 if=/dev/sda1 | gzip -nc -6 &gt; backup.img.gz
+# status
+# bs
+# if
+</code></pre>
+<h2 id="参考资料-1"><a class="header" href="#参考资料-1">参考资料</a></h2>
+<p>https://www.kali.org/downloads/</p>
+<p>https://www.kali.org/docs/usb/kali-linux-live-usb-install-linux/</p>
+<p>https://www.kali.org/docs/usb/kali-linux-live-usb-persistence/</p>
+<h2 id="后续-1"><a class="header" href="#后续-1">后续</a></h2>
+<p>TODO: 先把记得的先写下,用了一下Kali好像用了个一次性的内核,然后每次rsync到持久化分区保存文件,有空也可以再探究一下</p>
+<div style="break-before: page; page-break-before: always;"></div><hr />
+<p>title: &quot;I3&quot;
+description: &quot;&quot;
+draft: true
+tags:</p>
+<ul>
+<li>i3</li>
+<li>linux</li>
+</ul>
+<hr />
+<h2 id="i3wm"><a class="header" href="#i3wm">i3wm</a></h2>
+<blockquote>
+<p>https://i3wm.org/docs/userguide.html</p>
+</blockquote>
+<h2 id="i3status"><a class="header" href="#i3status">i3status</a></h2>
+<blockquote>
+<p>https://i4wm.org/i3status/manpage.html</p>
+</blockquote>
+<div style="break-before: page; page-break-before: always;"></div><hr />
+<p>title: &quot;Linux Graphics&quot; # Title of the blog post.
+date: 2020-12-23T10:57:01+08:00 # Date of post creation.</p>
+<h1 id="description-article-description--description-used-for-search-engine"><a class="header" href="#description-article-description--description-used-for-search-engine">description: &quot;Article description.&quot; # Description used for search engine.</a></h1>
+<h1 id="featured-true--sets-if-post-is-a-featured-post-making-appear-on-the-home-page-side-bar"><a class="header" href="#featured-true--sets-if-post-is-a-featured-post-making-appear-on-the-home-page-side-bar">featured: true # Sets if post is a featured post, making appear on the home page side bar.</a></h1>
+<h1 id="menu-main"><a class="header" href="#menu-main">menu: main</a></h1>
+<h1 id="featureimage-imagespathfilejpg--sets-featured-image-on-blog-post"><a class="header" href="#featureimage-imagespathfilejpg--sets-featured-image-on-blog-post">featureImage: &quot;/images/path/file.jpg&quot; # Sets featured image on blog post.</a></h1>
+<h1 id="thumbnail-imagespaththumbnailpng--sets-thumbnail-image-appearing-inside-card-on-homepage"><a class="header" href="#thumbnail-imagespaththumbnailpng--sets-thumbnail-image-appearing-inside-card-on-homepage">thumbnail: &quot;/images/path/thumbnail.png&quot; # Sets thumbnail image appearing inside card on homepage.</a></h1>
+<h1 id="shareimage-imagespathsharepng--designate-a-separate-image-for-social-media-sharing"><a class="header" href="#shareimage-imagespathsharepng--designate-a-separate-image-for-social-media-sharing">shareImage: &quot;/images/path/share.png&quot; # Designate a separate image for social media sharing.</a></h1>
+<h1 id="codemaxlines-10--override-global-value-for-how-many-lines-within-a-code-block-before-auto-collapsing"><a class="header" href="#codemaxlines-10--override-global-value-for-how-many-lines-within-a-code-block-before-auto-collapsing">codeMaxLines: 10 # Override global value for how many lines within a code block before auto-collapsing.</a></h1>
+<h1 id="codelinenumbers-false--override-global-value-for-showing-of-line-numbers-within-code-block"><a class="header" href="#codelinenumbers-false--override-global-value-for-showing-of-line-numbers-within-code-block">codeLineNumbers: false # Override global value for showing of line numbers within code block.</a></h1>
+<h1 id="figurepositionshow-true--override-global-value-for-showing-the-figure-label"><a class="header" href="#figurepositionshow-true--override-global-value-for-showing-the-figure-label">figurePositionShow: true # Override global value for showing the figure label.</a></h1>
+<h1 id="comment-false--disable-comment-if-false"><a class="header" href="#comment-false--disable-comment-if-false">comment: false # Disable comment if false.</a></h1>
+<p>toc: true # Controls if a table of contents should be generated for first-level links automatically.
+categories:</p>
+<ul>
+<li>note
+tags:</li>
+</ul>
+<hr />
+<h2 id="x11"><a class="header" href="#x11">X11</a></h2>
+<p>xorg</p>
+<p><code>Linux</code>图形化上有一个框架/标准/协议(?)叫<code>X11</code>,其中<code>Xorg</code>就是他的实现,在各种<code>DM</code>,<code>DE</code>,<code>WM</code>上都使用相应接口进行,也是对多个不同之间框架模块兼容的理由</p>
+<h2 id="de-desktop-environment"><a class="header" href="#de-desktop-environment">DE Desktop Environment</a></h2>
+<h2 id="dm-display-manage"><a class="header" href="#dm-display-manage">DM Display Manage</a></h2>
+<h2 id="wm-window-manage"><a class="header" href="#wm-window-manage">WM Window Manage</a></h2>
+<div style="break-before: page; page-break-before: always;"></div><hr />
+<p>title: &quot;URI Schema&quot;
+description: &quot;&quot;
+tags:</p>
+<ul>
+<li>uri
+TODO:</li>
+</ul>
+<hr />
+<pre><code>&lt;SCHEME&gt;://&lt;NETLOC&gt;&lt;PATH&gt;?&lt;PARAMS&gt;#&lt;FRAGMENT&gt;
+
+&lt;NETLOC&gt; =&gt; &lt;HOST&gt;:&lt;PORT&gt;
+&lt;HOST&gt; =&gt; &lt;DOMAIN&gt;/&lt;IPv4&gt;/&lt;IPv6&gt;
+&lt;DOMAIN&gt; =&gt; &lt;SUBDOMAIN&gt;.&lt;FLD&gt;
+&lt;FLD&gt; =&gt; #.&lt;SLD&gt;.&lt;TLD&gt;
+
+e.g. www.example.com
+TLD =&gt; com.
+SLD =&gt; example.com.
+FLD =&gt; example.com.
+e.g. www.example.com.cn
+TLD =&gt; cn.
+SLD =&gt; com.cn.
+FLD=&gt; example.com.cn.
+
+</code></pre>
+<div class="table-wrapper"><table><thead><tr><th style="text-align: center">part</th><th style="text-align: left">description</th></tr></thead><tbody>
+<tr><td style="text-align: center">TLD</td><td style="text-align: left">Top level domain ()</td></tr>
+<tr><td style="text-align: center">gTLD</td><td style="text-align: left"></td></tr>
+<tr><td style="text-align: center">SLD</td><td style="text-align: left">Second level domain</td></tr>
+<tr><td style="text-align: center">FLD</td><td style="text-align: left">Free level domain</td></tr>
+</tbody></table>
+</div>
+<blockquote>
+<p>REF: <a href="https://data.iana.org/TLD/tlds-alpha-by-domain.txt">List of Top-Level Domains</a></p>
+</blockquote>
+<p>// TODO:</p>
+<div style="break-before: page; page-break-before: always;"></div><hr />
+<p>title: &quot;Linux Keyboard Configure&quot;
+description: &quot;Linux键盘配置&quot;
+tags:</p>
+<ul>
+<li>linux</li>
+<li>keyboard</li>
+</ul>
+<hr />
+<blockquote>
+<p>之前一直在使用LControl和CapsLock交换的Keyboard Layout，但还没好好清晰地理一遍Linux相关的Keyboaed设置，此文章使用Linux发行版为Kali，以Debian为基础</p>
+</blockquote>
+<h2 id="相关包"><a class="header" href="#相关包">相关包</a></h2>
+<h3 id="systemd"><a class="header" href="#systemd"><code>systemd</code></a></h3>
+<p>在大多数的发行版下，在使用<code>systemd</code>作为<code>init system</code>，可以使用其中工具<code>localectl</code>设置<code>CLI</code>及<code>GUI</code>的键盘布局</p>
+<blockquote>
+<p>在Debian下，安装<code>console-data</code>，键盘布包会使用<code>kmap</code>为文件后缀，但<code>localectl</code>使用<code>map</code>为后缀，所以Debian建议使用<code>dpkg-reconfigure console-data</code>及<code>dpkg-reconfigure keyboard-configuration</code>进行配置，相关ISSUS https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=790955</p>
+</blockquote>
+<pre><code class="language-bash">$ localectl --help
+localectl [OPTIONS...] COMMAND ...
+
+Query or change system locale and keyboard settings.
+
+Commands:
+  status                   Show current locale settings
+  set-locale LOCALE...     Set system locale
+  list-locales             Show known locales
+  set-keymap MAP [MAP]     Set console and X11 keyboard mappings
+  list-keymaps             Show known virtual console keyboard mappings
+  set-x11-keymap LAYOUT [MODEL [VARIANT [OPTIONS]]]
+                           Set X11 and console keyboard mappings
+  list-x11-keymap-models   Show known X11 keyboard mapping models
+  list-x11-keymap-layouts  Show known X11 keyboard mapping layouts
+  list-x11-keymap-variants [LAYOUT]
+                           Show known X11 keyboard mapping variants
+  list-x11-keymap-options  Show known X11 keyboard mapping options
+
+Options:
+  -h --help                Show this help
+     --version             Show package version
+     --no-pager            Do not pipe output into a pager
+     --no-ask-password     Do not prompt for password
+  -H --host=[USER@]HOST    Operate on remote host
+  -M --machine=CONTAINER   Operate on local container
+     --no-convert          Don\'t convert keyboard mappings
+
+See the localectl(1) man page for details.
+$ strace localectl list-keymaps 2&gt;&amp;1 | grep lstat
+lstat(&quot;/usr/share/keymaps&quot;,...
+lstat(&quot;/usr/share/kbd/keymaps&quot;,...
+lstat(&quot;/usr/lib/kbd/keymaps&quot;,...
+lstat(&quot;/lib/kbd/keymaps&quot;,...
+</code></pre>
+<h3 id="kbd"><a class="header" href="#kbd"><code>kbd</code></a></h3>
+<p>提供在<code>TTY</code>/<code>Console</code>提供底层键盘工具</p>
+<pre><code class="language-bash">$ apt-file list kbd | grep bin
+kbd: /bin/chvt
+kbd: /bin/dumpkeys
+kbd: /bin/fgconsole
+kbd: /bin/kbd_mode
+kbd: /bin/loadkeys
+kbd: /bin/openvt
+kbd: /bin/setfont
+kbd: /bin/unicode_start
+kbd: /sbin/kbdrate
+kbd: /usr/bin/codepage
+kbd: /usr/bin/deallocvt
+kbd: /usr/bin/getkeycodes
+kbd: /usr/bin/kbdinfo
+kbd: /usr/bin/loadunimap
+kbd: /usr/bin/mapscrn
+kbd: /usr/bin/mk_modmap
+kbd: /usr/bin/psfaddtable
+kbd: /usr/bin/psfgettable
+kbd: /usr/bin/psfstriptable
+kbd: /usr/bin/psfxtable
+kbd: /usr/bin/resizecons
+kbd: /usr/bin/screendump
+kbd: /usr/bin/setkeycodes
+kbd: /usr/bin/setleds
+kbd: /usr/bin/setlogcons
+kbd: /usr/bin/setmetamode
+kbd: /usr/bin/setvtrgb
+kbd: /usr/bin/showconsolefont
+kbd: /usr/bin/showkey
+kbd: /usr/bin/splitfont
+kbd: /usr/bin/unicode_stop
+kbd: /usr/sbin/setvesablank
+kbd: /usr/sbin/vcstime
+</code></pre>
+<p>配置文件<code>/etc/vconsole.conf</code></p>
+<h3 id="x11-xkb-utils"><a class="header" href="#x11-xkb-utils"><code>x11-xkb-utils</code></a></h3>
+<p>提供在<code>X11</code>下的底层键盘工具（<code>X11</code>为Linux主流的<code>GUI</code>协议标准）</p>
+<pre><code class="language-bash">$ apt-file list x11-xkb-utils | grep bin
+x11-xkb-utils: /usr/bin/setxkbmap
+x11-xkb-utils: /usr/bin/xkbbell
+x11-xkb-utils: /usr/bin/xkbcomp
+x11-xkb-utils: /usr/bin/xkbevd
+x11-xkb-utils: /usr/bin/xkbprint
+x11-xkb-utils: /usr/bin/xkbvleds
+x11-xkb-utils: /usr/bin/xkbwatch
+</code></pre>
+<p>配置文件<code>/etc/X11/xorg.conf.d/*</code></p>
+<h2 id="常用设置"><a class="header" href="#常用设置">常用设置</a></h2>
+<h3 id="capslock及lcontrol互换"><a class="header" href="#capslock及lcontrol互换">CapsLock及LControl互换</a></h3>
+<h4 id="gui"><a class="header" href="#gui">GUI</a></h4>
+<pre><code class="language-bash">$ grep -E &quot;(ctrl|caps):&quot; /usr/share/X11/xkb/rules/base.lst
+  ctrl:nocaps          Caps Lock as Ctrl
+  ctrl:lctrl_meta      Left Ctrl as Meta
+  ctrl:swapcaps        Swap Ctrl and Caps Lock
+  ctrl:swapcaps_hyper  Caps Lock as Control, Control as Hyper
+  ctrl:ac_ctrl         At left of 'A'
+  ctrl:aa_ctrl         At bottom left
+  ctrl:rctrl_ralt      Right Ctrl as Right Alt
+  ctrl:menu_rctrl      Menu as Right Ctrl
+  ctrl:swap_lalt_lctl  Swap Left Alt with Left Ctrl
+  ctrl:swap_lwin_lctl  Swap Left Win with Left Ctrl
+  ctrl:swap_rwin_rctl  Swap Right Win with Right Ctrl
+  ctrl:swap_lalt_lctl_lwin Left Alt as Ctrl, Left Ctrl as Win, Left Win as Left Alt
+  caps:internal        Caps Lock uses internal capitalization; Shift &quot;pauses&quot; Caps Lock
+  caps:internal_nocancel Caps Lock uses internal capitalization; Shift does not affect Caps Lock
+  caps:shift           Caps Lock acts as Shift with locking; Shift &quot;pauses&quot; Caps Lock
+  caps:shift_nocancel  Caps Lock acts as Shift with locking; Shift does not affect Caps Lock
+  caps:capslock        Caps Lock toggles normal capitalization of alphabetic characters
+  caps:shiftlock       Caps Lock toggles ShiftLock (affects all keys)
+  caps:swapescape      Swap ESC and Caps Lock
+  caps:escape          Make Caps Lock an additional Esc
+  caps:escape_shifted_capslock Make unmodified Caps Lock an additional Esc, but Shift + Caps Lock behaves like regular Caps Lock
+  caps:backspace       Make Caps Lock an additional Backspace
+  caps:super           Make Caps Lock an additional Super
+  caps:hyper           Make Caps Lock an additional Hyper
+  caps:menu            Make Caps Lock an additional Menu key
+  caps:numlock         Make Caps Lock an additional Num Lock
+  caps:ctrl_modifier   Caps Lock is also a Ctrl
+  caps:none            Caps Lock is disabled
+$ setxkbmap -option ctrl:swapcpas  # enbale swap caps and ctrl, multiple option sep with `,`
+$ setxkbmap -option  # disable xkb options
+</code></pre>
+<h3 id="cli"><a class="header" href="#cli">CLI</a></h3>
+<p>TODO...</p>
+<pre><code class="language-bash">$ cat personal.map
+...
+keycode 29 = Caps_Lock
+keycode 58 = Control
+...
+$ loadkeys personal.map
+</code></pre>
+<h3 id="参考资料-2"><a class="header" href="#参考资料-2">参考资料</a></h3>
+<ul>
+<li><a href="https://wiki.archlinux.org/title/Category:Keyboard_configuration">keyboard configure</a></li>
+<li><a href="https://wiki.archlinux.org/title/Linux_console/Keyboard_configuration">linux console/keyboard</a></li>
+<li><a href="https://wiki.archlinux.org/title/Xorg/Keyboard_configuration">xorg/keyboard</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><hr />
+<h2>title: &quot;Serial Connection&quot;
+description: &quot;串行连接&quot;
+draft: true</h2>
+<div style="break-before: page; page-break-before: always;"></div><hr />
+<p>title: &quot;PyYaml解释‘21:21`错误&quot;
+date: 2019-12-09
+categories:</p>
+<ul>
+<li>bug
+tags:</li>
+<li>yaml</li>
+<li>docker-compose</li>
+</ul>
+<hr />
+<h2 id="问题problem-3"><a class="header" href="#问题problem-3">问题/Problem</a></h2>
+<ol>
+<li>
+<p>在docker-compose.yml中有</p>
+<pre><code class="language-yaml">- 21:21
+</code></pre>
+<p>解析解果為<code>int(1281)</code>非<code>str(&quot;21:21&quot;)</code></p>
+</li>
+</ol>
+<h2 id="原因reason-3"><a class="header" href="#原因reason-3">原因/Reason</a></h2>
+<ol>
+<li>
+<p>在python中pyyaml解釋中發現<code>21:21</code>會解釋為時間類型,再轉為秒數輸出</p>
+<blockquote>
+<p><code>X:Y</code> X為小時,Y為分鐘</p>
+</blockquote>
+</li>
+</ol>
+<h2 id="解决fix-3"><a class="header" href="#解决fix-3">解决/Fix</a></h2>
+<ol>
+<li>在yaml文件中指定為字符串
+<pre><code class="language-yaml"> - &quot;21:21&quot;
+</code></pre>
+</li>
+</ol>
+<div style="break-before: page; page-break-before: always;"></div><hr />
+<h2 id="title-c1f"><a class="header" href="#title-c1f">title: &quot;c1f&quot;</a></h2>
+<h2 id="about"><a class="header" href="#about">About</a></h2>
+<p>I Am ... Security R&amp;D Engineer, Learning Slowly ...</p>
+<h2 id="contact"><a class="header" href="#contact">Contact</a></h2>
+<h3 id="blog"><a class="header" href="#blog"><a href="https://blog.chongiofai.com">Blog</a></a></h3>
+<h3 id="email"><a class="header" href="#email"><a href="mailto:chongiofai@gmail.com">Email</a></a></h3>
+<h3 id="github"><a class="header" href="#github"><a href="https://github.com/chongiofai">Github</a></a></h3>
+<div style="break-before: page; page-break-before: always;"></div><hr />
+<h2>title: &quot;Python Coroutine&quot;
+description: &quot;Python协程&quot;
+draft: true</h2>
+<h2 id="python-36"><a class="header" href="#python-36">Python 3.6+</a></h2>
+<h3 id="asyncio"><a class="header" href="#asyncio"><code>asyncio</code></a></h3>
+<ul>
+<li>
+<p>awaitable</p>
+<ul>
+<li>coroutine</li>
+<li>task</li>
+<li>future</li>
+</ul>
+</li>
+<li>
+<p>gather</p>
+</li>
+<li>
+<p>wait</p>
+</li>
+<li>
+<p>wait_for</p>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><hr />
+<p>title: &quot;MITM Attack Via V2ray&quot;
+date: 2020-03-28
+categories:</p>
+<ul>
+<li>note
+tags:</li>
+<li>hacker</li>
+</ul>
+<hr />
+<blockquote>
+<p>前两天有新闻JD和GITHUB被劫持，和最近生活中有些情况令我想到关于劫持页面重导向试试实现(其实想指定情况下在我手机上劫持微信跳转页面到我自己的页面下</p>
+</blockquote>
+<h2 id="环境"><a class="header" href="#环境">环境</a></h2>
+<ol>
+<li>V2Ray 4.22.1 (V2Fly, a community-driven edition of V2Ray.) Custom (go1.13.8 linux/amd64)</li>
+</ol>
+<h2 id="实现"><a class="header" href="#实现">实现</a></h2>
+<ol>
+<li>v2配置
+设置outbounds规则，设置劫持转发的目标点，在routing设置转发</li>
+</ol>
+<blockquote>
+<p>https://www.v2fly.org/chapter_02/protocols/freedom.html</p>
+</blockquote>
+<pre><code class="language-json">    &quot;outbounds&quot;: [
+        {
+            &quot;protocol&quot;: &quot;freedom&quot;,
+            &quot;settings&quot;: {
+                &quot;redirect&quot;: &quot;127.0.0.1:58885&quot;
+            },
+            &quot;tag&quot;: &quot;mitm&quot;
+        }
+    ],
+</code></pre>
+<blockquote>
+<p>https://www.v2fly.org/chapter_02/03_routing.html</p>
+</blockquote>
+<pre><code class="language-json">    &quot;routing&quot;: {
+        &quot;rules&quot;: [
+            {
+                &quot;domain&quot;: [
+                    &quot;&lt;劫持页面&gt;&quot;
+                ],
+                &quot;outboundTag&quot;: &quot;mitm&quot;,
+                &quot;type&quot;: &quot;field&quot;
+            }
+        ]
+</code></pre>
+<ol start="2">
+<li>写了个简单劫持
+指定了在固定情况下发生劫持..其他情况正常</li>
+</ol>
+<pre><code class="language-python">@app.route(path, methods=[&quot;GET&quot;])
+def hpass():
+    if query == parse_qs(request.query_string):
+        return page, 200
+    url = list(urlsplit(request.url))
+    url[1] = netloc
+    url = urlunsplit(url)
+    resp = requests.get(url)
+    return resp.content, resp.status_code
+
+
+if __name__ == &quot;__main__&quot;:
+    basicConfig(level=DEBUG)
+    app.run(port=58885,
+            ssl_context=('./signature/device.crt',
+                         './signature/device.key'))
+</code></pre>
+<ol start="3">
+<li>最后..
+因为HTTPS关系,劫持成功了,自己的小实验失败了,因为证书,之后自签也无法通过,也是预料之内..就这样吧,挺好玩的</li>
+</ol>
+<div style="break-before: page; page-break-before: always;"></div><hr />
+<p>title: &quot;Kali localectl list-keymaps get no such file or directory Error&quot;
+description: &quot;&quot;
+date: 2021-05-03T22:14:49+08:00
+lastmod: 2021-05-03T22:14:49+08:00
+tags:</p>
+<ul>
+<li>keyboard</li>
+<li>linux</li>
+<li>debian</li>
+</ul>
+<hr />
+<h2 id="environment-2"><a class="header" href="#environment-2">Environment</a></h2>
+<pre><code class="language-bash">$ cat /etc/*release
+PRETTY_NAME=&quot;Kali GNU/Linux Rolling&quot;
+NAME=&quot;Kali GNU/Linux&quot;
+ID=kali
+VERSION=&quot;2021.1&quot;
+VERSION_ID=&quot;2021.1&quot;
+VERSION_CODENAME=&quot;kali-rolling&quot;
+ID_LIKE=debian
+ANSI_COLOR=&quot;1;31&quot;
+HOME_URL=&quot;https://www.kali.org/&quot;
+SUPPORT_URL=&quot;https://forums.kali.org/&quot;
+BUG_REPORT_URL=&quot;https://bugs.kali.org/&quot;
+</code></pre>
+<h2 id="question-3"><a class="header" href="#question-3">Question</a></h2>
+<pre><code class="language-bash">$ localectl list-keymaps
+Failed to read list of keymaps: No such file or directory
+</code></pre>
+<h2 id="debugging-1"><a class="header" href="#debugging-1">Debugging</a></h2>
+<blockquote>
+<p>https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=790955</p>
+</blockquote>
+<pre><code class="language-bash">$ ls /usr/share/keymaps/
+ls: cannot access '/usr/share/keymaps/': No such file or directory
+$ ls /usr/share/kbd/keymaps
+ls: cannot access '/usr/share/kbd/keymaps': No such file or directory
+$ strace localectl list-keymaps 2&gt;&amp;1 | less
+...
+lstat(&quot;/usr/share/kbd/keymaps&quot;, 0x7ffe375fa420) = -1 ENOENT (No such file or directory)
+lstat(&quot;/usr/lib/kbd/keymaps&quot;, 0x7ffe375fa420) = -1 ENOENT (No such file or directory)
+lstat(&quot;/lib/kbd/keymaps&quot;, 0x7ffe375fa420) = -1 ENOENT (No such file or directory)
+...
+$ sudo mv /usr/share/keymaps/i386/qwerty/us.kmap.gz /usr/share/keymaps/i386/qwerty
+/us.map.gz
+$ localectl list-keymaps
+us
+
+</code></pre>
+<h2 id="fixed-2"><a class="header" href="#fixed-2">Fixed</a></h2>
+<ol>
+<li><code>/usr/share/keymaps</code>等没有<code>keymap</code>文件是因为没安装<code>console-data</code></li>
+</ol>
+<pre><code class="language-bash">$ sudo apt install console-data
+</code></pre>
+<ol start="2">
+<li>根据上面的引用<code>issus</code>好像是<code>debian</code>一些兼容性的不同,官方推荐使用别的方式去设置键盘</li>
+</ol>
+<blockquote>
+<p>https://benohead.com/blog/2012/04/27/debian-change-the-keyboard-layout-from-the-console/</p>
+<p>https://wiki.debian.org/Keyboard</p>
+</blockquote>
+<pre><code class="language-bash">$ dpkg-reconfigure console-data
+$ dpkg-reconfigure keyboard-configuration
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><hr />
+<p>title: &quot;Postwoman CORS错误&quot;
+date: 2020-04-06
+categories:</p>
+<ul>
+<li>bug
+tags:</li>
+<li>postwoman</li>
+</ul>
+<hr />
+<h2 id="问题problem-4"><a class="header" href="#问题problem-4">问题/Problem</a></h2>
+<ol>
+<li>postwoman发送请求一直出现CORS，使用了postwoman extensions后只能在postwoman.io中成功，自建失败</li>
+</ol>
+<h2 id="原因reason-4"><a class="header" href="#原因reason-4">原因/Reason</a></h2>
+<ol>
+<li>浏览器安全策略，引至CORS</li>
+<li>原生postwoman extensions只能对postwoman官方项目生效</li>
+</ol>
+<pre><code>      &quot;matches&quot;: [
+        &quot;https://postwoman.io/&quot;,
+        &quot;https://postwoman.io/*&quot;,
+        &quot;https://postwoman.netlify.com/*&quot;,
+        &quot;https://postwoman.netlify.com/&quot;
+      ],
+</code></pre>
+<h2 id="解决fix-4"><a class="header" href="#解决fix-4">解决/Fix</a></h2>
+<ol>
+<li>修改postwoman extensions，对自建增加支持</li>
+</ol>
+<div style="break-before: page; page-break-before: always;"></div><hr />
+<p>title: &quot;Partition Disk&quot; # Title of the blog post.
+date: 2021-01-02
+updated: 2021-01-02
+toc: true
+categories:</p>
+<ul>
+<li>note
+tags:</li>
+<li>partition</li>
+<li>disk</li>
+<li>hardware</li>
+</ul>
+<hr />
+<h2 id="partition-tool"><a class="header" href="#partition-tool">Partition Tool</a></h2>
+<blockquote>
+<p><code>fdisk</code>和<code>parted</code>都是分区实用程序。 <code>fdisk</code>是众所周知的，稳定的，并且推荐用于MBR分区布局，而<code>parted</code>是支持GPT分区的第一个Linux块设备管理实用程序之一。 喜欢<code>fdisk</code>的用户界面的用户可以使用 <code>gdisk</code> （GPT fdisk）作为<code>parted</code>的替代。</p>
+</blockquote>
+<h3 id="parted"><a class="header" href="#parted">parted</a></h3>
+<h3 id="fdisk"><a class="header" href="#fdisk">fdisk</a></h3>
+<h3 id="gdisk"><a class="header" href="#gdisk">gdisk</a></h3>
+<h2 id="partition-table"><a class="header" href="#partition-table">Partition Table</a></h2>
+<h3 id="mbr"><a class="header" href="#mbr">MBR</a></h3>
+<p>主引导记录MBR (Master Boot Record)对分区的起始扇区和长度使用32比特的标识符，它支持三种分区类型：主分区、扩展分区和逻辑分区。主分区把它们的信息存储在主引导记录里一个非常小的空间里，通常是512字节，因为这个空间太小了，所以系统只支持四个主分区。（例如从 /dev/sda1 到/dev/sda4）</p>
+<h3 id="gpt"><a class="header" href="#gpt">GPT</a></h3>
+<p>GPT(GUID Partition Table)为分区使用64比特标识符，它用来存储分区信息的空间也远比MBR的512字节要大，GPT磁盘它也不对分区的数量作限制。分区的大小限制可以达到8ZiB。 译者注：</p>
+<pre><code>1ZiB = 1,024 EiB
+1EiB = 1024 PiB
+1PiB = 1024 TiB
+1TiB = 1024 GiB
+1GiB = 1024 MiB
+1MiB = 1024 KiB
+1KiB = 1024 B
+</code></pre>
+<p>当操作系统和系统固件之间的软件接口是UEFI (相对于BIOS)时，GPT几乎是必选的，因为这里MBR会引起很多兼容性问题。</p>
+<p>GPT还利用校验和和冗余。 它携带CRC32校验和以检测报头和分区表中的错误，并在磁盘的末尾有一个备份GPT。 此备份表可用于恢复磁盘开头附近主GPT的损坏。</p>
+<h2 id="partition-foramt"><a class="header" href="#partition-foramt">Partition Foramt</a></h2>
+<h3 id="btrfs"><a class="header" href="#btrfs">btrfs</a></h3>
+<p>是下一代文件系统，提供了许多高级功能，如快照，通过校验和自我修复、 透明压缩、 子卷和集成 RAID。几个发行版已经开始将它作为一个默认的选项,但它还未为生产工作做好准备。文件系统报告崩溃是常见的。其开发人员敦促人们运行最新的内核版本来解决安全问题,以及老的问题。 这种情况已经很多年了,现在使用它还为时过早。如果出现变更，以及发生了变化，解决错误问题，都很少往旧内核注入补丁。请谨慎使用这个文件系统!</p>
+<h3 id="ext2"><a class="header" href="#ext2">ext2</a></h3>
+<p>是经考验证明可靠的Linux文件系统，但是没有元数据日志，这意味这在启动系统时的ext2文件系统的日常检查相当耗时。现在相当一部分的新一代的日志文件系统都可以非常迅速检查一致性，因此比那些非日志文件系统更受欢迎。当你启动系统碰巧遇到文件系统状态不一致时，日志文件系统不会在那里耽搁很长时间。</p>
+<h3 id="ext3"><a class="header" href="#ext3">ext3</a></h3>
+<p>是ext2文件系统的带日志版本，提供了元数据日志模式以快速恢复数据。此外还提供了其他增强的日志模式，如完整数据日志模式和有序数据日志模式。它使用了HTree索引，在几乎所有的情况下都能保持高性能。简而言之，ext3是非常好及可靠的文件系统。</p>
+<h3 id="ext4"><a class="header" href="#ext4">ext4</a></h3>
+<p>最初创建为ext3的一个分支，EXT4带来了新的功能，性能改进和去除中度更改磁盘格式大小限制。它可以跨越体积高达1的EB并用16 TB最大文件大小。取而代之的是经典的ext2/3位块分配的ext4的使用范围，这对提高大文件的性能，并减少碎片。的Ext4还提供了更为复杂的块分配算法（延迟分配和多嵌段分配）给文件系统驱动更多的方式来优化数据的布局在磁盘上。 EXT4是推荐的通用所有平台的文件系统。</p>
+<h3 id="f2fs"><a class="header" href="#f2fs">f2fs</a></h3>
+<p>这个文件系统最初由三星创建用于NAND闪存，是一种闪存文件系统 从直到2016年第二季度起，这个文件系统仍然被认为不成熟。把Gentoo安装到microSD卡，USB驱动器或其他基于闪存的存储设备时使用它是一个不错的选择。</p>
+<h3 id="jfs"><a class="header" href="#jfs">JFS</a></h3>
+<p>是IBM的高性能日志文件系统。JFS是一个轻量级的、快速的和稳定的基于B+树的文件系统，在很多情况下都有很好的表现。</p>
+<h3 id="reiserfs"><a class="header" href="#reiserfs">ReiserFS</a></h3>
+<p>是基于B+树的文件系统，它有着非常全面的性能，特别时在处理很多小文件的时候，虽然会占用多一点CPU。ReiserFS相比其他文件系统显得受维护的不够。</p>
+<h3 id="xfs"><a class="header" href="#xfs">XFS</a></h3>
+<p>是一种带元数据日志的文件系统，它有一个健壮的特性集，并且对可伸缩性进行了优化。XFS似乎对各种各样的硬件问题显得不够宽容。</p>
+<h3 id="vfat"><a class="header" href="#vfat">vfat</a></h3>
+<p>也称为FAT32，被支持Linux，但不支持任何权限设置。它主要用于互操作性与其他操作系统（主要是微软的Windows），但也是很有必要的一些系统固件（如UEFI）的支持。</p>
+<h3 id="ntfs"><a class="header" href="#ntfs">NTFS</a></h3>
+<p>这个“新技术”的文件系统是Microsoft Windows的旗舰文件系统。 与上面的vfat类似，它不存储BSD或Linux正常工作所需的权限设置或扩展属性，因此它不能用作根文件系统。 它应该'只'用于与Microsoft Windows系统的互操作性（注意只强调）。</p>
+<h2 id="other"><a class="header" href="#other">Other</a></h2>
+<h3 id="lvm"><a class="header" href="#lvm">LVM</a></h3>
+<blockquote>
+<p>https://wiki.archlinux.org/index.php/LVM_
+</br>
+https://en.wikipedia.org/wiki/Logical_Volume_Manager_(Linux)</p>
+</blockquote>
+<h4 id="pv"><a class="header" href="#pv">PV</a></h4>
+<ol>
+<li><code>pvs</code></li>
+<li><code>pvdisplay</code></li>
+</ol>
+<h4 id="vg"><a class="header" href="#vg">VG</a></h4>
+<ol>
+<li><code>vgs</code></li>
+<li><code>vgdisplay</code></li>
+</ol>
+<h4 id="lv"><a class="header" href="#lv">LV</a></h4>
+<ol>
+<li><code>lvs</code></li>
+<li><code>lvdisplay</code></li>
+<li><code>lvextend</code></li>
+</ol>
+<h3 id="luks"><a class="header" href="#luks">LUKS</a></h3>
+<h2 id="mount"><a class="header" href="#mount">Mount</a></h2>
+<h3 id="fstab"><a class="header" href="#fstab">Fstab</a></h3>
+<blockquote>
+<p>/etc/fstab
+</br>
+https://wiki.gentoo.org/wiki/Fstab
+</br>
+https://wiki.gentoo.org/wiki/Handbook:AMD64/Installation/System#About_fstab</p>
+<pre><code>&lt;filesystem&gt; &lt;mountpoint&gt; &lt;type&gt; &lt;options&gt; &lt;dump&gt; &lt;pass&gt;
+</code></pre>
+</blockquote>
+<h4 id="filesystem"><a class="header" href="#filesystem">filesystem</a></h4>
+<blockquote>
+<p>第一个字段显示要挂载的特殊 block 设备或远程文件系统。 有几种设备标识符可用于特殊块设备节点，包括设备文件路径，文件系统标签，UUID，分区标签以及UUID。</p>
+</blockquote>
+<ol>
+<li>UUID</li>
+<li>LABEL</li>
+</ol>
+<h4 id="mountpoint"><a class="header" href="#mountpoint">mountpoint</a></h4>
+<blockquote>
+<p>第二个字段是分区挂载点，也就是分区应该挂载到的地方</p>
+</blockquote>
+<h4 id="type"><a class="header" href="#type">type</a></h4>
+<blockquote>
+<p>第三个字段给出分区所用的文件系统
+</br>
+<a href="http://blog.chongiofai.com/note/partition-disk/#partition-foramt">Partition Format</a></p>
+</blockquote>
+<h4 id="options"><a class="header" href="#options">options</a></h4>
+<blockquote>
+<p>第四个字段给出的是挂载分区时mount命令所用的挂载选项。由于每个文件系统都有自己的挂载选项，我们建议你阅读mount手册（man mount）以获得所有挂载选项的列表。多个挂载选项之间是用逗号分隔的。
+</br>
+https://wiki.gentoo.org/wiki/Mount
+</br>
+http://www.skrenta.com/rt/man/mount.8.html</p>
+</blockquote>
+<h4 id="dump"><a class="header" href="#dump">dump</a></h4>
+<blockquote>
+<p>第五个字段是给dump使用的，用以决定这个分区是否需要dump。一般情况下，你可以把该字段设为0（零）。</p>
+</blockquote>
+<h4 id="pass"><a class="header" href="#pass">pass</a></h4>
+<blockquote>
+<p>第六个字段是给fsck使用的，用以决定系统非正常关机之后文件系统的检查顺序。根文件系统应该为1，而其它的应该为2（如果不需要文件系统自检的话可以设为0）。</p>
+</blockquote>
+<h2 id="references"><a class="header" href="#references">References</a></h2>
+<ul>
+<li>https://wiki.gentoo.org/wiki/Handbook:AMD64/Installation/Disks/zh-cn#%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><hr />
+<p>title: &quot;Ssl Disable Connect&quot; # Title of the blog post.
+date: 2020-12-28T16:10:20+08:00 # Date of post creation.</p>
+<h1 id="description-article-description--description-used-for-search-engine-1"><a class="header" href="#description-article-description--description-used-for-search-engine-1">description: &quot;Article description.&quot; # Description used for search engine.</a></h1>
+<h1 id="featured-true--sets-if-post-is-a-featured-post-making-appear-on-the-home-page-side-bar-1"><a class="header" href="#featured-true--sets-if-post-is-a-featured-post-making-appear-on-the-home-page-side-bar-1">featured: true # Sets if post is a featured post, making appear on the home page side bar.</a></h1>
+<h1 id="menu-main-1"><a class="header" href="#menu-main-1">menu: main</a></h1>
+<h1 id="featureimage-imagespathfilejpg--sets-featured-image-on-blog-post-1"><a class="header" href="#featureimage-imagespathfilejpg--sets-featured-image-on-blog-post-1">featureImage: &quot;/images/path/file.jpg&quot; # Sets featured image on blog post.</a></h1>
+<h1 id="thumbnail-imagespaththumbnailpng--sets-thumbnail-image-appearing-inside-card-on-homepage-1"><a class="header" href="#thumbnail-imagespaththumbnailpng--sets-thumbnail-image-appearing-inside-card-on-homepage-1">thumbnail: &quot;/images/path/thumbnail.png&quot; # Sets thumbnail image appearing inside card on homepage.</a></h1>
+<h1 id="shareimage-imagespathsharepng--designate-a-separate-image-for-social-media-sharing-1"><a class="header" href="#shareimage-imagespathsharepng--designate-a-separate-image-for-social-media-sharing-1">shareImage: &quot;/images/path/share.png&quot; # Designate a separate image for social media sharing.</a></h1>
+<h1 id="codemaxlines-10--override-global-value-for-how-many-lines-within-a-code-block-before-auto-collapsing-1"><a class="header" href="#codemaxlines-10--override-global-value-for-how-many-lines-within-a-code-block-before-auto-collapsing-1">codeMaxLines: 10 # Override global value for how many lines within a code block before auto-collapsing.</a></h1>
+<h1 id="codelinenumbers-false--override-global-value-for-showing-of-line-numbers-within-code-block-1"><a class="header" href="#codelinenumbers-false--override-global-value-for-showing-of-line-numbers-within-code-block-1">codeLineNumbers: false # Override global value for showing of line numbers within code block.</a></h1>
+<h1 id="figurepositionshow-true--override-global-value-for-showing-the-figure-label-1"><a class="header" href="#figurepositionshow-true--override-global-value-for-showing-the-figure-label-1">figurePositionShow: true # Override global value for showing the figure label.</a></h1>
+<h1 id="comment-false--disable-comment-if-false-1"><a class="header" href="#comment-false--disable-comment-if-false-1">comment: false # Disable comment if false.</a></h1>
+<p>toc: true # Controls if a table of contents should be generated for first-level links automatically.
+categories:</p>
+<ul>
+<li>bug
+tags:</li>
+<li>ssl</li>
+</ul>
+<hr />
+<p><strong>Insert Lead paragraph here.</strong></p>
+<h2 id="question-4"><a class="header" href="#question-4">Question</a></h2>
+<pre><code class="language-bash">$ curl https://...
+curl: (35) error:1425F102:SSL routines:ssl_choose_client_version:unsupported protocol
+$ python with_ssl_session.py
+[DEBUG] SSL connection error occurred ('[SSL: WRONG_SSL_VERSION] wrong ssl version (_ssl.c:727)')
+[DEBUG] SSL connection error occurred ('[Errno 0] Error')
+[WARNING] can't establish SSL connection
+</code></pre>
+<h2 id="reason"><a class="header" href="#reason">Reason</a></h2>
+<h2 id="fixed-3"><a class="header" href="#fixed-3">Fixed</a></h2>
+<pre><code class="language-bash">$ vim /etc/ssl/openssl.cnf
+</code></pre>
+<p>disable protocol minimum version constraints</p>
+<pre><code>[system_default_sect]
+# MinProtocol = TLSv1.2
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><hr />
+<p>title: &quot;Grub&quot;
+date: 2020-01-26
+categories:</p>
+<ul>
+<li>note
+tags:</li>
+<li>grub</li>
+</ul>
+<hr />
+<blockquote>
+<p>之前grub搞了个在U盘上引就安装系统，不过引导不了windows的安装装，和和和之前又洗了，之后再玩玩，也想想要怎么玩，因为也想搞个linux在U盘上
+不过今天看到双系统的引导,一来想把倒数关了,免自己老要开机时守那几秒,和上想是找方法想弄成,自动启动上次开启的系统,和和也再好好看看grub</p>
+</blockquote>
+<h2 id="目录"><a class="header" href="#目录">目录</a></h2>
+<blockquote>
+<p>自已之前看过一次文档(都忘了),现在再撸一下目撸猜一下,纪录一下</p>
+</blockquote>
+<ol>
+<li>/boot/grub/*
+引导盘引导程序核心位置，所有引导需要的材料都放在这里了</li>
+<li>/boot/grub/grub.cfg</li>
+</ol>
+<pre><code>引导时的配置都看他了，不过好像是从grub2开始这个是自动生成的，改这如果重刷了还是会改回去，不优雅
+</code></pre>
+<ol start="2">
+<li>/etc/grub.d/*
+好像从grub2版本可以用命令按这个路径下的配置把/boot/grub/grub.cfg渲染出来， 看下README</li>
+</ol>
+<pre><code>All executable files in this directory are processed in shell expansion order.
+
+  00_*: Reserved for 00_header.
+  10_*: Native boot entries.
+  20_*: Third party apps (e.g. memtest86+).
+
+  The number namespace in-between is configurable by system installer and/or
+   administrator.  For example, you can add an entry to boot another OS as
+   01_otheros, 11_otheros, etc, depending on the position you want it to occupy in
+   the menu; and then adjust the default setting via /etc/default/grub.
+</code></pre>
+<p>大概定义了一下各文件的渲染上的任务</p>
+<pre><code>  .
+├── 00_header
+├── 05_debian_theme
+├── 10_linux
+├── 20_linux_xen
+├── 20_memtest86+
+├── 30_os-prober
+├── 30_uefi-firmware
+├── 40_custom
+#!/bin/sh
+exec tail -n +3 $0
+# This file provides an easy way to add custom menu entries.  Simply type the
+# menu entries you want to add after this comment.  Be careful not to change
+# the 'exec tail' line above.
+├── 41_custom
+#!/bin/sh
+if [ -f  \${config_directory}/custom.cfg ]; then
+  source \${config_directory}/custom.cfg
+elif [ -z &quot;\${config_directory}&quot; -a -f  \$prefix/custom.cfg ]; then
+  source \$prefix/custom.cfg;
+fi
+└── README
+</code></pre>
+<p>就如上。。基本就这样，按他格化式加下配置就好，优雅点</p>
+<ol start="3">
+<li>/etc/default/grub
+这就是渲染grub.cfg时的环境变量，原版（我好像没改过）就酱，改个timeout为0，先把那个倒数启动关了</li>
+</ol>
+<pre><code>  # If you change this file, run 'update-grub' afterwards to update
+  # /boot/grub/grub.cfg.
+  # For full documentation of the options in this file, see:
+  #   info -f grub -n 'Simple configuration'
+
+  GRUB_DEFAULT=0
+  GRUB_TIMEOUT_STYLE=hidden
+  GRUB_TIMEOUT=10
+  GRUB_DISTRIBUTOR=`lsb_release -i -s 2&gt; /dev/null || echo Debian`
+  GRUB_CMDLINE_LINUX_DEFAULT=&quot;quiet splash&quot;
+  GRUB_CMDLINE_LINUX=&quot;&quot;
+
+  # Uncomment to enable BadRAM filtering, modify to suit your needs
+  # This works with Linux (no patch required) and with any kernel that obtains
+  # the memory map information from GRUB (GNU Mach, kernel of FreeBSD ...)
+  #GRUB_BADRAM=&quot;0x01234567,0xfefefefe,0x89abcdef,0xefefefef&quot;
+
+  # Uncomment to disable graphical terminal (grub-pc only)
+  #GRUB_TERMINAL=console
+
+  # The resolution used on graphical terminal
+  # note that you can use only modes which your graphic card supports via VBE
+  # you can see them in real GRUB with the command `vbeinfo'
+  #GRUB_GFXMODE=640x480
+
+  # Uncomment if you don't want GRUB to pass &quot;root=UUID=xxx&quot; parameter to Linux
+  #GRUB_DISABLE_LINUX_UUID=true
+
+  # Uncomment to disable generation of recovery mode menu entries
+  #GRUB_DISABLE_RECOVERY=&quot;true&quot;
+
+  # Uncomment to get a beep at grub start
+  #GRUB_INIT_TUNE=&quot;480 440 1&quot;
+</code></pre>
+<h2 id="命令"><a class="header" href="#命令">命令</a></h2>
+<ol>
+<li>update-grub
+重新渲染/boot/grub/grub.cfg</li>
+</ol>
+<div style="break-before: page; page-break-before: always;"></div><hr />
+<p>title: &quot;network protocol&quot;
+description: &quot;review and note network protocol&quot;
+date: &quot;2022-07-19&quot;
+tags:</p>
+<ul>
+<li>network</li>
+<li>protocol
+TODO:</li>
+</ul>
+<hr />
+<h1 id="tcpip-model"><a class="header" href="#tcpip-model">TCP/IP Model</a></h1>
+<h2 id="internet-layer"><a class="header" href="#internet-layer">Internet Layer</a></h2>
+<h3 id="ip"><a class="header" href="#ip">IP</a></h3>
+<blockquote>
+<p>REF: https://datatracker.ietf.org/doc/html/rfc791</p>
+</blockquote>
+<h4 id="format"><a class="header" href="#format">Format</a></h4>
+<ul>
+<li>Header</li>
+</ul>
+<pre><code>   0                   1                   2                   3
+   0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1
+  +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+  |Version|  IHL  |Type of Service|          Total Length         |
+  +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+  |         Identification        |Flags|      Fragment Offset    |
+  +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+  |  Time to Live |    Protocol   |         Header Checksum       |
+  +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+  |                       Source Address                          |
+  +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+  |                    Destination Address                        |
+  +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+  |                    Options                    |    Padding    |
+  +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+</code></pre>
+<h2 id="transport-layer"><a class="header" href="#transport-layer">Transport Layer</a></h2>
+<h3 id="tcp"><a class="header" href="#tcp">TCP</a></h3>
+<blockquote>
+<p>REF: https://datatracker.ietf.org/doc/html/rfc793</p>
+</blockquote>
+<h4 id="format-1"><a class="header" href="#format-1">Format</a></h4>
+<ul>
+<li>Header</li>
+</ul>
+<pre><code>   0                   1                   2                   3
+   0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1
+  +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+  |          Source Port          |       Destination Port        |
+  +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+  |                        Sequence Number                        |
+  +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+  |                    Acknowledgment Number                      |
+  +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+  |  Data |           |U|A|P|R|S|F|                               |
+  | Offset| Reserved  |R|C|S|S|Y|I|            Window             |
+  |       |           |G|K|H|T|N|N|                               |
+  +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+  |           Checksum            |         Urgent Pointer        |
+  +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+  |                    Options                    |    Padding    |
+  +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+  |                             data                              |
+  +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+</code></pre>
+<ul>
+<li>IPLayer</li>
+</ul>
+<pre><code>   0      7 8     15 16    23 24    31
+  +--------+--------+--------+--------+
+  |           Source Address          |
+  +--------+--------+--------+--------+
+  |         Destination Address       |
+  +--------+--------+--------+--------+
+  |  zero  |  PTCL  |    TCP Length   |
+  +--------+--------+--------+--------+
+</code></pre>
+<h4 id="flow"><a class="header" href="#flow">Flow</a></h4>
+<pre><code>                                +---------+ ---------\      active OPEN
+                                |  CLOSED |            \    -----------
+                                +---------+&lt;---------\   \   create TCB
+                                  |     ^              \   \  snd SYN
+                     passive OPEN |     |   CLOSE        \   \
+                     ------------ |     | ----------       \   \
+                      create TCB  |     | delete TCB         \   \
+                                  V     |                      \   \
+                                +---------+            CLOSE    |    \
+                                |  LISTEN |          ---------- |     |
+                                +---------+          delete TCB |     |
+                     rcv SYN      |     |     SEND              |     |
+                    -----------   |     |    -------            |     V
+   +---------+      snd SYN,ACK  /       \   snd SYN          +---------+
+   |         |&lt;-----------------           ------------------&gt;|         |
+   |   SYN   |                    rcv SYN                     |   SYN   |
+   |   RCVD  |&lt;-----------------------------------------------|   SENT  |
+   |         |                    snd ACK                     |         |
+   |         |------------------           -------------------|         |
+   +---------+   rcv ACK of SYN  \       /  rcv SYN,ACK       +---------+
+     |           --------------   |     |   -----------
+     |                  x         |     |     snd ACK
+     |                            V     V
+     |  CLOSE                   +---------+
+     | -------                  |  ESTAB  |
+     | snd FIN                  +---------+
+     |                   CLOSE    |     |    rcv FIN
+     V                  -------   |     |    -------
+   +---------+          snd FIN  /       \   snd ACK          +---------+
+   |  FIN    |&lt;-----------------           ------------------&gt;|  CLOSE  |
+   | WAIT-1  |------------------                              |   WAIT  |
+   +---------+          rcv FIN  \                            +---------+
+     | rcv ACK of FIN   -------   |                            CLOSE  |
+     | --------------   snd ACK   |                           ------- |
+     V        x                   V                           snd FIN V
+   +---------+                  +---------+                   +---------+
+   |FINWAIT-2|                  | CLOSING |                   | LAST-ACK|
+   +---------+                  +---------+                   +---------+
+     |                rcv ACK of FIN |                 rcv ACK of FIN |
+     |  rcv FIN       -------------- |    Timeout=2MSL -------------- |
+     |  -------              x       V    ------------        x       V
+      \ snd ACK                 +---------+delete TCB         +---------+
+       ------------------------&gt;|TIME WAIT|------------------&gt;| CLOSED  |
+                                +---------+                   +---------+
+</code></pre>
+<h3 id="udp"><a class="header" href="#udp">UDP</a></h3>
+<blockquote>
+<p>REF: https://datatracker.ietf.org/doc/html/rfc768</p>
+</blockquote>
+<h4 id="format-2"><a class="header" href="#format-2">Format</a></h4>
+<ul>
+<li>Header</li>
+</ul>
+<pre><code>   0      7 8     15 16    23 24    31
+  +--------+--------+--------+--------+
+  |     Source      |   Destination   |
+  |      Port       |      Port       |
+  +--------+--------+--------+--------+
+  |                 |                 |
+  |     Length      |    Checksum     |
+  +--------+--------+--------+--------+
+  |
+  |          data octets ...
+  +---------------- ...
+</code></pre>
+<ul>
+<li>IPLayer</li>
+</ul>
+<pre><code>   0      7 8     15 16    23 24    31
+  +--------+--------+--------+--------+
+  |          source address           |
+  +--------+--------+--------+--------+
+  |        destination address        |
+  +--------+--------+--------+--------+
+  |  zero  |protocol|   UDP length    |
+  +--------+--------+--------+--------+
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><hr />
+<h2>title: &quot;U盘制作&quot;
+date: 2020-10-12T10:53:57+08:00</h2>
+<blockquote>
+<p>做一个多分区，有加密盘的U盘</p>
+</blockquote>
+<pre><code class="language-bash"># find mount point
+mount -l 
+# umount
+umount &lt;mount-point&gt;
+# make partional
+sudo fidsk &lt;disk&gt; # input m get help
+# format usb disk
+sudo mke2fs -j -F -L unencrypted &lt;unencrypted disk&gt;
+
+sudo cryptsetup luksFormat &lt;encrypted disk&gt;
+sudo cryptsetup luksOpen &lt;encrypted&gt; encrypted
+sudo mke2fs -j -F -L encrypted /dev/mapper/encrypted
+sudo cryptsetup luksClose encrypted
+</code></pre>
+<blockquote>
+<p>https://linux.cn/article-9640-1.html</p>
+</blockquote>
+<div style="break-before: page; page-break-before: always;"></div><hr />
+<h2>title: &quot;Network Topology&quot;
+description: &quot;网络拓扑&quot;
+draft: true</h2>
+<h2 id="bridge"><a class="header" href="#bridge">Bridge</a></h2>
+<h2 id="proxy"><a class="header" href="#proxy">Proxy</a></h2>
+<h3 id="forward-proxy--正向代理"><a class="header" href="#forward-proxy--正向代理">Forward Proxy / 正向代理</a></h3>
+<h3 id="reverse-proxy--反向代理"><a class="header" href="#reverse-proxy--反向代理">Reverse Proxy / 反向代理</a></h3>
+<h3 id="transport-proxy--正向代理"><a class="header" href="#transport-proxy--正向代理">Transport Proxy / 正向代理</a></h3>
+<h2 id="tools"><a class="header" href="#tools">Tools</a></h2>
+<p>ethernet
+internet</p>
+<ul>
+<li>ebtable
+<blockquote>
+<p>https://blog.csdn.net/u013485792/article/details/76522551</p>
+</blockquote>
+</li>
+<li>iptable</li>
+<li>netfilter</li>
+</ul>
+<blockquote>
+<p>https://arthurchiao.art/blog/deep-dive-into-iptables-and-netfilter-arch-zh/</p>
+</blockquote>
+<ul>
+<li>ip</li>
+<li>dhcpclient
+<pre><code class="language-bash">$ dhcpclient {interface} -v  # get dhcp
+</code></pre>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><hr />
+<p>title: &quot;sed bad flag in substitute command&quot;
+description: &quot;&quot;
+date: 2021-07-16T10:31:08+08:00
+tags:</p>
+<ul>
+<li>sed</li>
+<li>cli</li>
+<li>macOS</li>
+</ul>
+<hr />
+<h2 id="environment-3"><a class="header" href="#environment-3">Environment</a></h2>
+<pre><code class="language-bash">$ sw_vers
+ProductName:    macOS
+ProductVersion: 11.4
+BuildVersion:   20F71
+</code></pre>
+<h2 id="question-5"><a class="header" href="#question-5">Question</a></h2>
+<pre><code>$ echo &quot;abcdefg&quot; &gt; test
+$ sed &quot;s/b/d/g&quot; test
+adcdefg
+$ sed -i &quot;s/b/d/g&quot; test
+... error
+# undefined label
+# bad flag in substiute command
+</code></pre>
+<h2 id="debugging-2"><a class="header" href="#debugging-2">Debugging</a></h2>
+<h2 id="fixed-4"><a class="header" href="#fixed-4">Fixed</a></h2>
+<pre><code class="language-bash">$ sed -i.bak &quot;s/b/d/g&quot; test
+$ gsed -i &quot;s/b/d/g&quot; test
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><hr />
+<p>title: &quot;Docker有权限但权限不足&quot;
+date: 2019-12-09
+categories:</p>
+<ul>
+<li>bug
+tags:</li>
+<li>docker</li>
+</ul>
+<hr />
+<h2 id="问题problem-5"><a class="header" href="#问题problem-5">问题/Problem</a></h2>
+<ol>
+<li>Docker容器中已分配權限,但無法訪問文件</li>
+</ol>
+<h2 id="原因reason-5"><a class="header" href="#原因reason-5">原因/Reason</a></h2>
+<ol>
+<li>Selinux限制</li>
+</ol>
+<h2 id="解决fix-5"><a class="header" href="#解决fix-5">解决/Fix</a></h2>
+<ol>
+<li>Selinux關閉或添加權限</li>
+</ol>
+<div style="break-before: page; page-break-before: always;"></div><hr />
+<h2>title: &quot;OWASP Top 10 Web Application Security Risks&quot;
+description: &quot;OWASP前10 Web应用安全风险&quot;
+date: 2021-04-19T12:58:50+08:00</h2>
+<blockquote>
+<p>https://owasp.org/www-project-top-ten/</p>
+<p>http://www.owasp.org.cn/owasp-project</p>
+<p>https://github.com/owasp-top</p>
+</blockquote>
+<h2 id="owasp-top-10-web-application-security-risks-versions"><a class="header" href="#owasp-top-10-web-application-security-risks-versions">OWASP Top 10 Web Application Security Risks Versions</a></h2>
+<div class="table-wrapper"><table><thead><tr><th></th><th>2017</th><th>2013</th><th>2010</th><th>2007</th><th>2004</th><th>2003</th></tr></thead><tbody>
+<tr><td>A1</td><td>注入</td><td>注入</td><td>注入</td><td>跨站脚本（XSS）</td><td>不安全的配置管理</td><td>未验证的参数</td></tr>
+<tr><td>A2</td><td>失效的身份认证</td><td>失效的身份认证和会话管理</td><td>失效的身份认证和会话管理</td><td>注入漏洞</td><td>错误的访问控制</td><td>错误的访问控制</td></tr>
+<tr><td>A3</td><td>敏感数据泄露</td><td>跨站脚本（XSS）</td><td>跨站脚本（XSS）</td><td>恶意文件执行</td><td>错误的验证和会话管理</td><td>错误的验证和会话管理</td></tr>
+<tr><td>A4</td><td>XML 外部实体（XXE）</td><td>不安全的直接对象引用</td><td>不安全的直接对象引用</td><td>不安全的直接对象引用</td><td>注入漏洞</td><td>跨站脚本</td></tr>
+<tr><td>A5</td><td>失效的访问控制</td><td>安全配置错误</td><td>安全配置错误</td><td>跨站请求伪造（CSRF）</td><td>缓冲溢出</td><td>缓冲溢出</td></tr>
+<tr><td>A6</td><td>安全配置错误</td><td>敏感信息泄漏</td><td>不安全的加密存储</td><td>信息泄漏和不恰当的错误处理</td><td>注入式漏洞</td><td>命令注入式漏洞</td></tr>
+<tr><td>A7</td><td>跨站脚本（XSS）</td><td>功能级访问控制缺失</td><td>没有限制URL访问</td><td>失效的身份认证和会话管理</td><td>不正确的错误处理</td><td>错误处理的问题</td></tr>
+<tr><td>A8</td><td>不安全的反序列化</td><td>跨站请求伪造（CSRF）</td><td>跨站请求伪造（CSRF）</td><td>不安全的加密存储</td><td>不安全的存储</td><td>密码学的不安全的使用</td></tr>
+<tr><td>A9</td><td>使用含有已知漏洞的组件</td><td>使用含有已知漏洞的组件</td><td>未验证的重定向和转发</td><td>不安全的通信</td><td>拒绝访问</td><td>远程管理漏洞</td></tr>
+<tr><td>A10</td><td>不足的日志记录和监控</td><td>未验证的重定向和转发</td><td>传输层保护不足</td><td>没有限制 URL 访问</td><td>未验证的输入</td><td>Web 和应用服务器的错误配置</td></tr>
+</tbody></table>
+</div>
+<h2 id="2017"><a class="header" href="#2017">2017</a></h2>
+<blockquote>
+<p>http://www.owasp.org.cn/owasp-project/download/2010_OWASP_Top_10
+https://github.com/owasp-top/owasp-top-2017</p>
+</blockquote>
+<h3 id="注入"><a class="header" href="#注入">注入</a></h3>
+<ul>
+<li>可利用性: 易</li>
+<li>普遍性: 常见</li>
+<li>可利用性: 平均</li>
+<li>影响: 严重</li>
+</ul>
+<p>注入攻击漏洞，例如SQL，OS 以及LDAP注入。这些攻击发生在当不可信的数据作为命令或者查询语句的一部分，被发送给解释器的时候。攻击者发送的恶意数据可以欺骗解释器，以执行计划外的命令或者在未被恰当授权时访问数据。</p>
+<h3 id="失效的身份认证"><a class="header" href="#失效的身份认证">失效的身份认证</a></h3>
+<ul>
+<li>可利用性:</li>
+<li>普遍性:</li>
+<li>可利用性:</li>
+<li>影响:</li>
+</ul>
+<p>与身份认证和会话管理相关的应用程序功能往往得不到正确的实现，这就导致了攻击者破坏密码、密匙、会话令牌或攻击其他的漏洞去冒充其他用户的身份。</p>
+<h3 id="敏感数据泄露"><a class="header" href="#敏感数据泄露">敏感数据泄露</a></h3>
+<ul>
+<li>可利用性:</li>
+<li>普遍性:</li>
+<li>可利用性:</li>
+<li>影响:</li>
+</ul>
+<p>当应用程序收到含有不可信的数据，在没有进行适当的验证和转义的情况下，就将它发送给一个网页浏览器，这就会产生跨站脚本攻击（简称XSS）。XSS允许攻击者在受害者的浏览器上执行脚本，从而劫持用户会话、危害网站、或者将用户转向至恶意网站。</p>
+<h3 id="xml-外部实体xxe"><a class="header" href="#xml-外部实体xxe">XML 外部实体（XXE）</a></h3>
+<ul>
+<li>可利用性:</li>
+<li>普遍性:</li>
+<li>可利用性:</li>
+<li>影响:</li>
+</ul>
+<p>当开发人员暴露一个对内部实现对象的引用时，例如，一个文件、目录或者数据库密匙，就会产生一个不安全的直接对象引用。在没有访问控制检测或其他保护时，攻击者会操控这些引用去访问未授权数据。</p>
+<h3 id="失效的访问控制"><a class="header" href="#失效的访问控制">失效的访问控制</a></h3>
+<ul>
+<li>可利用性:</li>
+<li>普遍性:</li>
+<li>可利用性:</li>
+<li>影响:</li>
+</ul>
+<p>好的安全需要对应用程序、框架、应用程序服务器、web服务器、数据库服务器和平台定义和执行安全配置。由于许多设置的默认值并不是安全的，因此，必须定义、实施和维护这些设置。这包含了对所有的软件保持及时地更新，包括所有应用程序的库文件。</p>
+<h3 id="安全配置错误"><a class="header" href="#安全配置错误">安全配置错误</a></h3>
+<ul>
+<li>可利用性:</li>
+<li>普遍性:</li>
+<li>可利用性:</li>
+<li>影响:</li>
+</ul>
+<p>许多Web应用程序没有正确保护敏感数据，如信用卡，税务ID和身份验证凭据。攻击者可能会窃取或篡改这些弱保护的数据以进行信用卡诈骗、身份窃取，或其他犯罪。敏感数据值需额外的保护，比如在存放或在传输过程中的加密，以及在与浏览器交换时进行特殊的预防措施。</p>
+<h3 id="跨站脚本xss"><a class="header" href="#跨站脚本xss">跨站脚本（XSS）</a></h3>
+<ul>
+<li>可利用性:</li>
+<li>普遍性:</li>
+<li>可利用性:</li>
+<li>影响:</li>
+</ul>
+<p>大多数Web应用程序在功能在UI中可见以前，验证功能级别的访问权限。但是，应用程序需要在每个功能被访问时在服务器端执行相同的访问控制检查。如果请求没有被验证，攻击者能够伪造请求以在未经适当授权时访问功能。</p>
+<h3 id="不安全的反序列化"><a class="header" href="#不安全的反序列化">不安全的反序列化</a></h3>
+<ul>
+<li>可利用性:</li>
+<li>普遍性:</li>
+<li>可利用性:</li>
+<li>影响:</li>
+</ul>
+<p>一个跨站请求伪造攻击迫使登录用户的浏览器将伪造的HTTP请求，包括该用户的会话cookie和其他认证信息，发送到一个存在漏洞的web应用程序。这就允许了攻击者迫使用户浏览器向存在漏洞的应用程序发送请求，而这些请求会被应用程序认为是用户的合法请求。</p>
+<h3 id="使用含有已知漏洞的组件"><a class="header" href="#使用含有已知漏洞的组件">使用含有已知漏洞的组件</a></h3>
+<ul>
+<li>可利用性:</li>
+<li>普遍性:</li>
+<li>可利用性:</li>
+<li>影响:</li>
+</ul>
+<p>组件，比如：库文件、框架和其它软件模块，几乎总是以全部的权限运行。如果一个带有漏洞的组件被利用，这种攻击可以造成更为严重的数据丢失或服务器接管。应用程序使用带有已知漏洞的组件会破坏应用程序防御系统，并使一系列可能的攻击和影响成为可能。</p>
+<h3 id="不足的日志记录和监控"><a class="header" href="#不足的日志记录和监控">不足的日志记录和监控</a></h3>
+<ul>
+<li>可利用性:</li>
+<li>普遍性:</li>
+<li>可利用性:</li>
+<li>影响:</li>
+</ul>
+<p>Web应用程序经常将用户重定向和转发到其他网页和网站，并且利用不可信的数据去判定目的页面。如果没有得到适当验证，攻击者可以重定向受害用户到钓鱼软件或恶意网站，或者使用转发去访问未授权的页面</p>
+<h2 id="2013"><a class="header" href="#2013">2013</a></h2>
+<blockquote>
+<p>http://www.owasp.org.cn/owasp-project/download/mobile-top-10-2013-2</p>
+</blockquote>
+<h2 id="2010"><a class="header" href="#2010">2010</a></h2>
+<blockquote>
+<p>http://www.owasp.org.cn/owasp-project/download/2010_OWASP_Top_10</p>
+</blockquote>
+<h2 id="2007"><a class="header" href="#2007">2007</a></h2>
+<blockquote>
+<p>https://owasp.org/www-pdf-archive/OWASP_Top_10_2007.pdf</p>
+</blockquote>
+<h2 id="2004"><a class="header" href="#2004">2004</a></h2>
+<h2 id="2003"><a class="header" href="#2003">2003</a></h2>
+<div style="break-before: page; page-break-before: always;"></div><hr />
+<p>title: &quot;Boot Device&quot; # Title of the blog post.
+date: 2020-12-23T10:57:10+08:00 # Date of post creation.</p>
+<h1 id="description-article-description--description-used-for-search-engine-2"><a class="header" href="#description-article-description--description-used-for-search-engine-2">description: &quot;Article description.&quot; # Description used for search engine.</a></h1>
+<h1 id="featured-true--sets-if-post-is-a-featured-post-making-appear-on-the-home-page-side-bar-2"><a class="header" href="#featured-true--sets-if-post-is-a-featured-post-making-appear-on-the-home-page-side-bar-2">featured: true # Sets if post is a featured post, making appear on the home page side bar.</a></h1>
+<h1 id="menu-main-2"><a class="header" href="#menu-main-2">menu: main</a></h1>
+<h1 id="featureimage-imagespathfilejpg--sets-featured-image-on-blog-post-2"><a class="header" href="#featureimage-imagespathfilejpg--sets-featured-image-on-blog-post-2">featureImage: &quot;/images/path/file.jpg&quot; # Sets featured image on blog post.</a></h1>
+<h1 id="thumbnail-imagespaththumbnailpng--sets-thumbnail-image-appearing-inside-card-on-homepage-2"><a class="header" href="#thumbnail-imagespaththumbnailpng--sets-thumbnail-image-appearing-inside-card-on-homepage-2">thumbnail: &quot;/images/path/thumbnail.png&quot; # Sets thumbnail image appearing inside card on homepage.</a></h1>
+<h1 id="shareimage-imagespathsharepng--designate-a-separate-image-for-social-media-sharing-2"><a class="header" href="#shareimage-imagespathsharepng--designate-a-separate-image-for-social-media-sharing-2">shareImage: &quot;/images/path/share.png&quot; # Designate a separate image for social media sharing.</a></h1>
+<h1 id="codemaxlines-10--override-global-value-for-how-many-lines-within-a-code-block-before-auto-collapsing-2"><a class="header" href="#codemaxlines-10--override-global-value-for-how-many-lines-within-a-code-block-before-auto-collapsing-2">codeMaxLines: 10 # Override global value for how many lines within a code block before auto-collapsing.</a></h1>
+<h1 id="codelinenumbers-false--override-global-value-for-showing-of-line-numbers-within-code-block-2"><a class="header" href="#codelinenumbers-false--override-global-value-for-showing-of-line-numbers-within-code-block-2">codeLineNumbers: false # Override global value for showing of line numbers within code block.</a></h1>
+<h1 id="figurepositionshow-true--override-global-value-for-showing-the-figure-label-2"><a class="header" href="#figurepositionshow-true--override-global-value-for-showing-the-figure-label-2">figurePositionShow: true # Override global value for showing the figure label.</a></h1>
+<h1 id="comment-false--disable-comment-if-false-2"><a class="header" href="#comment-false--disable-comment-if-false-2">comment: false # Disable comment if false.</a></h1>
+<p>toc: true # Controls if a table of contents should be generated for first-level links automatically.
+categories:</p>
+<ul>
+<li>note
+tags:</li>
+</ul>
+<hr />
+<p>UEFI/BIOS</p>
+<p><strong>Insert Lead paragraph here.</strong></p>
+<ol>
+<li>Linux After Press Power Button</li>
+</ol>
+<blockquote>
+<p>https://www.thegeekstuff.com/2011/02/linux-boot-process/</p>
+<p>6 Stages of Linux Boot Process</p>
+<p>BIOS - Basic Input/Output system executes MBR</p>
+<p>MBR - Master Boot Record executes GRUB</p>
+<p>GRUB - Grand Unified Bootloader executes Kernel</p>
+<p>Kernel - Kernel executes /sbin/init</p>
+<p>Init - Init executes runlevel programs</p>
+<p>Runlevel - Runlevel programs are executes from /etc/rc.d/rc*.d/</p>
+</blockquote>
+<ol>
+<li>OpenRC VS Systemd</li>
+</ol>
+<blockquote>
+<p>https://wiki.archlinux.org/index.php/Systemd</p>
+<p>https://wiki.gentoo.org/wiki/OpenRC</p>
+</blockquote>
+<p>对于Gentoo默认是使用<code>OpenRC</code>,现在大量的Linux发行版都使用<code>Systemd</code>(Archlinux也是使用<code>Systemd</code>),在看了一些资料后了解,这两个都是作为<code>PID1</code>的<code>init</code>(其中其实还有一个<code>SysVinit</code>,也是大量发行版以前的<code>init</code>),且<code>gnome</code>也是绑定了<code>Systemd</code>,对于<code>Systemd</code>可以理解为有高度集成的一个<code>init</code>,其中包括<code>timedatectl</code>,<code>systemctl</code>,<code>journalctl</code>,<code>hostnamectl</code>等等,还有对很多的操作,有很多对于<code>Systemd</code>的负面评价,在看完后装Gentoo时决定,再学习一次试一下<code>OpenRC</code>看看还需要什么服务的...</p>
+<div style="break-before: page; page-break-before: always;"></div><hr />
+<h2>title: &quot;Distribution&quot;
+description: &quot;&quot;
+draft: true</h2>
+<div style="break-before: page; page-break-before: always;"></div><hr />
+<p>title: &quot;Ngrok Tunnel No Found&quot;
+date: 2019-11-05
+categories:</p>
+<ul>
+<li>bug
+tags:</li>
+<li>ngrok</li>
+<li>dns</li>
+</ul>
+<hr />
+<h2 id="问题problem-6"><a class="header" href="#问题problem-6">问题/Problem</a></h2>
+<ol>
+<li>TODO</li>
+</ol>
+<h2 id="原因reason-6"><a class="header" href="#原因reason-6">原因/Reason</a></h2>
+<ol>
+<li>ngrokd服務器無法路由請求,在ngrok1.X中subdomain為三級域名,DNS需設置三級域名解析到ngrokd服務器,或使用hostname重寫為二級域名</li>
+</ol>
+<h2 id="解决fix-6"><a class="header" href="#解决fix-6">解决/Fix</a></h2>
+<ol>
+<li>解決路由問題</li>
+<li>godday dns的三級域名解析方法為主机: <em>.</em></li>
+</ol>
+<div style="break-before: page; page-break-before: always;"></div><hr />
+<p>title: &quot;base64在Windows及Linux下错误&quot;
+date: 2019-12-09
+categories:</p>
+<ul>
+<li>bug
+tags:</li>
+<li>linux</li>
+<li>windows</li>
+<li>base64</li>
+</ul>
+<hr />
+<h2 id="问题problem-7"><a class="header" href="#问题problem-7">问题/Problem</a></h2>
+<ol>
+<li>在linux上<code>echo &quot;STRING&quot;|base</code>時與decode結果不一致,在python base64.b64encode下正常</li>
+</ol>
+<h2 id="原因reason-7"><a class="header" href="#原因reason-7">原因/Reason</a></h2>
+<ol>
+<li>因為首先關于換行符, echo會打印換行,在Windows下為\r\n,在*nix為\n,在早期Mac下為\r,因為這個引至第一個BUG點</li>
+<li>echo 可以用-n消行echo出來自身的換行,用-e可以解釋字符中的替換符</li>
+</ol>
+<h2 id="解决fix-7"><a class="header" href="#解决fix-7">解决/Fix</a></h2>
+<ol>
+<li><code>echo -en &quot;STRING\r\n&quot;|base64</code></li>
+</ol>
+<div style="break-before: page; page-break-before: always;"></div><hr />
+<p>title: &quot;Netfilter&quot;
+Description: &quot;Netfilter&quot;
+tags:</p>
+<ul>
+<li>linux</li>
+<li>network</li>
+<li>netfilter</li>
+<li>kernel
+draft: true</li>
+</ul>
+<hr />
+<h1 id="netfilter"><a class="header" href="#netfilter">Netfilter</a></h1>
+<h2 id="intro"><a class="header" href="#intro">Intro</a></h2>
+<p><code>iptables</code>, <code>ebtable</code>, ..</p>
+<h2 id="hook"><a class="header" href="#hook">HOOK</a></h2>
+<ul>
+<li><code>NF_IP_PRE_ROUTING</code></li>
+<li><code>NF_IP_LOCAL_IN</code></li>
+<li><code>NF_IP_FORWARD</code></li>
+<li><code>NF_IP_LOCAL_OUT</code></li>
+<li><code>NF_IP_POST_ROUTING</code></li>
+</ul>
+<h2 id="chain"><a class="header" href="#chain">Chain</a></h2>
+<ul>
+<li><code>PREROUTING</code></li>
+<li><code>INPUT</code></li>
+<li><code>FORWARD</code></li>
+<li><code>OUTPUT</code></li>
+<li><code>POSTROUTING</code></li>
+</ul>
+<h2 id="table"><a class="header" href="#table">Table</a></h2>
+<ul>
+<li><code>FILTER</code></li>
+<li><code>NAT</code></li>
+<li><code>MANGLE</code></li>
+<li><code>RAW</code></li>
+<li><code>SECURITY</code></li>
+</ul>
+<h2 id="priority"><a class="header" href="#priority">Priority</a></h2>
+<ul>
+<li>GetAndLocal
+<ol>
+<li><code>PREROUTING</code></li>
+<li><code>INPUT</code></li>
+</ol>
+</li>
+<li>GetAndOther
+<ol>
+<li><code>PREROUTING</code></li>
+<li><code>FORWARD</code></li>
+<li><code>POSTROUTING</code></li>
+</ol>
+</li>
+<li>Produce
+<ol>
+<li><code>OUTPUT</code></li>
+<li><code>POSTROUTING</code></li>
+</ol>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><hr />
+<p>title: &quot;rDNS and PTR&quot;
+description: &quot;reverse dns resolve and ptr record&quot;
+tags:</p>
+<ul>
+<li>protocol</li>
+<li>dns
+TODO:</li>
+</ul>
+<hr />
+<blockquote>
+<p>REF: https://www.cloudflare.com/zh-cn/learning/dns/dns-records/dns-ptr-record/</p>
+</blockquote>
+<blockquote>
+<p>REF: https://zh.m.wikipedia.org/zh-hans/%E5%8F%8D%E5%90%91DNS</p>
+</blockquote>
+<p>// TODO:</p>
+<div style="break-before: page; page-break-before: always;"></div><hr />
+<p>title: &quot;Android Flashing Device&quot;
+date: 2020-11-23T19:18:05+08:00
+toc: true
+categories:</p>
+<ul>
+<li>note
+tags:</li>
+<li>android</li>
+<li>adb</li>
+<li>fastboot</li>
+<li>root</li>
+<li>oneplus</li>
+</ul>
+<hr />
+<h2 id="android刷机"><a class="header" href="#android刷机">Android刷机</a></h2>
+<h3 id="环境-1"><a class="header" href="#环境-1">环境</a></h3>
+<ol>
+<li>
+<p>OnePlus8Pro</p>
+</li>
+<li>
+<p>Kali Rolling</p>
+</li>
+<li>
+<p>adb</p>
+<blockquote>
+<p>Android Debug Bridge version 1.0.39
+Version 1:8.1.0+r23-8
+Installed as /usr/lib/android-sdk/platform-tools/adb</p>
+<p><code>sudo apt install android-tools-adb</code></p>
+</blockquote>
+</li>
+<li>
+<p>fastboot</p>
+<blockquote>
+<p>fastboot version 1:8.1.0+r23-8
+Installed as /usr/lib/android-sdk/platform-tools/fastboot</p>
+<p><code>sudo apt install android-tools-fastboot</code></p>
+</blockquote>
+</li>
+</ol>
+<h3 id="基础"><a class="header" href="#基础">基础</a></h3>
+<ol>
+<li>
+<p>解锁OEM</p>
+<blockquote>
+<p>https://source.android.com/setup/build/running</p>
+</blockquote>
+</li>
+<li>
+<p>进入FastbootMode</p>
+</li>
+<li>
+<p>进入RecoveryMode</p>
+</li>
+<li>
+<p>安装Magisk/MagiskManager</p>
+<blockquote>
+<p>官方网站：　https://magiskmanager.com/</p>
+</blockquote>
+</li>
+</ol>
+<h3 id="玩起来-1"><a class="header" href="#玩起来-1">玩起来</a></h3>
+<ol>
+<li>
+<p>官方OTA全量包中解压，此处使用<code>OnePlus8ProHydrogen_15.H.31_OTA_0310_all_2010291922_15e1f3321849475e.zip</code></p>
+<blockquote>
+<p>https://www.oneplus.com/cn/support/softwareupgrade</p>
+<p>https://www.oneplus.com/support/softwareupgrade</p>
+</blockquote>
+</li>
+</ol>
+<pre><code>$ unzip OnePlus8ProHydrogen_15.H.31_OTA_0310_all_2010291922_15e1f3321849475e.zip -d OnePlus8ProHydrogen_15.H.31_OTA_0310_all_2010291922_15e1f3321849475e
+$ tree OnePlus8ProHydrogen_15.H.31_OTA_0310_all_2010291922_15e1f3321849475e
+OnePlus8ProHydrogen_15.H.31_OTA_0310_all_2010291922_15e1f3321849475e
+├── META-INF
+│   └── com
+├── payload.bin
+└── payload_properties.txt
+</code></pre>
+<ol start="2">
+<li>
+<p>其中<code>payload.bin</code>是使用<code>protobuf</code>压缩的二进制<code>img</code>文件，使用<code>payload_dumper</code>解压出来<code>boot.img</code>、<code>recovery.img</code>及其他<code>img</code>文件</p>
+<blockquote>
+<p>https://github.com/vm03/payload_dumper</p>
+</blockquote>
+<pre><code>$ git clone https://github.com/vm03/payload_dumper.git payload_dumper
+$ pip install -r requirements.txt
+$ python payload_dumper.py payload.bin
+$ tree payload_dumper
+payload_dumper
+├── old
+├── output
+│   ├── abl.img
+│   ├── aop.img
+│   ├── bluetooth.img
+│   ├── boot.img
+│   ├── cmnlib64.img
+│   ├── cmnlib.img
+│   ├── devcfg.img
+│   ├── dsp.img
+│   ├── dtbo.img
+│   ├── featenabler.img
+│   ├── hyp.img
+│   ├── imagefv.img
+│   ├── keymaster.img
+│   ├── logo.img
+│   ├── mdm_oem_stanvbk.img
+│   ├── modem.img
+│   ├── multiimgoem.img
+│   ├── odm.img
+│   ├── product.img
+│   ├── qupfw.img
+│   ├── recovery.img
+│   ├── reserve.img
+│   ├── spunvm.img
+│   ├── storsec.img
+│   ├── system_ext.img
+│   ├── system.img
+│   ├── tz.img
+│   ├── uefisecapp.img
+│   ├── vbmeta.img
+│   ├── vbmeta_system.img
+│   ├── vendor.img
+│   ├── xbl_config.img
+│   └── xbl.img
+├── payload_dumper.py
+├── README.md
+├── requirements.txt
+└── update_metadata_pb2.py
+</code></pre>
+</li>
+<li>
+<p>其中在刷<code>Magisk</code>比较有用的是<code>boot.img</code>及<code>recovery.img</code>，可以使用<code>Magisk</code>对<code>boot.img</code>或<code>recovery.img</code>进行修改，修改为<code>magisk_patch.img</code>然后对相应分区<code>flash</code></p>
+<pre><code>$ adb push boot.img /storage/emulated/0/Download/
+# 手机操作`MagiskManager`修改`img`文件
+$ adb pull /storage/emulated/0/Download/magisk_patch.img
+$ adb reboot-fastboot
+# 手机重启至`FastbootMode`
+$ sudo fastboot flash boot magisk_patch.img
+$ sudo fastboot continue # sudo fastboot reboot # 也可
+</code></pre>
+</li>
+</ol>
+<h3 id="研究一下"><a class="header" href="#研究一下">研究一下</a></h3>
+<pre><code class="language-bash">$ adb shell
+OnePlus8Pro:/ $ mount
+/dev/block/dm-10 on / type ext4 (ro,seclabel,relatime,discard)
+tmpfs on /dev type tmpfs (rw,seclabel,nosuid,relatime,size=3837280k,nr_inodes=959320,mode=755)
+devpts on /dev/pts type devpts (rw,seclabel,relatime,mode=600,ptmxmode=000)
+proc on /proc type proc (rw,relatime,gid=3009,hidepid=2)
+sysfs on /sys type sysfs (rw,seclabel,relatime)
+selinuxfs on /sys/fs/selinux type selinuxfs (rw,relatime)
+tmpfs on /mnt type tmpfs (rw,seclabel,nosuid,nodev,noexec,relatime,size=3837280k,nr_inodes=959320,mode=755,gid=1000)
+tmpfs on /mnt/installer type tmpfs (rw,seclabel,nosuid,nodev,noexec,relatime,size=3837280k,nr_inodes=959320,mode=755,gid=1000)
+tmpfs on /mnt/androidwritable type tmpfs (rw,seclabel,nosuid,nodev,noexec,relatime,size=3837280k,nr_inodes=959320,mode=755,gid=1000)
+/dev/block/sda19 on /metadata type ext4 (rw,sync,seclabel,nosuid,nodev,noatime,discard)
+/dev/block/dm-11 on /system_ext type ext4 (ro,seclabel,relatime,discard)
+/dev/block/dm-12 on /product type ext4 (ro,seclabel,relatime,discard)
+/dev/block/dm-13 on /vendor type ext4 (ro,seclabel,relatime,discard)
+/dev/block/dm-14 on /odm type ext4 (ro,seclabel,relatime,discard)
+overlay on /system/etc/buildinfo type overlay (ro,context=u:object_r:system_file:s0,relatime,lowerdir=/odm/etc/buildinfo:/system/etc/buildinfo)
+tmpfs on /apex type tmpfs (rw,seclabel,nosuid,nodev,noexec,relatime,size=3837280k,nr_inodes=959320,mode=755)
+tmpfs on /linkerconfig type tmpfs (rw,seclabel,nosuid,nodev,noexec,relatime,size=3837280k,nr_inodes=959320,mode=755)
+none on /dev/blkio type cgroup (rw,nosuid,nodev,noexec,relatime,blkio)
+none on /dev/cg2_bpf type cgroup2 (rw,nosuid,nodev,noexec,relatime)
+none on /dev/cpuctl type cgroup (rw,nosuid,nodev,noexec,relatime,cpu)
+none on /acct type cgroup (rw,nosuid,nodev,noexec,relatime,cpuacct)
+none on /dev/cpuset type cgroup (rw,nosuid,nodev,noexec,relatime,cpuset,noprefix,release_agent=/sbin/cpuset_release_agent)
+none on /dev/freezer type cgroup (rw,nosuid,nodev,noexec,relatime,freezer)
+none on /dev/iolimit type cgroup (rw,nosuid,nodev,noexec,relatime,iolimit)
+none on /dev/memcg type cgroup (rw,nosuid,nodev,noexec,relatime,memory)
+none on /dev/stune type cgroup (rw,nosuid,nodev,noexec,relatime,schedtune)
+tracefs on /sys/kernel/tracing type tracefs (rw,seclabel,relatime)
+none on /config type configfs (rw,nosuid,nodev,noexec,relatime)
+binder on /dev/binderfs type binder (rw,relatime,max=1048576,stats=global)
+none on /sys/fs/fuse/connections type fusectl (rw,relatime)
+bpf on /sys/fs/bpf type bpf (rw,nosuid,nodev,noexec,relatime)
+pstore on /sys/fs/pstore type pstore (rw,seclabel,nosuid,nodev,noexec,relatime)
+none on /sys/fs/cgroup type tmpfs (rw,seclabel,relatime,size=3837280k,nr_inodes=959320,mode=750,gid=1000)
+none on /sys/fs/cgroup/freezer type cgroup (rw,relatime,freezer)
+/dev/block/sda9 on /mnt/vendor/modemdump type ext4 (rw,seclabel,nosuid,nodev,noatime)
+/dev/block/sda2 on /mnt/vendor/persist type ext4 (rw,seclabel,nosuid,nodev,noatime)
+/dev/block/sde4 on /vendor/firmware_mnt type vfat (ro,context=u:object_r:firmware_file:s0,relatime,uid=1000,gid=1000,fmask=0337,dmask=0227,codepage=437,iocharset=iso8859-1,shortname=lower,errors=remount-ro)
+/dev/block/sde9 on /vendor/dsp type ext4 (ro,seclabel,nosuid,nodev,relatime)
+/dev/block/sde5 on /vendor/bt_firmware type vfat (ro,context=u:object_r:bt_firmware_file:s0,relatime,uid=1002,gid=3002,fmask=0337,dmask=0227,codepage=437,iocharset=iso8859-1,shortname=lower,errors=remount-ro)
+/dev/block/sda10 on /mnt/vendor/op2 type ext4 (rw,seclabel,nosuid,nodev,noatime,data=ordered)
+/dev/block/dm-15 on /data type f2fs (rw,lazytime,seclabel,nosuid,nodev,noatime,background_gc=on,discard,no_heap,user_xattr,inline_xattr,acl,inline_data,inline_dentry,extent_cache,mode=adaptive,active_logs=6,reserve_root=32768,resuid=0,resgid=1065,inlinecrypt,alloc_mode=default,fsync_mode=nobarrier)
+/dev/block/loop6 on /system/reserve type ext4 (ro,context=u:object_r:system_file:s0,relatime)
+tmpfs on /linkerconfig type tmpfs (rw,seclabel,nosuid,nodev,noexec,relatime,size=3837280k,nr_inodes=959320,mode=755)
+/dev/block/dm-15 on /data/user/0 type f2fs (rw,lazytime,seclabel,nosuid,nodev,noatime,background_gc=on,discard,no_heap,user_xattr,inline_xattr,acl,inline_data,inline_dentry,extent_cache,mode=adaptive,active_logs=6,reserve_root=32768,resuid=0,resgid=1065,inlinecrypt,alloc_mode=default,fsync_mode=nobarrier)
+tmpfs on /data_mirror type tmpfs (rw,seclabel,nosuid,nodev,noexec,relatime,size=3837280k,nr_inodes=959320,mode=700,gid=1000)
+/dev/block/dm-15 on /data_mirror/data_ce/null type f2fs (rw,lazytime,seclabel,nosuid,nodev,noatime,background_gc=on,discard,no_heap,user_xattr,inline_xattr,acl,inline_data,inline_dentry,extent_cache,mode=adaptive,active_logs=6,reserve_root=32768,resuid=0,resgid=1065,inlinecrypt,alloc_mode=default,fsync_mode=nobarrier)
+/dev/block/dm-15 on /data_mirror/data_ce/null/0 type f2fs (rw,lazytime,seclabel,nosuid,nodev,noatime,background_gc=on,discard,no_heap,user_xattr,inline_xattr,acl,inline_data,inline_dentry,extent_cache,mode=adaptive,active_logs=6,reserve_root=32768,resuid=0,resgid=1065,inlinecrypt,alloc_mode=default,fsync_mode=nobarrier)
+/dev/block/dm-15 on /data_mirror/data_de/null type f2fs (rw,lazytime,seclabel,nosuid,nodev,noatime,background_gc=on,discard,no_heap,user_xattr,inline_xattr,acl,inline_data,inline_dentry,extent_cache,mode=adaptive,active_logs=6,reserve_root=32768,resuid=0,resgid=1065,inlinecrypt,alloc_mode=default,fsync_mode=nobarrier)
+/dev/block/dm-15 on /data_mirror/cur_profiles type f2fs (rw,lazytime,seclabel,nosuid,nodev,noatime,background_gc=on,discard,no_heap,user_xattr,inline_xattr,acl,inline_data,inline_dentry,extent_cache,mode=adaptive,active_logs=6,reserve_root=32768,resuid=0,resgid=1065,inlinecrypt,alloc_mode=default,fsync_mode=nobarrier)
+/dev/block/dm-16 on /apex/com.android.os.statsd@300901600 type ext4 (ro,dirsync,seclabel,nodev,noatime)
+/dev/block/dm-16 on /apex/com.android.os.statsd type ext4 (ro,dirsync,seclabel,nodev,noatime)
+/dev/block/loop8 on /apex/com.android.adbd@300900700 type ext4 (ro,dirsync,seclabel,nodev,noatime)
+/dev/block/loop8 on /apex/com.android.adbd type ext4 (ro,dirsync,seclabel,nodev,noatime)
+/dev/block/loop9 on /apex/com.android.i18n@1 type ext4 (ro,dirsync,seclabel,nodev,noatime)
+/dev/block/loop9 on /apex/com.android.i18n type ext4 (ro,dirsync,seclabel,nodev,noatime)
+/dev/block/loop10 on /apex/com.android.art@1 type ext4 (ro,dirsync,seclabel,nodev,noatime)
+/dev/block/loop10 on /apex/com.android.art type ext4 (ro,dirsync,seclabel,nodev,noatime)
+/dev/block/loop11 on /apex/com.android.tethering@300208500 type ext4 (ro,dirsync,seclabel,nodev,noatime)
+/dev/block/loop11 on /apex/com.android.tethering type ext4 (ro,dirsync,seclabel,nodev,noatime)
+/dev/block/loop12 on /apex/com.android.conscrypt@300900703 type ext4 (ro,dirsync,seclabel,nodev,noatime)
+/dev/block/loop12 on /apex/com.android.conscrypt type ext4 (ro,dirsync,seclabel,nodev,noatime)
+/dev/block/loop13 on /apex/com.android.wifi@300208500 type ext4 (ro,dirsync,seclabel,nodev,noatime)
+/dev/block/loop13 on /apex/com.android.wifi type ext4 (ro,dirsync,seclabel,nodev,noatime)
+/dev/block/loop14 on /apex/com.android.runtime@1 type ext4 (ro,dirsync,seclabel,nodev,noatime)
+/dev/block/loop14 on /apex/com.android.runtime type ext4 (ro,dirsync,seclabel,nodev,noatime)
+/dev/block/loop15 on /apex/com.android.resolv@300208500 type ext4 (ro,dirsync,seclabel,nodev,noatime)
+/dev/block/loop15 on /apex/com.android.resolv type ext4 (ro,dirsync,seclabel,nodev,noatime)
+/dev/block/loop16 on /apex/com.android.tzdata@300900700 type ext4 (ro,dirsync,seclabel,nodev,noatime)
+/dev/block/loop16 on /apex/com.android.tzdata type ext4 (ro,dirsync,seclabel,nodev,noatime)
+/dev/block/loop17 on /apex/com.android.sdkext@300900700 type ext4 (ro,dirsync,seclabel,nodev,noatime)
+/dev/block/loop17 on /apex/com.android.sdkext type ext4 (ro,dirsync,seclabel,nodev,noatime)
+/dev/block/loop18 on /apex/com.android.neuralnetworks@300900700 type ext4 (ro,dirsync,seclabel,nodev,noatime)
+/dev/block/loop18 on /apex/com.android.neuralnetworks type ext4 (ro,dirsync,seclabel,nodev,noatime)
+/dev/block/loop19 on /apex/com.android.ipsec@300900700 type ext4 (ro,dirsync,seclabel,nodev,noatime)
+/dev/block/loop19 on /apex/com.android.ipsec type ext4 (ro,dirsync,seclabel,nodev,noatime)
+/dev/block/loop20 on /apex/com.android.apex.cts.shim@1 type ext4 (ro,dirsync,seclabel,nodev,noatime)
+/dev/block/loop20 on /apex/com.android.apex.cts.shim type ext4 (ro,dirsync,seclabel,nodev,noatime)
+/dev/block/loop21 on /apex/com.android.media.swcodec@300900714 type ext4 (ro,dirsync,seclabel,nodev,noatime)
+/dev/block/loop21 on /apex/com.android.media.swcodec type ext4 (ro,dirsync,seclabel,nodev,noatime)
+/dev/block/loop22 on /apex/com.android.extservices@300900700 type ext4 (ro,dirsync,seclabel,nodev,noatime)
+/dev/block/loop22 on /apex/com.android.extservices type ext4 (ro,dirsync,seclabel,nodev,noatime)
+/dev/block/loop23 on /apex/com.android.mediaprovider@300900729 type ext4 (ro,dirsync,seclabel,nodev,noatime)
+/dev/block/loop23 on /apex/com.android.mediaprovider type ext4 (ro,dirsync,seclabel,nodev,noatime)
+/dev/block/loop24 on /apex/com.android.vndk.v30@1 type ext4 (ro,dirsync,seclabel,nodev,noatime)
+/dev/block/loop24 on /apex/com.android.vndk.v30 type ext4 (ro,dirsync,seclabel,nodev,noatime)
+/dev/block/loop25 on /apex/com.android.permission@300208500 type ext4 (ro,dirsync,seclabel,nodev,noatime)
+/dev/block/loop25 on /apex/com.android.permission type ext4 (ro,dirsync,seclabel,nodev,noatime)
+/dev/block/loop26 on /apex/com.android.media@300900700 type ext4 (ro,dirsync,seclabel,nodev,noatime)
+/dev/block/loop26 on /apex/com.android.media type ext4 (ro,dirsync,seclabel,nodev,noatime)
+tmpfs on /storage type tmpfs (rw,seclabel,nosuid,nodev,noexec,relatime,size=3837280k,nr_inodes=959320,mode=755,gid=1000)
+adb on /dev/usb-ffs/adb type functionfs (rw,relatime)
+diag on /dev/ffs-diag type functionfs (rw,relatime)
+diag_mdm on /dev/ffs-diag-1 type functionfs (rw,relatime)
+diag_mdm2 on /dev/ffs-diag-2 type functionfs (rw,relatime)
+/data/media on /mnt/runtime/default/emulated type sdcardfs (rw,nosuid,nodev,noexec,noatime,fsuid=1023,fsgid=1023,gid=1015,multiuser,mask=6,derive_gid,default_normal,unshared_obb)
+/data/media on /mnt/runtime/read/emulated type sdcardfs (rw,nosuid,nodev,noexec,noatime,fsuid=1023,fsgid=1023,gid=9997,multiuser,mask=23,derive_gid,default_normal,unshared_obb)
+/data/media on /mnt/runtime/write/emulated type sdcardfs (rw,nosuid,nodev,noexec,noatime,fsuid=1023,fsgid=1023,gid=9997,multiuser,mask=7,derive_gid,default_normal,unshared_obb)
+/data/media on /mnt/runtime/full/emulated type sdcardfs (rw,nosuid,nodev,noexec,noatime,fsuid=1023,fsgid=1023,gid=9997,multiuser,mask=7,derive_gid,default_normal,unshared_obb)
+/dev/fuse on /storage/emulated type fuse (rw,lazytime,nosuid,nodev,noexec,noatime,user_id=0,group_id=0,allow_other)
+/dev/fuse on /mnt/installer/0/emulated type fuse (rw,lazytime,nosuid,nodev,noexec,noatime,user_id=0,group_id=0,allow_other)
+/dev/fuse on /mnt/androidwritable/0/emulated type fuse (rw,lazytime,nosuid,nodev,noexec,noatime,user_id=0,group_id=0,allow_other)
+/dev/fuse on /mnt/user/0/emulated type fuse (rw,lazytime,nosuid,nodev,noexec,noatime,user_id=0,group_id=0,allow_other)
+/data/media on /mnt/pass_through/0/emulated type sdcardfs (rw,nosuid,nodev,noexec,noatime,fsuid=1023,fsgid=1023,gid=9997,multiuser,mask=7,derive_gid,default_normal,unshared_obb)
+/data/media on /mnt/androidwritable/0/emulated/0/Android/data type sdcardfs (rw,nosuid,nodev,noexec,noatime,fsuid=1023,fsgid=1023,gid=1015,multiuser,mask=6,derive_gid,default_normal,unshared_obb)
+/data/media on /mnt/installer/0/emulated/0/Android/data type sdcardfs (rw,nosuid,nodev,noexec,noatime,fsuid=1023,fsgid=1023,gid=1015,multiuser,mask=6,derive_gid,default_normal,unshared_obb)
+/data/media on /storage/emulated/0/Android/data type sdcardfs (rw,nosuid,nodev,noexec,noatime,fsuid=1023,fsgid=1023,gid=1015,multiuser,mask=6,derive_gid,default_normal,unshared_obb)
+/data/media on /mnt/user/0/emulated/0/Android/data type sdcardfs (rw,nosuid,nodev,noexec,noatime,fsuid=1023,fsgid=1023,gid=1015,multiuser,mask=6,derive_gid,default_normal,unshared_obb)
+/data/media on /mnt/androidwritable/0/emulated/0/Android/obb type sdcardfs (rw,nosuid,nodev,noexec,noatime,fsuid=1023,fsgid=1023,gid=1015,multiuser,mask=6,derive_gid,default_normal,unshared_obb)
+/data/media on /storage/emulated/0/Android/obb type sdcardfs (rw,nosuid,nodev,noexec,noatime,fsuid=1023,fsgid=1023,gid=1015,multiuser,mask=6,derive_gid,default_normal,unshared_obb)
+/data/media on /mnt/user/0/emulated/0/Android/obb type sdcardfs (rw,nosuid,nodev,noexec,noatime,fsuid=1023,fsgid=1023,gid=1015,multiuser,mask=6,derive_gid,default_normal,unshared_obb)
+/data/media on /mnt/installer/0/emulated/0/Android/obb type sdcardfs (rw,nosuid,nodev,noexec,noatime,fsuid=1023,fsgid=1023,gid=9997,multiuser,mask=7,derive_gid,default_normal,unshared_obb)
+/dev/fuse on /mnt/installer/999/emulated type fuse (rw,lazytime,nosuid,nodev,noexec,noatime,user_id=0,group_id=0,allow_other)
+/dev/fuse on /mnt/androidwritable/999/emulated type fuse (rw,lazytime,nosuid,nodev,noexec,noatime,user_id=0,group_id=0,allow_other)
+/dev/fuse on /mnt/user/999/emulated type fuse (rw,lazytime,nosuid,nodev,noexec,noatime,user_id=0,group_id=0,allow_other)
+/data/media on /mnt/pass_through/999/emulated type sdcardfs (rw,nosuid,nodev,noexec,noatime,fsuid=1023,fsgid=1023,gid=9997,multiuser,mask=7,derive_gid,default_normal,unshared_obb)
+/data/media on /mnt/androidwritable/999/emulated/999/Android/data type sdcardfs (rw,nosuid,nodev,noexec,noatime,fsuid=1023,fsgid=1023,gid=1015,multiuser,mask=6,derive_gid,default_normal,unshared_obb)
+/data/media on /mnt/installer/999/emulated/999/Android/data type sdcardfs (rw,nosuid,nodev,noexec,noatime,fsuid=1023,fsgid=1023,gid=1015,multiuser,mask=6,derive_gid,default_normal,unshared_obb)
+/data/media on /mnt/user/999/emulated/999/Android/data type sdcardfs (rw,nosuid,nodev,noexec,noatime,fsuid=1023,fsgid=1023,gid=1015,multiuser,mask=6,derive_gid,default_normal,unshared_obb)
+/data/media on /mnt/androidwritable/999/emulated/999/Android/obb type sdcardfs (rw,nosuid,nodev,noexec,noatime,fsuid=1023,fsgid=1023,gid=1015,multiuser,mask=6,derive_gid,default_normal,unshared_obb)
+/data/media on /mnt/user/999/emulated/999/Android/obb type sdcardfs (rw,nosuid,nodev,noexec,noatime,fsuid=1023,fsgid=1023,gid=1015,multiuser,mask=6,derive_gid,default_normal,unshared_obb)
+/data/media on /mnt/pass_through/0/ace-999 type sdcardfs (rw,nosuid,nodev,noexec,noatime,fsuid=1023,fsgid=1023,gid=9997,multiuser,mask=7,derive_gid,default_normal,unshared_obb)
+/data/media on /mnt/pass_through/999/ace-0 type sdcardfs (rw,nosuid,nodev,noexec,noatime,fsuid=1023,fsgid=1023,gid=9997,multiuser,mask=7,derive_gid,default_normal,unshared_obb)
+/dev/fuse on /mnt/installer/999/ace-0 type fuse (rw,lazytime,nosuid,nodev,noexec,noatime,user_id=0,group_id=0,allow_other)
+/dev/fuse on /mnt/androidwritable/999/ace-0 type fuse (rw,lazytime,nosuid,nodev,noexec,noatime,user_id=0,group_id=0,allow_other)
+/dev/fuse on /mnt/user/999/ace-0 type fuse (rw,lazytime,nosuid,nodev,noexec,noatime,user_id=0,group_id=0,allow_other)
+/data/media on /mnt/androidwritable/0/emulated/0/Android/data type sdcardfs (rw,nosuid,nodev,noexec,noatime,fsuid=1023,fsgid=1023,gid=1015,multiuser,mask=6,derive_gid,default_normal,unshared_obb)
+/data/media on /mnt/installer/0/emulated/0/Android/data type sdcardfs (rw,nosuid,nodev,noexec,noatime,fsuid=1023,fsgid=1023,gid=1015,multiuser,mask=6,derive_gid,default_normal,unshared_obb)
+/data/media on /storage/emulated/0/Android/data type sdcardfs (rw,nosuid,nodev,noexec,noatime,fsuid=1023,fsgid=1023,gid=1015,multiuser,mask=6,derive_gid,default_normal,unshared_obb)
+/data/media on /mnt/androidwritable/999/ace-0/Android/data type sdcardfs (rw,nosuid,nodev,noexec,noatime,fsuid=1023,fsgid=1023,gid=1015,multiuser,mask=6,derive_gid,default_normal,unshared_obb)
+/data/media on /mnt/installer/999/ace-0/Android/data type sdcardfs (rw,nosuid,nodev,noexec,noatime,fsuid=1023,fsgid=1023,gid=1015,multiuser,mask=6,derive_gid,default_normal,unshared_obb)
+/data/media on /mnt/user/0/emulated/0/Android/data type sdcardfs (rw,nosuid,nodev,noexec,noatime,fsuid=1023,fsgid=1023,gid=1015,multiuser,mask=6,derive_gid,default_normal,unshared_obb)
+/data/media on /mnt/user/999/ace-0/Android/data type sdcardfs (rw,nosuid,nodev,noexec,noatime,fsuid=1023,fsgid=1023,gid=1015,multiuser,mask=6,derive_gid,default_normal,unshared_obb)
+/data/media on /mnt/androidwritable/0/emulated/0/Android/obb type sdcardfs (rw,nosuid,nodev,noexec,noatime,fsuid=1023,fsgid=1023,gid=1015,multiuser,mask=6,derive_gid,default_normal,unshared_obb)
+/data/media on /mnt/installer/0/emulated/0/Android/obb type sdcardfs (rw,nosuid,nodev,noexec,noatime,fsuid=1023,fsgid=1023,gid=1015,multiuser,mask=6,derive_gid,default_normal,unshared_obb)
+/data/media on /storage/emulated/0/Android/obb type sdcardfs (rw,nosuid,nodev,noexec,noatime,fsuid=1023,fsgid=1023,gid=1015,multiuser,mask=6,derive_gid,default_normal,unshared_obb)
+/data/media on /mnt/androidwritable/999/ace-0/Android/obb type sdcardfs (rw,nosuid,nodev,noexec,noatime,fsuid=1023,fsgid=1023,gid=1015,multiuser,mask=6,derive_gid,default_normal,unshared_obb)
+/data/media on /mnt/installer/999/ace-0/Android/obb type sdcardfs (rw,nosuid,nodev,noexec,noatime,fsuid=1023,fsgid=1023,gid=1015,multiuser,mask=6,derive_gid,default_normal,unshared_obb)
+/data/media on /mnt/user/0/emulated/0/Android/obb type sdcardfs (rw,nosuid,nodev,noexec,noatime,fsuid=1023,fsgid=1023,gid=1015,multiuser,mask=6,derive_gid,default_normal,unshared_obb)
+/data/media on /mnt/user/999/ace-0/Android/obb type sdcardfs (rw,nosuid,nodev,noexec,noatime,fsuid=1023,fsgid=1023,gid=1015,multiuser,mask=6,derive_gid,default_normal,unshared_obb)
+/dev/fuse on /storage/ace-999 type fuse (rw,lazytime,nosuid,nodev,noexec,noatime,user_id=0,group_id=0,allow_other)
+/dev/fuse on /mnt/installer/0/ace-999 type fuse (rw,lazytime,nosuid,nodev,noexec,noatime,user_id=0,group_id=0,allow_other)
+/dev/fuse on /mnt/androidwritable/0/ace-999 type fuse (rw,lazytime,nosuid,nodev,noexec,noatime,user_id=0,group_id=0,allow_other)
+/dev/fuse on /mnt/user/0/ace-999 type fuse (rw,lazytime,nosuid,nodev,noexec,noatime,user_id=0,group_id=0,allow_other)
+/data/media on /mnt/androidwritable/999/emulated/999/Android/data type sdcardfs (rw,nosuid,nodev,noexec,noatime,fsuid=1023,fsgid=1023,gid=1015,multiuser,mask=6,derive_gid,default_normal,unshared_obb)
+/data/media on /mnt/installer/999/emulated/999/Android/data type sdcardfs (rw,nosuid,nodev,noexec,noatime,fsuid=1023,fsgid=1023,gid=1015,multiuser,mask=6,derive_gid,default_normal,unshared_obb)
+/data/media on /mnt/androidwritable/0/ace-999/Android/data type sdcardfs (rw,nosuid,nodev,noexec,noatime,fsuid=1023,fsgid=1023,gid=1015,multiuser,mask=6,derive_gid,default_normal,unshared_obb)
+/data/media on /mnt/installer/0/ace-999/Android/data type sdcardfs (rw,nosuid,nodev,noexec,noatime,fsuid=1023,fsgid=1023,gid=1015,multiuser,mask=6,derive_gid,default_normal,unshared_obb)
+/data/media on /storage/ace-999/Android/data type sdcardfs (rw,nosuid,nodev,noexec,noatime,fsuid=1023,fsgid=1023,gid=1015,multiuser,mask=6,derive_gid,default_normal,unshared_obb)
+/data/media on /mnt/user/999/emulated/999/Android/data type sdcardfs (rw,nosuid,nodev,noexec,noatime,fsuid=1023,fsgid=1023,gid=1015,multiuser,mask=6,derive_gid,default_normal,unshared_obb)
+/data/media on /mnt/user/0/ace-999/Android/data type sdcardfs (rw,nosuid,nodev,noexec,noatime,fsuid=1023,fsgid=1023,gid=1015,multiuser,mask=6,derive_gid,default_normal,unshared_obb)
+/data/media on /mnt/androidwritable/999/emulated/999/Android/obb type sdcardfs (rw,nosuid,nodev,noexec,noatime,fsuid=1023,fsgid=1023,gid=1015,multiuser,mask=6,derive_gid,default_normal,unshared_obb)
+/data/media on /mnt/installer/999/emulated/999/Android/obb type sdcardfs (rw,nosuid,nodev,noexec,noatime,fsuid=1023,fsgid=1023,gid=1015,multiuser,mask=6,derive_gid,default_normal,unshared_obb)
+/data/media on /mnt/androidwritable/0/ace-999/Android/obb type sdcardfs (rw,nosuid,nodev,noexec,noatime,fsuid=1023,fsgid=1023,gid=1015,multiuser,mask=6,derive_gid,default_normal,unshared_obb)
+/data/media on /mnt/installer/0/ace-999/Android/obb type sdcardfs (rw,nosuid,nodev,noexec,noatime,fsuid=1023,fsgid=1023,gid=1015,multiuser,mask=6,derive_gid,default_normal,unshared_obb)
+/data/media on /storage/ace-999/Android/obb type sdcardfs (rw,nosuid,nodev,noexec,noatime,fsuid=1023,fsgid=1023,gid=1015,multiuser,mask=6,derive_gid,default_normal,unshared_obb)
+/data/media on /mnt/user/999/emulated/999/Android/obb type sdcardfs (rw,nosuid,nodev,noexec,noatime,fsuid=1023,fsgid=1023,gid=1015,multiuser,mask=6,derive_gid,default_normal,unshared_obb)
+/data/media on /mnt/user/0/ace-999/Android/obb type sdcardfs (rw,nosuid,nodev,noexec,noatime,fsuid=1023,fsgid=1023,gid=1015,multiuser,mask=6,derive_gid,default_normal,unshared_obb)
+/data/media on /mnt/installer/999/emulated/999/Android/obb type sdcardfs (rw,nosuid,nodev,noexec,noatime,fsuid=1023,fsgid=1023,gid=9997,multiuser,mask=7,derive_gid,default_normal,unshared_obb)
+OnePlus8Pro:/ $ df
+Filesystem        1K-blocks     Used Available Use% Mounted on
+/dev/block/dm-10    1771636  1766260         0 100% /
+tmpfs               3837280     1300   3835980   1% /dev
+tmpfs               3837280        0   3837280   0% /mnt
+/dev/block/dm-11    1095456  1092176         0 100% /system_ext
+/dev/block/dm-12     460352   458972         0 100% /product
+/dev/block/dm-13    1565912  1561168         0 100% /vendor
+/dev/block/dm-14      86616    86356         0 100% /odm
+overlay               86616    86356         0 100% /system/etc/buildinfo
+tmpfs               3837280        0   3837280   0% /apex
+none                3837280        0   3837280   0% /sys/fs/cgroup
+/dev/block/sda2       27632     5012     21644  19% /mnt/vendor/persist
+/dev/block/dm-15  105515340 36082176  69302092  35% /data
+/dev/block/loop6    1606296  1469000    104260  94% /system/reserve
+/dev/block/dm-16       1696     1668         0 100% /apex/com.android.os.statsd@300901600
+/dev/block/loop8       7728     7700         0 100% /apex/com.android.adbd@300900700
+/dev/block/loop9      24640    24608         0 100% /apex/com.android.i18n@1
+/dev/block/loop10     81560    81532         0 100% /apex/com.android.art@1
+/dev/block/loop11       748      720        16  98% /apex/com.android.tethering@300208500
+/dev/block/loop12      4744     4716         0 100% /apex/com.android.conscrypt@300900703
+/dev/block/loop13      4564     4536         0 100% /apex/com.android.wifi@300208500
+/dev/block/loop14      5116     5080         0 100% /apex/com.android.runtime@1
+/dev/block/loop15      2388     2356         0 100% /apex/com.android.resolv@300208500
+/dev/block/loop16       844      816        12  99% /apex/com.android.tzdata@300900700
+/dev/block/loop17       332      300        28  92% /apex/com.android.sdkext@300900700
+/dev/block/loop18      5360     5328         0 100% /apex/com.android.neuralnetworks@300900700
+/dev/block/loop19       560      532        20  97% /apex/com.android.ipsec@300900700
+/dev/block/loop20       232       92       136  41% /apex/com.android.apex.cts.shim@1
+/dev/block/loop21     18144    18116         0 100% /apex/com.android.media.swcodec@300900714
+/dev/block/loop22      3988     3960         0 100% /apex/com.android.extservices@300900700
+/dev/block/loop23      3884     3856         0 100% /apex/com.android.mediaprovider@300900729
+/dev/block/loop24    110756   110724         0 100% /apex/com.android.vndk.v30@1
+/dev/block/loop25     18520    18488         0 100% /apex/com.android.permission@300208500
+/dev/block/loop26      4488     4460         0 100% /apex/com.android.media@300900700
+/dev/fuse         105515340 36082176  69302092  35% /storage/emulated
+/dev/fuse         105515340 36082176  69302092  35% /storage/ace-999
+$ diff OnePlus8ProHydrogen_15.H.31_OTA_0310_all_2010291922_15e1f3321849475e/payload_dumper/output OnePlus8ProOxygen_15.E.23_OTA_023_all_2008300442_568e6/payload_dumper/output/
+Binary files OnePlus8ProHydrogen_15.H.31_OTA_0310_all_2010291922_15e1f3321849475e/payload_dumper/output/abl.img and OnePlus8ProOxygen_15.E.23_OTA_023_all_2008300442_568e6/payload_dumper/output/abl.img differ
+Binary files OnePlus8ProHydrogen_15.H.31_OTA_0310_all_2010291922_15e1f3321849475e/payload_dumper/output/aop.img and OnePlus8ProOxygen_15.E.23_OTA_023_all_2008300442_568e6/payload_dumper/output/aop.img differ
+Binary files OnePlus8ProHydrogen_15.H.31_OTA_0310_all_2010291922_15e1f3321849475e/payload_dumper/output/bluetooth.img and OnePlus8ProOxygen_15.E.23_OTA_023_all_2008300442_568e6/payload_dumper/output/bluetooth.img differ
+Binary files OnePlus8ProHydrogen_15.H.31_OTA_0310_all_2010291922_15e1f3321849475e/payload_dumper/output/boot.img and OnePlus8ProOxygen_15.E.23_OTA_023_all_2008300442_568e6/payload_dumper/output/boot.img differ
+Binary files OnePlus8ProHydrogen_15.H.31_OTA_0310_all_2010291922_15e1f3321849475e/payload_dumper/output/cmnlib64.img and OnePlus8ProOxygen_15.E.23_OTA_023_all_2008300442_568e6/payload_dumper/output/cmnlib64.img differ
+Binary files OnePlus8ProHydrogen_15.H.31_OTA_0310_all_2010291922_15e1f3321849475e/payload_dumper/output/cmnlib.img and OnePlus8ProOxygen_15.E.23_OTA_023_all_2008300442_568e6/payload_dumper/output/cmnlib.img differ
+Binary files OnePlus8ProHydrogen_15.H.31_OTA_0310_all_2010291922_15e1f3321849475e/payload_dumper/output/devcfg.img and OnePlus8ProOxygen_15.E.23_OTA_023_all_2008300442_568e6/payload_dumper/output/devcfg.img differ
+Binary files OnePlus8ProHydrogen_15.H.31_OTA_0310_all_2010291922_15e1f3321849475e/payload_dumper/output/dsp.img and OnePlus8ProOxygen_15.E.23_OTA_023_all_2008300442_568e6/payload_dumper/output/dsp.img differ
+Binary files OnePlus8ProHydrogen_15.H.31_OTA_0310_all_2010291922_15e1f3321849475e/payload_dumper/output/dtbo.img and OnePlus8ProOxygen_15.E.23_OTA_023_all_2008300442_568e6/payload_dumper/output/dtbo.img differ
+Binary files OnePlus8ProHydrogen_15.H.31_OTA_0310_all_2010291922_15e1f3321849475e/payload_dumper/output/featenabler.img and OnePlus8ProOxygen_15.E.23_OTA_023_all_2008300442_568e6/payload_dumper/output/featenabler.img differ
+Binary files OnePlus8ProHydrogen_15.H.31_OTA_0310_all_2010291922_15e1f3321849475e/payload_dumper/output/hyp.img and OnePlus8ProOxygen_15.E.23_OTA_023_all_2008300442_568e6/payload_dumper/output/hyp.img differ
+Binary files OnePlus8ProHydrogen_15.H.31_OTA_0310_all_2010291922_15e1f3321849475e/payload_dumper/output/imagefv.img and OnePlus8ProOxygen_15.E.23_OTA_023_all_2008300442_568e6/payload_dumper/output/imagefv.img differ
+Binary files OnePlus8ProHydrogen_15.H.31_OTA_0310_all_2010291922_15e1f3321849475e/payload_dumper/output/keymaster.img and OnePlus8ProOxygen_15.E.23_OTA_023_all_2008300442_568e6/payload_dumper/output/keymaster.img differ
+Binary files OnePlus8ProHydrogen_15.H.31_OTA_0310_all_2010291922_15e1f3321849475e/payload_dumper/output/logo.img and OnePlus8ProOxygen_15.E.23_OTA_023_all_2008300442_568e6/payload_dumper/output/logo.img differ
+Binary files OnePlus8ProHydrogen_15.H.31_OTA_0310_all_2010291922_15e1f3321849475e/payload_dumper/output/mdm_oem_stanvbk.img and OnePlus8ProOxygen_15.E.23_OTA_023_all_2008300442_568e6/payload_dumper/output/mdm_oem_stanvbk.img differ
+Binary files OnePlus8ProHydrogen_15.H.31_OTA_0310_all_2010291922_15e1f3321849475e/payload_dumper/output/modem.img and OnePlus8ProOxygen_15.E.23_OTA_023_all_2008300442_568e6/payload_dumper/output/modem.img differ
+Binary files OnePlus8ProHydrogen_15.H.31_OTA_0310_all_2010291922_15e1f3321849475e/payload_dumper/output/multiimgoem.img and OnePlus8ProOxygen_15.E.23_OTA_023_all_2008300442_568e6/payload_dumper/output/multiimgoem.img differ
+Binary files OnePlus8ProHydrogen_15.H.31_OTA_0310_all_2010291922_15e1f3321849475e/payload_dumper/output/odm.img and OnePlus8ProOxygen_15.E.23_OTA_023_all_2008300442_568e6/payload_dumper/output/odm.img differ
+Only in OnePlus8ProOxygen_15.E.23_OTA_023_all_2008300442_568e6/payload_dumper/output/: opproduct.img
+Binary files OnePlus8ProHydrogen_15.H.31_OTA_0310_all_2010291922_15e1f3321849475e/payload_dumper/output/product.img and OnePlus8ProOxygen_15.E.23_OTA_023_all_2008300442_568e6/payload_dumper/output/product.img differ
+Binary files OnePlus8ProHydrogen_15.H.31_OTA_0310_all_2010291922_15e1f3321849475e/payload_dumper/output/qupfw.img and OnePlus8ProOxygen_15.E.23_OTA_023_all_2008300442_568e6/payload_dumper/output/qupfw.img differ
+Binary files OnePlus8ProHydrogen_15.H.31_OTA_0310_all_2010291922_15e1f3321849475e/payload_dumper/output/recovery.img and OnePlus8ProOxygen_15.E.23_OTA_023_all_2008300442_568e6/payload_dumper/output/recovery.img differ
+Binary files OnePlus8ProHydrogen_15.H.31_OTA_0310_all_2010291922_15e1f3321849475e/payload_dumper/output/reserve.img and OnePlus8ProOxygen_15.E.23_OTA_023_all_2008300442_568e6/payload_dumper/output/reserve.img differ
+Only in OnePlus8ProHydrogen_15.H.31_OTA_0310_all_2010291922_15e1f3321849475e/payload_dumper/output: storsec.img
+Only in OnePlus8ProHydrogen_15.H.31_OTA_0310_all_2010291922_15e1f3321849475e/payload_dumper/output: system_ext.img
+Binary files OnePlus8ProHydrogen_15.H.31_OTA_0310_all_2010291922_15e1f3321849475e/payload_dumper/output/system.img and OnePlus8ProOxygen_15.E.23_OTA_023_all_2008300442_568e6/payload_dumper/output/system.img differ
+Binary files OnePlus8ProHydrogen_15.H.31_OTA_0310_all_2010291922_15e1f3321849475e/payload_dumper/output/tz.img and OnePlus8ProOxygen_15.E.23_OTA_023_all_2008300442_568e6/payload_dumper/output/tz.img differ
+Binary files OnePlus8ProHydrogen_15.H.31_OTA_0310_all_2010291922_15e1f3321849475e/payload_dumper/output/uefisecapp.img and OnePlus8ProOxygen_15.E.23_OTA_023_all_2008300442_568e6/payload_dumper/output/uefisecapp.img differ
+Binary files OnePlus8ProHydrogen_15.H.31_OTA_0310_all_2010291922_15e1f3321849475e/payload_dumper/output/vbmeta.img and OnePlus8ProOxygen_15.E.23_OTA_023_all_2008300442_568e6/payload_dumper/output/vbmeta.img differ
+Binary files OnePlus8ProHydrogen_15.H.31_OTA_0310_all_2010291922_15e1f3321849475e/payload_dumper/output/vbmeta_system.img and OnePlus8ProOxygen_15.E.23_OTA_023_all_2008300442_568e6/payload_dumper/output/vbmeta_system.img differ
+Binary files OnePlus8ProHydrogen_15.H.31_OTA_0310_all_2010291922_15e1f3321849475e/payload_dumper/output/vendor.img and OnePlus8ProOxygen_15.E.23_OTA_023_all_2008300442_568e6/payload_dumper/output/vendor.img differ
+Binary files OnePlus8ProHydrogen_15.H.31_OTA_0310_all_2010291922_15e1f3321849475e/payload_dumper/output/xbl_config.img and OnePlus8ProOxygen_15.E.23_OTA_023_all_2008300442_568e6/payload_dumper/output/xbl_config.img differ
+Binary files OnePlus8ProHydrogen_15.H.31_OTA_0310_all_2010291922_15e1f3321849475e/payload_dumper/output/xbl.img and OnePlus8ProOxygen_15.E.23_OTA_023_all_2008300442_568e6/payload_dumper/output/xbl.img differ
+
+</code></pre>
+<h3 id="后续-2"><a class="header" href="#后续-2">后续</a></h3>
+<ol>
+<li>
+<p>在后<code>/system</code>分区发现系统装不可删的<code>APP</code>，网上说提权后可删，因为<code>Android11</code>用<code>Magisk21.1</code>卡死了暂时没有继续尝试</p>
+</li>
+<li>
+<p>查看<code>img</code>文件，其实就是<code>ext</code>格式文件，在使用<code>mount system.img system</code>失败，好像还有一些格式问题，看有些说要用<code>simg2img</code>转一下，或者是么改完用<code>extfstools</code>重新打回<code>img</code></p>
+<blockquote>
+<p>https://github.com/anestisb/android-simg2img</p>
+<p>https://github.com/nlitsme/extfstools</p>
+</blockquote>
+<pre><code>$ file boot.img
+boot.img: Android bootimg, kernel (0x8000), ramdisk (0x1000000), page size: 4096, cmdline (androidboot.hardware=qcom androidboot.console=ttyMSM0 androidboot.memcg=1 lpm_levels.sleep_disa)
+$ file system.img
+system.img: Linux rev 1.0 ext2 filesystem data, UUID=4a50462e-52cf-5fab-87a1-49824cdf6b4f (extents) (large files) (huge files)
+</code></pre>
+</li>
+<li>
+<p>对于其他，好像说华为分区方法不同，刷法也有不同，还有现在<code>Android</code>的<code>boot</code>分区有用<code>slot a</code>及<code>slot b</code>可以用<code>fastboot flash boot_a boot.img</code>或<code>flashboot flash boot boot.img --slot all</code>指定分区或者全刷</p>
+</li>
+<li>
+<p>还有好些可以玩的，对于各<code>img</code>文件解释分析，对<code>system.img</code>的修改，各种第三方<code>ROM</code>和使用不同的<code>Kernel</code>，先做得笔记<code># TODO:</code>一下，之后的未完待续</p>
+</li>
+</ol>
+<h3 id="缺陷"><a class="header" href="#缺陷">缺陷</a></h3>
+<ol>
+<li>Android11+Magisk20有严重卡顿无法正常使用</li>
+</ol>
+<h3 id="参考资料-3"><a class="header" href="#参考资料-3">参考资料</a></h3>
+<blockquote>
+<p>https://forum.xda-developers.com/showthread.php?t=2277112</p>
+<p>https://forum.xda-developers.com/oneplus-8-pro</p>
+<p>https://forum.xda-developers.com/oneplus-8-pro/how-to/guide-how-to-root-oneplus-8-pro-twrp-t4083981</p>
+<p>https://magiskmanager.com/</p>
+<p>https://topjohnwu.github.io/Magisk/install.html</p>
+<p>https://topjohnwu.github.io/Magisk/install.html#magisk-in-recovery</p>
+<p>https://source.android.com/setup/build/running</p>
+</blockquote>
+<blockquote>
+<p>目标周更Blog的第一篇...不过写好了发布脚本了,为周更的懒又...溜了溜了</p>
+</blockquote>
+<p>TODO:</p>
+<ol>
+<li>OP8P system rollback to android 10 O2 OS</li>
+<li>install magisk to root</li>
+<li>install adblock</li>
+<li>modify system partition to install H2 applications</li>
+</ol>
+<div style="break-before: page; page-break-before: always;"></div><hr />
+<p>title: &quot;Reinstall Manjaro From Archlinux FAQ And Think&quot;
+description: &quot;&quot;
+tags:</p>
+<ul>
+<li>faq</li>
+<li>archlinux</li>
+<li>manjaro</li>
+<li>systemd</li>
+</ul>
+<hr />
+<blockquote>
+<p>REF: https://github.com/chg1f/dots</p>
+</blockquote>
+<ol>
+<li>Linux Distro, Manjaro And Archlinux ...</li>
+</ol>
+<blockquote>
+<p>REF: https://distrowatch.com/</p>
+</blockquote>
+<ul>
+<li>About Manjaro And Archlinux</li>
+<li>About Archlinux And Gentoo</li>
+<li>About Debian, CentOS/RTHL, Archlinux, Gentoo And LFS</li>
+</ul>
+<ol start="2">
+<li>Sysinid, Systemd And OpenRC ...</li>
+</ol>
+<ul>
+<li>About Systemd And OpenRC</li>
+</ul>
+<ol start="3">
+<li>Disk Encrypted And Partition</li>
+</ol>
+<ul>
+<li>ESP, Boot, Root, Home And Others</li>
+<li>Encrypted Boot with GRUB</li>
+</ul>
+<ol start="4">
+<li>Systemd Service</li>
+</ol>
+<ul>
+<li>Systemd User Unit No <code>User</code> And <code>Group</code></li>
+</ul>
+<pre><code>service: Failed to determine supplementary groups: Operation not permitted
+service: Failed at step GROUP spawning : Operation not permitted
+</code></pre>
+<p>-. Systemd Enable Service And Unit WantedBy</p>
+<pre><code></code></pre>
+<ol start="5">
+<li>Fonts</li>
+</ol>
+<ul>
+<li>Mono Font</li>
+<li>Emoji Font Unable Calculate</li>
+</ul>
+<p>-. URxvt Font Unable to calculate</p>
+<pre><code>urxvt: unable to calculate font width for 'Twitter Color Emoji:slant=0:weight=100:pixelsize=40:minspace=True', ignoring.
+</code></pre>
+<ol start="6">
+<li>
+<p>Browen, Firefox &amp; Chrome &amp; Chromium</p>
+</li>
+<li>
+<p>WM, DM ...</p>
+</li>
+<li>
+<p>Bashrc Profile XProfile</p>
+</li>
+<li>
+<p>Keyboard</p>
+</li>
+<li>
+<p>AWK Using</p>
+</li>
+<li>
+<p>i3 Like Mac Copy&amp;Paste</p>
+</li>
+</ol>
+<pre><code>xdotool
+</code></pre>
+<ol start="5">
+<li>
+<p>ACPI Battery Status With i3Bar Via i3Status&amp;Conky</p>
+</li>
+<li>
+<p>Tmux StatusBar And i3Bar</p>
+</li>
+<li>
+<p>Manjaro And Archlinux</p>
+</li>
+<li>
+<p>NAS via SFTP</p>
+</li>
+<li>
+<p>SSH Configure</p>
+</li>
+</ol>
+<p>... TODO:</p>
+<div style="break-before: page; page-break-before: always;"></div><hr />
+<p>title: &quot;Fastboot Fake Plaseholder&quot; # Title of the blog post.
+date: 2020-12-28T16:17:35+08:00 # Date of post creation.</p>
+<h1 id="description-article-description--description-used-for-search-engine-3"><a class="header" href="#description-article-description--description-used-for-search-engine-3">description: &quot;Article description.&quot; # Description used for search engine.</a></h1>
+<h1 id="featured-true--sets-if-post-is-a-featured-post-making-appear-on-the-home-page-side-bar-3"><a class="header" href="#featured-true--sets-if-post-is-a-featured-post-making-appear-on-the-home-page-side-bar-3">featured: true # Sets if post is a featured post, making appear on the home page side bar.</a></h1>
+<h1 id="menu-main-3"><a class="header" href="#menu-main-3">menu: main</a></h1>
+<h1 id="featureimage-imagespathfilejpg--sets-featured-image-on-blog-post-3"><a class="header" href="#featureimage-imagespathfilejpg--sets-featured-image-on-blog-post-3">featureImage: &quot;/images/path/file.jpg&quot; # Sets featured image on blog post.</a></h1>
+<h1 id="thumbnail-imagespaththumbnailpng--sets-thumbnail-image-appearing-inside-card-on-homepage-3"><a class="header" href="#thumbnail-imagespaththumbnailpng--sets-thumbnail-image-appearing-inside-card-on-homepage-3">thumbnail: &quot;/images/path/thumbnail.png&quot; # Sets thumbnail image appearing inside card on homepage.</a></h1>
+<h1 id="shareimage-imagespathsharepng--designate-a-separate-image-for-social-media-sharing-3"><a class="header" href="#shareimage-imagespathsharepng--designate-a-separate-image-for-social-media-sharing-3">shareImage: &quot;/images/path/share.png&quot; # Designate a separate image for social media sharing.</a></h1>
+<h1 id="codemaxlines-10--override-global-value-for-how-many-lines-within-a-code-block-before-auto-collapsing-3"><a class="header" href="#codemaxlines-10--override-global-value-for-how-many-lines-within-a-code-block-before-auto-collapsing-3">codeMaxLines: 10 # Override global value for how many lines within a code block before auto-collapsing.</a></h1>
+<h1 id="codelinenumbers-false--override-global-value-for-showing-of-line-numbers-within-code-block-3"><a class="header" href="#codelinenumbers-false--override-global-value-for-showing-of-line-numbers-within-code-block-3">codeLineNumbers: false # Override global value for showing of line numbers within code block.</a></h1>
+<h1 id="figurepositionshow-true--override-global-value-for-showing-the-figure-label-3"><a class="header" href="#figurepositionshow-true--override-global-value-for-showing-the-figure-label-3">figurePositionShow: true # Override global value for showing the figure label.</a></h1>
+<h1 id="comment-false--disable-comment-if-false-3"><a class="header" href="#comment-false--disable-comment-if-false-3">comment: false # Disable comment if false.</a></h1>
+<p>toc: true # Controls if a table of contents should be generated for first-level links automatically.
+categories:</p>
+<ul>
+<li>bug
+tags:</li>
+</ul>
+<hr />
+<p><strong>Insert Lead paragraph here.</strong></p>
+<h2 id="question-6"><a class="header" href="#question-6">Question</a></h2>
+<h2 id="reason-1"><a class="header" href="#reason-1">Reason</a></h2>
+<h2 id="fixed-5"><a class="header" href="#fixed-5">Fixed</a></h2>
+<div style="break-before: page; page-break-before: always;"></div><hr />
+<p>title: &quot;Tmux Note&quot; # Title of the blog post.
+date: 2021-01-28T17:26:00+08:00 # Date of post creation.
+toc: true # Controls if a table of contents should be generated for first-level links automatically.
+categories:</p>
+<ul>
+<li>note
+tags:</li>
+<li>linux</li>
+<li>tmux</li>
+<li>CLI</li>
+</ul>
+<hr />
+<p><strong>Insert Lead paragraph here.</strong></p>
+<h1 id="tmux笔记"><a class="header" href="#tmux笔记">Tmux笔记</a></h1>
+<h2 id="配置文件"><a class="header" href="#配置文件">配置文件</a></h2>
+<blockquote>
+<p><a href="https://github.com/chongiofai/dots/blob/master/.tmux.conf">我的Tmux配置</a></p>
+</blockquote>
+<h2 id="操作"><a class="header" href="#操作">操作</a></h2>
+<ol>
+<li>Default Commands</li>
+</ol>
+<pre><code>attach-session (attach) [-dErx] [-c working-directory] [-t target-session]
+bind-key (bind) [-nr] [-T key-table] [-N note] key command [arguments]
+break-pane (breakp) [-dP] [-F format] [-n window-name] [-s src-pane] [-t dst-window]
+capture-pane (capturep) [-aCeJNpPq] [-b buffer-name] [-E end-line] [-S start-line] [-t target-pane]
+choose-buffer [-NrZ] [-F format] [-f filter] [-O sort-order] [-t target-pane] [template]
+choose-client [-NrZ] [-F format] [-f filter] [-O sort-order] [-t target-pane] [template]
+choose-tree [-GNrswZ] [-F format] [-f filter] [-O sort-order] [-t target-pane] [template]
+clear-history (clearhist) [-t target-pane]
+clock-mode [-t target-pane]
+command-prompt [-1kiN] [-I inputs] [-p prompts] [-t target-client] [template]
+confirm-before (confirm) [-p prompt] [-t target-client] command
+copy-mode [-eHMuq] [-t target-pane]
+delete-buffer (deleteb) [-b buffer-name]
+detach-client (detach) [-aP] [-E shell-command] [-s target-session] [-t target-client]
+display-menu (menu) [-c target-client] [-t target-pane] [-T title] [-x position] [-y position] name key command ...
+display-message (display) [-aIpv] [-c target-client] [-F format] [-t target-pane] [message]
+display-panes (displayp) [-b] [-d duration] [-t target-client] [template]
+find-window (findw) [-CNrTZ] [-t target-pane] match-string
+has-session (has) [-t target-session]
+if-shell (if) [-bF] [-t target-pane] shell-command command [command]
+join-pane (joinp) [-bdfhv] [-l size] [-s src-pane] [-t dst-pane]
+kill-pane (killp) [-a] [-t target-pane]
+kill-server
+kill-session [-aC] [-t target-session]
+kill-window (killw) [-a] [-t target-window]
+last-pane (lastp) [-deZ] [-t target-window]
+last-window (last) [-t target-session]
+link-window (linkw) [-dk] [-s src-window] [-t dst-window]
+list-buffers (lsb) [-F format]
+list-clients (lsc) [-F format] [-t target-session]
+list-commands (lscm) [-F format] [command]
+list-keys (lsk) [-1aN] [-P prefix-string] [-T key-table] [key]
+list-panes (lsp) [-as] [-F format] [-t target-window]
+list-sessions (ls) [-F format]
+list-windows (lsw) [-a] [-F format] [-t target-session]
+load-buffer (loadb) [-b buffer-name] path
+lock-client (lockc) [-t target-client]
+lock-server (lock)
+lock-session (locks) [-t target-session]
+move-pane (movep) [-bdhv] [-p percentage|-l size] [-s src-pane] [-t dst-pane]
+move-window (movew) [-dkr] [-s src-window] [-t dst-window]
+new-session (new) [-AdDEPX] [-c start-directory] [-F format] [-n window-name] [-s session-name] [-t target-session] [-x width] [-y height] [command]
+new-window (neww) [-adkP] [-c start-directory] [-e environment] [-F format] [-n window-name] [-t target-window] [command]
+next-layout (nextl) [-t target-window]
+next-window (next) [-a] [-t target-session]
+paste-buffer (pasteb) [-dpr] [-s separator] [-b buffer-name] [-t target-pane]
+pipe-pane (pipep) [-IOo] [-t target-pane] [command]
+previous-layout (prevl) [-t target-window]
+previous-window (prev) [-a] [-t target-session]
+refresh-client (refresh) [-cDlLRSU] [-C XxY] [-F flags] [-t target-client] [adjustment]
+rename-session (rename) [-t target-session] new-name
+rename-window (renamew) [-t target-window] new-name
+resize-pane (resizep) [-DLMRUZ] [-x width] [-y height] [-t target-pane] [adjustment]
+resize-window (resizew) [-aADLRU] [-x width] [-y height] [-t target-window] [adjustment]
+respawn-pane (respawnp) [-k] [-c start-directory] [-e environment] [-t target-pane] [command]
+respawn-window (respawnw) [-k] [-c start-directory] [-e environment] [-t target-window] [command]
+rotate-window (rotatew) [-DUZ] [-t target-window]
+run-shell (run) [-b] [-t target-pane] shell-command
+save-buffer (saveb) [-a] [-b buffer-name] path
+select-layout (selectl) [-Enop] [-t target-pane] [layout-name]
+select-pane (selectp) [-DdeLlMmRUZ] [-T title] [-t target-pane]
+select-window (selectw) [-lnpT] [-t target-window]
+send-keys (send) [-FHlMRX] [-N repeat-count] [-t target-pane] key ...
+send-prefix [-2] [-t target-pane]
+set-buffer (setb) [-a] [-b buffer-name] [-n new-buffer-name] data
+set-environment (setenv) [-gru] [-t target-session] name [value]
+set-hook [-agRu] [-t target-session] hook [command]
+set-option (set) [-aFgopqsuw] [-t target-pane] option [value]
+set-window-option (setw) [-aFgoqu] [-t target-window] option [value]
+show-buffer (showb) [-b buffer-name]
+show-environment (showenv) [-gs] [-t target-session] [name]
+show-hooks [-g] [-t target-session]
+show-messages (showmsgs) [-JT] [-t target-client]
+show-options (show) [-AgHpqsvw] [-t target-pane] [option]
+show-window-options (showw) [-gv] [-t target-window] [option]
+source-file (source) [-nqv] path ...
+split-window (splitw) [-bdefhIPv] [-c start-directory] [-e environment] [-F format] [-l size] [-t target-pane] [command]
+start-server (start)
+suspend-client (suspendc) [-t target-client]
+swap-pane (swapp) [-dDUZ] [-s src-pane] [-t dst-pane]
+swap-window (swapw) [-d] [-s src-window] [-t dst-window]
+switch-client (switchc) [-ElnprZ] [-c target-client] [-t target-session] [-T key-table]
+unbind-key (unbind) [-an] [-T key-table] key
+unlink-window (unlinkw) [-k] [-t target-window]
+wait-for (wait) [-L|-S|-U] channel
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><hr />
+<p>title: &quot;docker-compose网络配置&quot;
+date: 2020-07-29
+categories:</p>
+<ul>
+<li>note
+tags:</li>
+<li>docker-compose</li>
+<li>dokcer</li>
+</ul>
+<hr />
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+        <script>
+        window.addEventListener('load', function() {
+            MathJax.Hub.Register.StartupHook('End', function() {
+                window.setTimeout(window.print, 100);
+            });
+        });
+        </script>
+
+    </div>
+    </body>
+</html>
